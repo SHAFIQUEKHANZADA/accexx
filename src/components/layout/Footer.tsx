@@ -3,11 +3,14 @@ import { footerNav, links, site } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
 import { Instagram, LinkedIn, Mail } from "@/components/ui/icons";
 
-// Email / social URLs have not been supplied yet; until they are, each falls back to /contact.
 const connect = [
-  { label: "Email", href: links.email ? `mailto:${links.email}` : "/contact", Icon: Mail },
-  { label: "LinkedIn", href: links.linkedin ?? "/contact", Icon: LinkedIn },
-  { label: "Instagram", href: links.instagram ?? "/contact", Icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/laidealexander/" },
+  { label: "Instagram", href: "https://www.instagram.com/iamdrlaidea/" },
+  { label: "YouTube", href: "https://www.youtube.com/@Dr.LaideAlexander" },
+  { label: "TikTok", href: "https://www.tiktok.com/@drlaidealexander/" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584887520106" },
+  { label: "Website", href: "https://www.accexxinsight.com/" },
+  { label: "Email", href: links.email ? `mailto:${links.email}` : "/contact" },
 ];
 
 export function Footer() {
@@ -39,7 +42,7 @@ export function Footer() {
         <div>
           <h2 className="eyebrow">Connect</h2>
           <ul className="mt-5 space-y-3">
-            {connect.map(({ label, href, Icon }) => {
+            {connect.map(({ label, href }) => {
               const external = href.startsWith("http");
               return (
                 <li key={label}>
@@ -48,7 +51,7 @@ export function Footer() {
                     {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="inline-flex items-center gap-2.5 text-sm text-white/70 transition-colors hover:text-white"
                   >
-                    <Icon width={16} height={16} /> {label}
+                    {label}
                   </a>
                 </li>
               );

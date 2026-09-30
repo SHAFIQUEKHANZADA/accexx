@@ -15,6 +15,10 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] **Forbes article link** for "The Greed In It: A Look At Modern Leadership" (Editor's Choice). Shown on the home page without a link.
 - [ ] **IACET status.** Site must not claim accreditation; CEUs will show as "Recommended CEUs" behind `showCeus`.
 - [ ] **Self-paced course prices** (Leadership Development + BEInspire).
+- [ ] **BEInspire live workshops:** only BEI-01 states its live length (3 contact hours, in-person or live-virtual). Are BEI-02 to BEI-10 the same?
+- [ ] **Series name spelling:** "BEInspire© Career Series" (draft site) or "BEInspired© Career Workshop Series" (glossary)?
+- [ ] **Certification descriptions:** 31 module one-liners (EL-HOC, TOS-F, RLWS, EVLP, CHOC-F, G-HOC Coach) are taken from the first sentence of each module's description in her files, since the overviews list titles only. Please review them on the certification pages.
+- [ ] **Hybrid prices** are 92.5% of the in-person price, and her files round some up and some down (e.g. HOC-LP $17,482 vs $17,482.50). The site uses her numbers exactly; confirm.
 - [ ] **Why Move My Cheese? Conference dates**, plus **video + photos from the previous conference** (to showcase and announce the next one).
 - [ ] **Main tagline wording:** "Every Page. A New Possibility." (WhatsApp) or "Every New Page. A New Possibility." (email 2026-09-30)? Site shows the first until confirmed.
 - [ ] **Kindle:** list it (Amazon link) or leave it off, given she doesn't want to send buyers to Amazon?

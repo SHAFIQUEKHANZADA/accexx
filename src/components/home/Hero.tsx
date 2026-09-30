@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import stagePhoto from "../../../public/images/dr-laide-keynote-stage.jpg";
-import { GoldWaves } from "./GoldWaves";
 
 const values = ["Empathy", "Integrity", "Transformation", "Empowerment", "Resilience", "Growth", "Connection", "Accountability"];
 
@@ -24,7 +23,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-[#2a1c08] mix-blend-color" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/10 lg:via-ink/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/60" />
-        <GoldWaves className="absolute inset-x-0 bottom-0 h-3/5 w-full opacity-70" />
       </div>
 
       <div className="container-site flex flex-1 flex-col justify-end pb-14 pt-32 sm:pb-20 lg:pb-24 lg:pt-40">
