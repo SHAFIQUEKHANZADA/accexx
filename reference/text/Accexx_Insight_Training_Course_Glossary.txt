@@ -1,0 +1,128 @@
+ACCEXX INSIGHT
+Training Course Glossary
+Intellectual Property of Dr. Laide R. Alexander and Accexx Insight, LLC.
+Every acronym and program code used across the curriculum library, in one place
+1. The Core Framework
+Term
+What It Means
+HOC
+Human Operating Code™ — the proprietary framework underlying every Accexx Insight program.); renamed for consistency across the library.
+BSEH
+Beliefs–Stories–Emotions–Habits — the diagnostic lens used throughout HOC-based coursework to explain what actually drives behavior, beneath the surface-level action.
+2. HOC Flagship Certification Suite
+The 10 credential-bearing certifications, each carrying a graded capstone project and recommended CEUs.
+Code
+Full Name
+HOC-LP
+Certified Human Operating Code™ Leadership Practitioner
+CCAL
+Certified Culture Architect Leader
+LCP
+Certified Leader-as-Coach Practitioner
+HCHR-D
+Certified Human-Centered HR & People Systems Designer
+EL-HOC
+Certified Education Leadership & Human Operating Code™ Specialist
+TOS-F
+Certified Team Operating Systems Facilitator
+RLWS
+Certified Resilient Leadership & Well-Being Strategist
+EVLP
+Certified Ethical & Values-Based Leadership Practitioner
+CHOC-F
+Certified Change & Human Operating Code™ Facilitator
+G-HOC Coach
+Certified Global Human Operating Code™ Coach — the suite's advanced, selective-entry certification
+3. Leadership Development Programs
+The 12 non-certificate programs (Certificate of Participation only).
+Code
+Program Name
+LD-01
+Leading Through Complexity & Uncertainty
+LD-02
+Strategic Thinking & Human-Centered Decision Making
+LD-03
+Difficult Conversations & Courageous Dialogue
+LD-04
+Leading Hybrid & Distributed Teams
+LD-05
+Inclusive & Bias-Aware Leadership
+LD-06
+Leading High-Trust, High-Accountability Teams
+LD-07
+Emotionally Intelligent Leadership in Practice
+LD-08
+Leading Change Without Formal Authority
+LD-09
+Purpose-Driven & Values-Anchored Leadership
+LD-10
+Time, Energy & Focus Management for Leaders
+LD-11
+Cross-Cultural & Global Leadership
+LD-12
+Leadership Communication & Storytelling
+4. BEInspired© Career Workshop Series
+The 10 single-session career-readiness workshops for students and early-career professionals.
+Code
+Workshop Name
+BEI-01
+Being a 10
+BEI-02
+Believe in Yourself
+BEI-03
+Who Am I?
+BEI-04
+The Right Choice
+BEI-05
+Beat the Odds
+BEI-06
+The Inside Track
+BEI-07
+Billboard 101
+BEI-08
+Shoot to Score
+BEI-09
+Knock 'Em Dead
+BEI-10
+The Last Piece
+5. Consulting Engagement Codes
+HR & People Systems Consulting (HR-series) and Organizational Culture & Strategy Consulting (CS-series). Education Institutions Consulting (13 engagements) has no codes yet — not built.
+Code
+Engagement Name
+HR-01
+HR Systems Audit & Redesign
+HR-02
+Performance Management Transformation
+HR-03
+From HR Administrator to People & Culture Leader
+HR-04
+Onboarding as Operating System Installation
+HR-05
+Recruitment & Selection for Culture Fit
+HR-06
+Employee Relations with Emotional Intelligence
+CS-01
+Culture Diagnostic & Blueprint
+CS-02
+Leadership Alignment & Strategy Retreats
+CS-03
+Designing and Shifting Organizational Culture
+CS-04
+HR as Stewards of Values and Everyday Behavior
+CS-05
+Change Leadership Support
+6. Related Training & Delivery Terms
+Terms used throughout the facilitator guides and textbooks that aren't program codes but come up often enough to belong in this glossary.
+Term
+What It Means
+CEU
+Continuing Education Unit — the standard unit for measuring non-credit continuing education, used throughout the library at a ratio of 1 CEU: 10 contact hours.
+IACET
+International Accreditors for Continuing Education and Training — the accrediting body that would need to formally register Accexx Insight's programs before recommended CEUs become officially issued credit, rather than a calculated estimate.
+EQ
+Emotional Intelligence (sometimes "Emotional Quotient") — a recurring skill area across the HOC Short Courses, Leadership Development, and Consulting libraries.
+STAR
+Situation, Task, Action, Result — the structured answer format taught in BEI-08 (Shoot to Score) for interview preparation.
+ATS
+Applicant Tracking System — the software many employers use to screen resumes, covered in BEI-06 (The Inside Track) and HR-05 (Recruitment & Selection for Culture Fit).
+Two program families — Project Unify Certificate Programs (15 certificates) and HOC Short Courses & Workshops (8 courses) — don't yet have short-code systems like LD-, BEI-, HR-, or CS-, since they're still at the original curriculum-outline standard rather than the rebuilt facilitator-guide standard. See the Curriculum Library Master Index for their full names and current status.
