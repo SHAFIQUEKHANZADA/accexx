@@ -16,7 +16,10 @@ export const site = {
  * See TODO_CLIENT.md for what is still outstanding.
  */
 export const links = {
-  booking: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || "/contact#book",
+  // Every "Book Dr. A" / "Book a Discovery Call" button goes to the calendar embedded on /contact,
+  // so visitors stay on the site. The GHL widget URL itself is only used for that embed.
+  booking: "/contact#book",
+  bookingEmbed: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || null,
   coursePortal: process.env.NEXT_PUBLIC_COURSE_PORTAL_URL || "/contact",
   // Phone number not supplied yet: "Call Now" routes to the contact page until it is.
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || null,
@@ -57,10 +60,12 @@ export const mainNav: NavItem[] = [
     href: "/education",
     children: [
       { label: "Overview", href: "/education" },
-      { label: "Certificate Programs", href: "/education/certifications", description: "10 HOC certifications" },
+      { label: "HOC Certifications", href: "/education/certifications", description: "10 flagship certifications" },
       { label: "Leadership Development", href: "/education/leadership", description: "12 leadership programs" },
       { label: "BEInspire© Career Series", href: "/education/beinspire", description: "10 career workshops" },
-      { label: "Project Unify©", href: "/education/project-unify" },
+      { label: "Project Unify© Certificates", href: "/education/project-unify", description: "15 workforce certificates" },
+      { label: "HOC Short Courses", href: "/education/short-courses", description: "8 short courses & workshops" },
+      { label: "Project Unify© Training Shop", href: "/education/training-shop", description: "10 practical courses" },
     ],
   },
   {
@@ -68,7 +73,8 @@ export const mainNav: NavItem[] = [
     href: "/books",
     children: [
       { label: "Books", href: "/books", description: "The Unfinished Leader · Why Move My Cheese?" },
-      { label: "Why Move My Cheese? Conference", href: "/books#conference" },
+      { label: "Why Move My Cheese? Conference", href: "/books#conference", description: "Leadership Conference 2026 highlights" },
+      { label: "Inside the Pages with Dr. A", href: "/inside-the-pages", description: "Where books become conversations" },
       { label: "Shop", href: "/shop", description: "Books & swag" },
     ],
   },
@@ -94,16 +100,18 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "Consulting", href: "/services/consulting" },
       { label: "Coaching", href: "/services/coaching" },
       { label: "Speaking", href: "/services/speaking" },
+      { label: "Inside the Pages", href: "/inside-the-pages" },
     ],
   },
   {
     title: "Education",
     links: [
       { label: "Overview", href: "/education" },
-      { label: "Certificate Programs", href: "/education/certifications" },
+      { label: "HOC Certifications", href: "/education/certifications" },
       { label: "Leadership Development", href: "/education/leadership" },
-      { label: "Project Unify©", href: "/education/project-unify" },
       { label: "BEInspire© Career Series", href: "/education/beinspire" },
+      { label: "Project Unify© Certificates", href: "/education/project-unify" },
+      { label: "HOC Short Courses", href: "/education/short-courses" },
     ],
   },
 ];

@@ -1,0 +1,160 @@
+ACCEXX INSIGHT
+Curriculum Library — Pricing Master
+A consolidated rate card and full pricing schedule across all 89 programs, engagements, and coaching streams
+Executive Summary
+Pricing is built bottom-up from each program's already-documented contact hours (for courses) or engagement phases (for consulting and coaching), using a tiered hourly rate, a standard cohort size assumption, and consistent delivery-format and package discounts. Every figure in this document can be traced back to the rate card on the next page.
+89 Programs and engagements priced | $540 – $35,100 Course price range (in-person, per cohort) | $2,800/day Standard consulting day rate | $650/session Executive 1:1 coaching rate
+Pricing Methodology & Assumptions
+1. Courses (Flagship, Leadership Development, BEInspire, Project Unify, HOC Short Courses)
+Priced per cohort (one delivered program, any group size up to the standard cap), calculated as:
+Base Price = Tier Hourly Rate  ×  Program's Total Contact Hours
+This is a per-cohort fee, not a per-participant fee — one client books the whole program for their group, up to the standard cohort cap listed below. Groups larger than the cap pay a per-additional-participant fee.
+Tier Hourly Rates
+Tier | Hourly Rate | Programs in This Tier
+Flagship — Advanced | $650/hr | G-HOC Coach (selective-entry, advanced certification)
+Flagship — Standard | $450/hr | HOC-LP, CCAL, LCP, HCHR-D, EVLP, EL-HOC, CHOC-F, TOS-F, RLWS
+Leadership Development | $350/hr | LD-01 through LD-12
+Project Unify & HOC Short Courses | $300/hr | 15 Project Unify certificates, 8 HOC Short Courses, 10 Project Unify Training Shop courses
+BEInspire | $180/hr | BEI-01 through BEI-10 (accessible/student pricing)
+Delivery Format Adjustment
+Format | Price | Rationale
+In-Person | 100% of base price | Full rate — includes facilitator travel and venue-related overhead
+Hybrid | 92.5% of base price | Partial reduction — some sessions still require in-person logistics
+Virtual | 85% of base price | Reduced rate — no travel or venue costs
+Cohort Size & Additional Participants
+Standard cohort cap: 15 participants (20 for BEInspire, reflecting its classroom-style format).
+Additional participant fee: 8% of the in-person base price per participant beyond the cap, up to a maximum cohort of 25.
+2. Consulting
+Priced by consulting day, using each engagement's already-documented phase timing to estimate the number of days required:
+Engagement Fee = $2,800/day  ×  Estimated Consulting Days (derived from the engagement's phase timing)
+For single-day engagements, this is a flat fee. For multi-week engagements, it's presented as a range, since actual scope varies by organization size — Finance should treat the low end as a lean engagement and the high end as a fuller one.
+3. Coaching
+Priced per session, with a package discount for booking a full engagement upfront:
+Stream | Per-Session Rate | Package Pricing
+Executive & Leadership Coaching (1:1) | $650/session | 6 sessions: $3,600 (8% off) · 12 sessions: $6,800 (13% off)
+Group & Team Coaching | $2,200/session | 8-session cohort: $16,800 total (per-person cost depends on group size, 4–8 people)
+HOC Flagship Certification Suite — Pricing
+Certification | Contact Hrs | In-Person Price | Virtual Price (85%) | +Participant (8%)
+HOC-LP | 42 | $18,900 | $16,065 | $1,512
+CCAL | 24 | $10,800 | $9,180 | $864
+LCP | 30 | $13,500 | $11,475 | $1,080
+HCHR-D | 36 | $16,200 | $13,770 | $1,296
+EVLP | 21 | $9,450 | $8,033 | $756
+EL-HOC | 33 | $14,850 | $12,623 | $1,188
+CHOC-F | 33 | $14,850 | $12,623 | $1,188
+TOS-F | 27 | $12,150 | $10,328 | $972
+RLWS | 27 | $12,150 | $10,328 | $972
+G-HOC Coach | 54 | $35,100 | $29,835 | $2,808
+Hybrid pricing = 92.5% of the In-Person Price column for any row above.
+Leadership Development Programs — Pricing
+Program | Contact Hrs | In-Person Price | Virtual Price (85%) | +Participant (8%)
+LD-01 Leading Through Complexity & Uncertainty | 6 | $2,100 | $1,785 | $168
+LD-02 Strategic Thinking & Human-Centered Decision Making | 12 | $4,200 | $3,570 | $336
+LD-03 Difficult Conversations & Courageous Dialogue | 9 | $3,150 | $2,678 | $252
+LD-04 Leading Hybrid & Distributed Teams | 6 | $2,100 | $1,785 | $168
+LD-05 Inclusive & Bias-Aware Leadership | 9 | $3,150 | $2,678 | $252
+LD-06 Leading High-Trust, High-Accountability Teams | 12 | $4,200 | $3,570 | $336
+LD-07 Emotionally Intelligent Leadership in Practice | 12 | $4,200 | $3,570 | $336
+LD-08 Leading Change Without Formal Authority | 9 | $3,150 | $2,678 | $252
+LD-09 Purpose-Driven & Values-Anchored Leadership | 9 | $3,150 | $2,678 | $252
+LD-10 Time, Energy & Focus Management for Leaders | 6 | $2,100 | $1,785 | $168
+LD-11 Cross-Cultural & Global Leadership | 12 | $4,200 | $3,570 | $336
+LD-12 Leadership Communication & Storytelling | 9 | $3,150 | $2,678 | $252
+Hybrid pricing = 92.5% of the In-Person Price column for any row above.
+BEInspire© Career Workshop Series — Pricing
+All 10 workshops run 3 contact hours. Cohort cap for this series is 20 participants (classroom-style format).
+Workshop | In-Person Price | Virtual Price (85%) | +Participant (8%)
+BEI-01 Being a 10 | $540 | $459 | $43
+BEI-02 Believe in Yourself | $540 | $459 | $43
+BEI-03 Who Am I? | $540 | $459 | $43
+BEI-04 The Right Choice | $540 | $459 | $43
+BEI-05 Beat the Odds | $540 | $459 | $43
+BEI-06 The Inside Track | $540 | $459 | $43
+BEI-07 Billboard 101 | $540 | $459 | $43
+BEI-08 Shoot to Score | $540 | $459 | $43
+BEI-09 Knock 'Em Dead | $540 | $459 | $43
+BEI-10 The Last Piece | $540 | $459 | $43
+Full Series Bundle
+All 10 workshops booked together as a full career-readiness series:
+Individual total: $5,400   →   Bundle price: $4,500 (17% bundle discount)
+Project Unify Certificate Programs — Pricing
+Certificate | Contact Hrs | In-Person Price | Virtual Price (85%) | +Participant
+School to Work Readiness | 10 | $3,000 | $2,550 | $240
+Early Career Professionalism | 10 | $3,000 | $2,550 | $240
+Career Navigation & Mobility | 10 | $3,000 | $2,550 | $240
+Career Supportive Management | 10 | $3,000 | $2,550 | $240
+Core Workforce Skills | 10 | $3,000 | $2,550 | $240
+Frontline Supervision & Team Leadership | 12 | $3,600 | $3,060 | $288
+Accountability Culture | 8 | $2,400 | $2,040 | $192
+Workplace Ethics & Integrity | 6 | $1,800 | $1,530 | $144
+Practical Problem-Solving & Continuous Improvement | 8 | $2,400 | $2,040 | $192
+High-Level Customer Service Excellence | 16 | $4,800 | $4,080 | $384
+Business Etiquette & Professional Presence | 8 | $2,400 | $2,040 | $192
+Digital Customer Service | 6 | $1,800 | $1,530 | $144
+Service Excellence for Schools | 9 | $2,700 | $2,295 | $216
+Service Recovery & Difficult Customers | 8 | $2,400 | $2,040 | $192
+Executive Presence & Business Etiquette | 6 | $1,800 | $1,530 | $144
+Contact hours reflect the finalized program structure — the 5-part facilitator guide and student workbook sets built to the HOC Flagship graded standard (measurable objectives, a graded capstone, formal contact hours). This corrects the earlier estimated-hours draft.
+HOC Short Courses & Workshops — Pricing
+Course | Contact Hrs | In-Person Price | Virtual Price (85%)
+Upgrade Your Inner Operating Code | 6 | $1,800 | $1,530
+Self-Leadership for Emerging Leaders | 6 | $1,800 | $1,530
+Emotional Intelligence (EQ) for Leaders & Teams | 6 | $1,800 | $1,530
+Conflict, Feedback & Difficult Conversations | 6 | $1,800 | $1,530
+High-Performance Habits | 6 | $1,800 | $1,530
+Focus, Attention & Digital Discipline | 3.5 | $1,050 | $893
+Resilience & Stress Management for Professionals | 6 | $1,800 | $1,530
+Leading and Living Through Change | 6 | $1,800 | $1,530
+Additional participant fee for this set follows the standard formula: 8% of the In-Person Price. Contact hours reflect the finalized short-course structure documented in the 4-part facilitator guide and participant workbook sets.
+Project Unify© Training Shop — New Courses — Pricing
+These are the 10 Project Unify Training Shop courses — distinct from the 15 Project Unify Certificate Programs above (see Master Index Outstanding Item #3 for the overlap this set intentionally avoids). Priced at the same $300/hr tier as the Project Unify certificates and HOC Short Courses.
+Course | Contact Hrs | In-Person Price | Virtual Price (85%)
+Learning How to Learn for Life | 6 | $1,800 | $1,530
+Personal Effectiveness & Self-Leadership | 6 | $1,800 | $1,530
+Adaptive Thinking & Learning Agility at Work | 6 | $1,800 | $1,530
+Attention Management in a Distracted Workplace | 3.5 | $1,050 | $893
+Resilience & Mental Fitness for Everyday Work | 6 | $1,800 | $1,530
+Career Discovery & Pathways for Students | 6 | $1,800 | $1,530
+Student Employability Skills Lab | 6 | $1,800 | $1,530
+Working Across Generations | 6 | $1,800 | $1,530
+Collaboration & Cross-Functional Teaming | 6 | $1,800 | $1,530
+AI Basics for the Everyday Employee | 6 | $1,800 | $1,530
+Additional participant fee for this set follows the standard formula: 8% of the In-Person Price.
+Consulting — Pricing
+Priced at $2,800 per consulting day. Multi-week or scope-variable engagements are shown as a range reflecting typical scope variation.
+HR & People Systems Consulting
+Engagement | Typical Duration | Est. Days | Fee
+HR Systems Audit & Redesign | 6–10 weeks | 10–15 days | $28,000 – $42,000
+Performance Management Transformation | 8–16 weeks | 15–24 days | $42,000 – $67,200
+From HR Administrator to People & Culture Leader | 1 day | 1 day | $2,800
+Onboarding as Operating System Installation | 1 day + design support | 1.5 days | $4,200
+Recruitment & Selection for Culture Fit | 1 day | 1 day | $2,800
+Employee Relations with Emotional Intelligence | 1 day | 1 day | $2,800
+Organizational Culture & Strategy Consulting
+Engagement | Typical Duration | Est. Days | Fee
+Culture Diagnostic & Blueprint | 1–2 days | 2 days | $5,600
+Leadership Alignment & Strategy Retreats | 1–2 days + prep | 3 days | $8,400
+Designing and Shifting Organizational Culture | 1–2 days | 2 days | $5,600
+HR as Stewards of Values and Everyday Behavior | 1 day | 1 day | $2,800
+Change Leadership Support | Project-based | 12–18 days | $33,600 – $50,400
+Education Institutions Consulting
+Engagement | Typical Duration | Est. Days | Fee
+School Brand & Reality Audit | Half-day to multi-day, depending on scope | 0.5–2 days | $1,400 – $5,600
+90-Day School Improvement Action Lab | 1 day (6 hours) per lab | 1 day | $2,800 per lab
+Non-Negotiable Standards for Teaching & Discipline | 3–4 hours (half-day) | 0.5 day | $1,400
+Practical Classroom Management | 1 day (6 hours) | 1 day | $2,800
+Teaching for Understanding, Not Just Coverage | 1 day (6 hours) | 1 day | $2,800
+Assessment, Feedback & Protecting Academic Reputation | Half-day to 1 day | 0.5–1 day | $1,400 – $2,800
+Parent Communication & Expectation Management | 3–4 hours (half-day) | 0.5 day | $1,400
+Student Support & Retention | 3–4 hours (half-day) | 0.5 day | $1,400
+Operations That Support Learning | 1 day (6 hours) | 1 day | $2,800
+Curriculum-to-Market Alignment Review | 1–2 days (6–12 hours) | 1–2 days | $2,800 – $5,600
+Accreditation & Quality Assurance Readiness | Half-day to multi-day, plus ongoing monitoring | 0.5–2 days | $1,400 – $5,600 (+ ongoing, scoped separately)
+Institutional Vision, Strategy & Graduate Outcomes | Half-day or 1-day retreat | 0.5–1 day | $1,400 – $2,800
+Student Experience & Support Systems Mapping | 1 day (6 hours) | 1 day | $2,800
+Estimated days are derived from each engagement's stated duration and phase timing, the same methodology used for HR and Culture consulting above. Where an engagement's scope varies (school size, existing documentation, depth of the follow-up phase), the fee is shown as a range.
+Coaching — Pricing
+Stream | Per-Session Rate | Package Pricing
+Executive & Leadership Coaching (1:1) | $650/session | 6-session engagement: $3,600 · 12-session engagement: $6,800
+Group & Team Coaching (4–8 people) | $2,200/session | 8-session cohort: $16,800 total
+Group coaching's per-person cost ranges from roughly $2,100 (8-person cohort) to $4,200 (4-person cohort) for the full 8-session engagement.

@@ -47,6 +47,8 @@ The `.docx` originals are next to them. **Use the text files; only copy wording 
 
 ## 3. Design direction
 
+> **SUPERSEDED (2026-10-01, `CLIENT_UPDATES.md` #8):** Dr. A finds the dark version "too dark" and wants it **brighter**, modelled on her live site accexxinsight.com: white/cream backgrounds, navy + gold, clean and simple, less "AI-looking". The dark-theme notes below are kept for history only.
+
 Take the **look** of the x01works draft and the **content depth** of the live site.
 
 - **Theme:** dark and premium. Near-black background (`#0B0B0C`-ish), warm gold accent (`#C9974B` range; the draft's buttons and the italic "Accexx"), off-white text. Light sections allowed for contrast (the shop and long-read pages may be light).
@@ -233,3 +235,9 @@ She does **not** want to send buyers to Amazon (Amazon takes 75%), so sell direc
 - Most merch belongs to the **Why Move My Cheese? Conference**: showcase **video + photos from the previous event** and **announce the upcoming one**. Media + dates pending.
 
 **New: Inside the Pages with Dr. A** — "Every Book. Different Perspective." / "Where books become conversations." A travelling book-conversation series (armchairs, mustard backdrop, the bell, reading together, Open Floor for other authors, Resource Corner). Schedule: #1 Dec 12, 2026 at The Cannon; then every two months Jan 2027 → Nov 2028 (13 total, venues TBD). Data: `src/data/events.ts`. Belongs under Books & Events; CTA is joining the Accexx Circle.
+
+---
+
+## 13. Client updates log
+
+Every later item from Dr. A is logged in **`CLIENT_UPDATES.md`** (numbered, with its impact on the build). Read it before building any step. Where it conflicts with the sections above, `CLIENT_UPDATES.md` wins: for example, Project Unify and consulting now have full content (item #6).

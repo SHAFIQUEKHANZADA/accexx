@@ -7,6 +7,10 @@
  * Workbooks, activities, assignments, rubrics and video scripts are course material and are
  * deliberately not included.
  *
+ * Live format: BEI-01's overview states "3 contact hours, in-person or live-virtual"; the Pricing Master
+ * (reference/text/UPDATED Curriculum_Library_Pricing_Master_CFO_Copy (2).txt) confirms
+ * "All 10 workshops run 3 contact hours", so all 10 use 3 / "in-person or live-virtual".
+ *
  * Self-paced prices not provided yet (TODO_CLIENT.md).
  */
 import type { BeinspireWorkshop } from "./types";
@@ -38,9 +42,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Build confidence, self-esteem, and courage. Challenge negative self-talk and practice assertive communication.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Confidence Check-In", format: "Video", time: "~5 min" },
@@ -58,9 +61,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Identify your interests, values, strengths, and competencies. Link them to realistic career directions.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Why Self-Knowledge Matters", format: "Video", time: "~5 min" },
@@ -78,9 +80,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Understand the link between current roles and dream jobs. Map possible pathways from \"now\" to \"next.\"",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Where Are You Now?", format: "Video", time: "~5 min" },
@@ -98,9 +99,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Access the hidden job market through networking, volunteering, and alternative pathways beyond adverts.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "The Hidden Job Market", format: "Video", time: "~5 min" },
@@ -118,9 +118,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Think like employers and recruiters. Understand what they look for, how CVs are screened, and common red flags.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Inside the Recruiter's Mind", format: "Video", time: "~5 min" },
@@ -138,9 +137,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Create stronger marketing tools: targeted CVs, personal summaries, and online profiles that capture attention.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "You Are a Billboard", format: "Video", time: "~5 min" },
@@ -158,9 +156,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Build effective interview strategies. Practice answering common and behavioral questions confidently.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Interview Mindset", format: "Video", time: "~5 min" },
@@ -178,9 +175,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Compete effectively against other candidates. Package achievements and manage first impressions.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "What Makes Candidates Stand Out", format: "Video", time: "~5 min" },
@@ -199,9 +195,8 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     description: "Integrate the full job search process into a practical roadmap with weekly actions and accountability.",
     audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition — completing the full BEInspire series.",
     live: {
-      // TODO_CLIENT: live contact hours and delivery not stated in the source (only BEI-01 states them).
-      contactHours: null,
-      delivery: null,
+      contactHours: 3,
+      delivery: "in-person or live-virtual",
     },
     segments: [
       { number: 1, title: "Reviewing Your Journey", format: "Video", time: "~5 min" },
@@ -213,5 +208,20 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     selfPaced: { price: null },
   },
 ];
+
+/**
+ * Per-cohort pricing, identical for all 10 workshops (Pricing Master, "BEInspire© Career Workshop Series — Pricing").
+ * TODO_CLIENT: confirm prices may be shown publicly (source is labelled "CFO Copy").
+ */
+export const beinspirePricing = {
+  contactHours: 3,
+  inPerson: 540,
+  virtual: 459,
+  additionalParticipant: 43,
+  /** Classroom-style format: cap of 20 participants (15 for other series). */
+  cohortCap: 20,
+  /** All 10 workshops booked together as a full career-readiness series. */
+  bundle: { individualTotal: 5400, price: 4500 },
+} as const;
 
 export const getBeinspireWorkshop = (slug: string) => beinspireWorkshops.find((w) => w.slug === slug);

@@ -16,8 +16,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
-          background: "radial-gradient(ellipse at 80% 110%, #3a2a12 0%, #0b0b0c 60%)",
-          color: "#ece7df",
+          background: "linear-gradient(135deg, #fbf7f0 0%, #f3ecdf 100%)",
+          color: "#1f3864",
           fontFamily: "Georgia, serif",
         }}
       >
@@ -27,7 +27,7 @@ export default function OpengraphImage() {
               width: 64,
               height: 64,
               borderRadius: 999,
-              border: "2px solid rgba(255,255,255,0.35)",
+              border: "2px solid #c9974b", color: "#c9974b",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -41,10 +41,10 @@ export default function OpengraphImage() {
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ display: "flex", fontSize: 76, lineHeight: 1.05, color: "#fff" }}>
+          <div style={{ display: "flex", fontSize: 76, lineHeight: 1.05, color: "#1f3864" }}>
             From Access to&nbsp;<span style={{ color: "#c9974b", fontStyle: "italic" }}>Accexx</span>
           </div>
-          <div style={{ fontSize: 30, color: "#c9974b", fontStyle: "italic" }}>
+          <div style={{ fontSize: 30, color: "#9c7437", fontStyle: "italic" }}>
             We more than find solutions. We ensure transformation.
           </div>
         </div>

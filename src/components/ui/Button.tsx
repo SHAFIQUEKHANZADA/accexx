@@ -3,12 +3,14 @@ import type { ReactNode } from "react";
 import { isExternal } from "@/lib/site";
 import { ArrowRight } from "./icons";
 
-type Variant = "gold" | "outline" | "ghost";
+type Variant = "gold" | "navy" | "outline" | "outline-light" | "link";
 
 const styles: Record<Variant, string> = {
-  gold: "bg-gold text-ink hover:bg-gold-light",
-  outline: "border border-white/30 text-white hover:border-gold hover:text-gold-light",
-  ghost: "text-white hover:text-gold-light",
+  gold: "bg-gold text-white shadow-sm shadow-gold/30 hover:bg-gold-deep",
+  navy: "bg-navy text-white hover:bg-navy-deep",
+  outline: "border border-navy/25 text-navy hover:border-navy hover:bg-navy hover:text-white",
+  "outline-light": "border border-white/40 text-white hover:bg-white hover:text-navy",
+  link: "px-0! text-gold-deep hover:text-navy",
 };
 
 export function ButtonLink({
@@ -27,19 +29,11 @@ export function ButtonLink({
   className?: string;
 }) {
   const sizing = size === "sm" ? "h-10 px-5 text-sm" : "h-12 px-6 text-[0.95rem]";
-  const cls = `group inline-flex items-center justify-center gap-3 rounded-full font-medium transition-colors duration-300 ${sizing} ${styles[variant]} ${className}`;
+  const cls = `group inline-flex items-center justify-center gap-2.5 rounded-full font-semibold transition-colors duration-300 ${sizing} ${styles[variant]} ${className}`;
   const content = (
     <>
       <span>{children}</span>
-      {arrow && (
-        <span
-          className={`grid size-6 place-items-center rounded-full transition-transform duration-300 group-hover:translate-x-0.5 ${
-            variant === "gold" ? "bg-ink/10" : "bg-white/10"
-          }`}
-        >
-          <ArrowRight width={14} height={14} />
-        </span>
-      )}
+      {arrow && <ArrowRight width={16} height={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />}
     </>
   );
 

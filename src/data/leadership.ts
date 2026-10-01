@@ -13,6 +13,8 @@ import type { LeadershipProgram } from "./types";
  *  - "LD01-LD12 + overview.txt": self-paced "Videos / Lessons" table only. Workbook activities,
  *    assignments, rubrics and video scripts are course material and stay in the course portal.
  *  - "Accexx_Insight_Training_Course_Glossary.txt": code and program name (all match the curriculum guide).
+ *  - "UPDATED Curriculum_Library_Pricing_Master_CFO_Copy (2).txt": contact hours and per-cohort prices
+ *    (`cohort`). Cohort cap 15; hybrid = 92.5% of in-person. TODO_CLIENT: confirm prices may be shown publicly.
  */
 export const leadershipPrograms: LeadershipProgram[] = [
   {
@@ -84,6 +86,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 6, inPerson: 2100, virtual: 1785, additionalParticipant: 168 },
     credential: "Certificate of Participation",
   },
   {
@@ -154,6 +157,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 12, inPerson: 4200, virtual: 3570, additionalParticipant: 336 },
     credential: "Certificate of Participation",
   },
   {
@@ -224,6 +228,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 9, inPerson: 3150, virtual: 2678, additionalParticipant: 252 },
     credential: "Certificate of Participation",
   },
   {
@@ -283,6 +288,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 6, inPerson: 2100, virtual: 1785, additionalParticipant: 168 },
     credential: "Certificate of Participation",
   },
   {
@@ -342,6 +348,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 9, inPerson: 3150, virtual: 2678, additionalParticipant: 252 },
     credential: "Certificate of Participation",
   },
   {
@@ -412,6 +419,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 12, inPerson: 4200, virtual: 3570, additionalParticipant: 336 },
     credential: "Certificate of Participation",
   },
   {
@@ -482,6 +490,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 12, inPerson: 4200, virtual: 3570, additionalParticipant: 336 },
     credential: "Certificate of Participation",
   },
   {
@@ -551,6 +560,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 9, inPerson: 3150, virtual: 2678, additionalParticipant: 252 },
     credential: "Certificate of Participation",
   },
   {
@@ -610,6 +620,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 9, inPerson: 3150, virtual: 2678, additionalParticipant: 252 },
     credential: "Certificate of Participation",
   },
   {
@@ -669,6 +680,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 6, inPerson: 2100, virtual: 1785, additionalParticipant: 168 },
     credential: "Certificate of Participation",
   },
   {
@@ -740,6 +752,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 12, inPerson: 4200, virtual: 3570, additionalParticipant: 336 },
     credential: "Certificate of Participation",
   },
   {
@@ -810,6 +823,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       ],
       price: null, // TODO_CLIENT: self-paced price not provided yet
     },
+    cohort: { contactHours: 9, inPerson: 3150, virtual: 2678, additionalParticipant: 252 },
     credential: "Certificate of Participation",
   },
 ];

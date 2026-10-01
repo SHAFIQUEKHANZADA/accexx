@@ -6,6 +6,9 @@ const FORM_TYPES = new Set([
   "accexx-circle",
   "shop-popup",
   "conference-interest",
+  "inside-the-pages-interest",
+  "consulting-proposal",
+  "product-review",
 ]);
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

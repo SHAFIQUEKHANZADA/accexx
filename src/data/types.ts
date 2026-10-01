@@ -80,6 +80,8 @@ export type LeadershipProgram = {
     /** Price not provided yet by the client. */
     price: null;
   };
+  /** Live cohort pricing (Curriculum Library Pricing Master). */
+  cohort: CohortPrices;
   /** Leadership Development programs award a Certificate of Participation only. */
   credential: "Certificate of Participation";
 };
@@ -100,12 +102,10 @@ export type BeinspireWorkshop = {
   name: string;
   description: string;
   audience: string;
-  /** Live workshop details as written, e.g. "3 contact hours, in-person or live-virtual". */
+  /** Live workshop details: "3 contact hours, in-person or live-virtual" (all 10, per the Pricing Master). */
   live: {
-    /** null when the source does not state it (only BEI-01 does). */
-    contactHours: number | null;
-    /** null when the source does not state it (only BEI-01 does). */
-    delivery: string | null;
+    contactHours: number;
+    delivery: string;
   };
   /** Always exactly 4 segments. */
   segments: BeinspireSegment[];
@@ -113,4 +113,47 @@ export type BeinspireWorkshop = {
     /** Price not provided yet by the client. */
     price: null;
   };
+};
+
+/**
+ * Per-cohort live pricing in USD, from "UPDATED Curriculum_Library_Pricing_Master_CFO_Copy (2).txt".
+ * Hybrid is not listed per row; the source defines it as 92.5% of the in-person price.
+ */
+export type CohortPrices = {
+  contactHours: number;
+  /** Per cohort, up to the standard cap (15; 20 for BEInspire). */
+  inPerson: number;
+  /** Per cohort (85% of in-person). */
+  virtual: number;
+  /** Each participant beyond the cap, up to 25 (8% of in-person). */
+  additionalParticipant: number;
+};
+
+export type CatalogModule = {
+  number: number;
+  title: string;
+  /** Contact hours for this module. */
+  hours: number;
+};
+
+/**
+ * A course in the Project Unify© Certificates, HOC Short Courses & Workshops or
+ * Project Unify© Training Shop catalogs. Only overview-level fields are modelled:
+ * objectives, activities, capstones and materials stay in the course portal.
+ */
+export type CatalogCourse = {
+  slug: string;
+  name: string;
+  /** One-line description as written in the source. */
+  description: string;
+  /** Track / stream heading in the source, when there is one. */
+  track?: string;
+  audience: string;
+  /** Omitted when the source does not state prerequisites. */
+  prerequisites?: string;
+  /** Recommended CEUs (Project Unify certificates only). */
+  recommendedCeus?: number;
+  credential: "Certificate" | "Certificate of Participation";
+  modules: CatalogModule[];
+  cohort: CohortPrices;
 };

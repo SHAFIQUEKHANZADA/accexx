@@ -1,15 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoDark from "../../../public/images/accexx-insight-logo.png";
+import logoLight from "../../../public/images/accexx-insight-logo-light.png";
 
-/** Placeholder wordmark until the client's logo files arrive (see TODO_CLIENT.md). */
-export function Logo({ className = "" }: { className?: string }) {
+/**
+ * Dr. A's logo (gold circled "A" + "Accexx Insight"), cut out of her file
+ * (reference/bio-images/wide preview 1.png) onto a transparent background:
+ * navy wordmark for light backgrounds, white wordmark for the navy footer.
+ */
+export function Logo({ tone = "dark", className = "" }: { tone?: "dark" | "light"; className?: string }) {
   return (
-    <Link href="/" aria-label="Accexx Insight — home" className={`group inline-flex items-center gap-2.5 ${className}`}>
-      <span className="grid size-9 place-items-center rounded-full border border-white/25 font-serif text-lg italic text-white transition-colors group-hover:border-gold">
-        A
-      </span>
-      <span className="font-serif text-[1.35rem] leading-none tracking-tight text-white">
-        Accexx <em className="text-gold">Insight</em>
-      </span>
+    <Link href="/" aria-label="Accexx Insight — home" className={`inline-flex shrink-0 items-center ${className}`}>
+      <Image
+        src={tone === "dark" ? logoDark : logoLight}
+        alt="Accexx Insight"
+        preload={tone === "dark"}
+        sizes="200px"
+        className="h-11 w-auto sm:h-12"
+      />
     </Link>
   );
 }
