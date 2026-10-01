@@ -53,19 +53,8 @@ export const mainNav: NavItem[] = [
       { label: "Consulting", href: "/services/consulting", description: "Redesign systems, behaviors and beliefs" },
       { label: "Coaching", href: "/services/coaching", description: "Work at the level of your Human Operating System" },
       { label: "Speaking", href: "/services/speaking", description: "Keynotes, panels and talks" },
-    ],
-  },
-  {
-    label: "Education",
-    href: "/education",
-    children: [
-      { label: "Overview", href: "/education" },
-      { label: "HOC Certifications", href: "/education/certifications", description: "10 flagship certifications" },
-      { label: "Leadership Development", href: "/education/leadership", description: "12 leadership programs" },
-      { label: "BEInspire© Career Series", href: "/education/beinspire", description: "10 career workshops" },
-      { label: "Project Unify© Certificates", href: "/education/project-unify", description: "15 workforce certificates" },
-      { label: "HOC Short Courses", href: "/education/short-courses", description: "8 short courses & workshops" },
-      { label: "Project Unify© Training Shop", href: "/education/training-shop", description: "10 practical courses" },
+      // Education sits under Services (Dr. A, 2026-10-01: "so the header is neater and not crowded").
+      { label: "Education", href: "/education", description: "Certifications, leadership programs, courses & workshops" },
     ],
   },
   {

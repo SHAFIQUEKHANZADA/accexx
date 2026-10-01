@@ -9,6 +9,7 @@ import { ChevronDown, Close, Menu, Phone } from "@/components/ui/icons";
 
 function isActive(pathname: string, item: NavItem) {
   if (item.href === "/") return pathname === "/";
+  if (item.children?.some((c) => c.href !== item.href && (pathname === c.href || pathname.startsWith(`${c.href}/`)))) return true;
   return pathname === item.href || pathname.startsWith(`${item.href}/`);
 }
 

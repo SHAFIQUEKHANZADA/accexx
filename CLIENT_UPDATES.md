@@ -105,3 +105,19 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
   - Fresh = modern, light, clean, not dated and not "AI template"; relevant = clearly hers (real photos, books, events, HOC, real audiences).
   - Done: bright redesign, real photos, AI-looking sections rebuilt (HOC method, Who We Serve). 🟡 Remaining clean-up: decorative half-circles (keep only by the books), static client-name row, fewer italic-gold heading words.
 - Earlier in the same chat: "the videos and pictures are in the WhatsApp chat." ✅ Pictures received (item #7). ❓ **No videos received yet**: ask for the conference/event videos (for /books#conference).
+
+## #11 — Chat with Dr. A (via Hilal), 2026-10-01 11:53–12:21 — home page back toward the dark x01works look
+- "I really need the home page to be **catchy**, it does not have to have my picture." / "yes I am the founder but **the organization needs to be bigger than me**, especially in general places."
+- "I prefer the first home page to this second one… **go back to the dark one for home page and mix it with some lighter color like beige, white**, like you have it now." "I love the **blue and gold**." Final: "I like it. **Mimic this** [upload.x01works.com.ng], and add the other ones like the shop, the event, inside the pages."
+- Photo removals: no photos in the Breakthrough part; under it keep only pictures 1 and 2, very large with the text below, remove 3 and 4; no photo in The Human Operating Code; no photo in Services. "I like Conversations that move people" (keep).
+- "Can we put **Education under Services**, so the header is neater and not crowded."
+- Decisions (Shafique, 2026-10-01): dark parts in **deep navy + gold** (not black); **home page only**; the other pages stay bright.
+- Status ✅ (2026-10-01):
+  - Hero: deep navy (`--color-night`) with the x01works gold light-waves (`GoldWaves`), no photo, headline + values + CTAs.
+  - Who We Serve ("Find your breakthrough"): photos only on cards 1 and 2 (Organizations, Leaders), large, text below; cards 3 and 4 text only.
+  - What we offer: Speaking is a plain card (photo removed); 2 × 2 grid.
+  - The Human Operating Code: photo removed. Services page hero: photo removed.
+  - Stats strip turned dark navy; light (white/beige) sections in between; shop, conference ("Conversations that move people") and Inside the Pages stay on the home page.
+  - Header: Education is now an item in the Services dropdown (Services stays highlighted on /education pages).
+- ❓ "I prefer we use **full pages**": meaning unclear (full-width sections vs separate full pages instead of one long home page). Ask.
+- 🟡 Meet Dr. A on the home page still has her headshot (it is the section about her); confirm she wants to keep it.

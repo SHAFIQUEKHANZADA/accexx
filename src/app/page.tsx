@@ -13,7 +13,6 @@ import { bookLaunch, conference2026, insideThePages } from "@/data/events";
 import { links, site } from "@/lib/site";
 import { corePromise, whoWeServe } from "@/data/about";
 import headshot from "../../public/images/dr-laide-headshot.jpg";
-import speakingPhoto from "../../public/images/dr-laide-keynote-stage.jpg";
 import forbesGraphic from "../../public/images/forbes-editors-choice.jpg";
 import insideThePagesSet from "../../public/images/inside-the-pages-set.jpg";
 
@@ -129,8 +128,9 @@ function Philosophy() {
 
 /* Find your breakthrough (who we serve) ---------------------------------------- */
 
-// Where each audience usually starts (site navigation only) + a photo from her library.
-const audienceCards: Record<string, { photo: string; alt: string; links: { label: string; href: string }[] }> = {
+// Where each audience usually starts (site navigation only). Dr. A (2026-10-01): photos on the
+// first two cards only, very large with the text below; none on cards 3 and 4.
+const audienceCards: Record<string, { photo?: string; alt?: string; links: { label: string; href: string }[] }> = {
   Organizations: {
     photo: "/images/consulting-meeting.jpg",
     alt: "A leadership team in a working session",
@@ -148,16 +148,12 @@ const audienceCards: Record<string, { photo: string; alt: string; links: { label
     ],
   },
   "Entrepreneurs and Founders": {
-    photo: "/images/events/book-launch-06.jpg",
-    alt: "Readers with their copies of Dr. A's books at her book launch",
     links: [
       { label: "Coaching", href: "/services/coaching" },
       { label: "Consulting", href: "/services/consulting" },
     ],
   },
   Professionals: {
-    photo: "/images/education-lecture.jpg",
-    alt: "Professionals in a training session",
     links: [
       { label: "BEInspire© workshops", href: "/education/beinspire" },
       { label: "Coaching", href: "/services/coaching" },
@@ -177,18 +173,18 @@ function Paths() {
           <p className="max-w-xl text-lg leading-relaxed text-body lg:justify-self-end">{corePromise}</p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {whoWeServe.map((group) => {
             const card = audienceCards[group.name];
             return (
               <article key={group.name} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-white" data-reveal>
-                {card && (
-                  <div className="relative aspect-[3/2]">
-                    <Image src={card.photo} alt={card.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                {card?.photo && (
+                  <div className="relative aspect-[16/10]">
+                    <Image src={card.photo} alt={card.alt ?? ""} fill sizes="(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw" className="object-cover" />
                   </div>
                 )}
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-serif text-2xl font-semibold leading-tight text-navy">{group.name}</h3>
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <h3 className="font-serif text-2xl font-semibold leading-tight text-navy sm:text-[1.75rem]">{group.name}</h3>
                   <p className="mt-3 text-[0.95rem] leading-relaxed text-body">{group.summary}</p>
                   <ul className="mb-6 mt-4 space-y-1.5 text-[0.92rem] text-ink">
                     {group.items.slice(0, 3).map((item) => (
@@ -248,7 +244,7 @@ function Offerings() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16">
           <div data-reveal>
             <OfferCard
               title="Consulting"
@@ -268,33 +264,16 @@ function Offerings() {
             />
           </div>
 
-          {/* Speaking: photo card spanning two rows on desktop */}
-          <div data-reveal data-reveal-delay="180" className="md:col-span-2 lg:col-span-1 lg:row-span-2">
-            <Link href="/services/speaking" className="group relative flex h-full min-h-[26rem] flex-col justify-end overflow-hidden rounded-3xl">
-              <Image
-                src={speakingPhoto}
-                alt="Dr. Laide Alexander on stage, addressing a full auditorium"
-                fill
-                placeholder="blur"
-                sizes="(min-width: 1024px) 33vw, 100vw"
-                className="object-cover object-[64%_center] transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <span aria-hidden className="absolute inset-0 bg-linear-to-t from-navy-deep/95 via-navy-deep/40 to-transparent" />
-              <span className="relative p-7 text-white sm:p-8">
-                <span className="block font-serif text-3xl font-semibold">Speaking</span>
-                <span className="mt-3 block text-[0.95rem] leading-relaxed text-white/85">
-                  Keynotes, panels, and talks that don&apos;t just inform — they shift how people think about leadership,
-                  culture, and human behavior.
-                </span>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-light">
-                  Book Dr. A
-                  <ArrowRight width={15} height={15} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              </span>
-            </Link>
+          <div data-reveal>
+            <OfferCard
+              title="Speaking"
+              icon={<Quote width={20} height={20} />}
+              body="Keynotes, panels, and talks that don't just inform — they shift how people think about leadership, culture, and human behavior."
+              href="/services/speaking"
+              cta="Book Dr. A"
+            />
           </div>
-
-          <div data-reveal data-reveal-delay="90" className="md:col-span-2">
+          <div data-reveal data-reveal-delay="90">
             <OfferCard
               title="Education"
               icon={<Cap width={20} height={20} />}
@@ -322,26 +301,17 @@ const bseh = [
 function Method() {
   return (
     <section className="bg-cream py-20 lg:py-28">
-      <div className="container-site grid items-center gap-12 lg:grid-cols-[5fr_6fr] lg:gap-20">
-        <figure className="relative aspect-[4/3] overflow-hidden rounded-3xl" data-reveal>
-          <Image
-            src="/images/dr-laide-speaking.jpg"
-            alt="Dr. Laide Alexander speaking to a group"
-            fill
-            sizes="(min-width: 1024px) 42vw, 100vw"
-            className="object-cover"
-          />
-        </figure>
-
-        <div data-reveal data-reveal-delay="100">
+      {/* No photo here (Dr. A, 2026-10-01: "the organization needs to be bigger than me"). */}
+      <div className="container-site">
+        <div data-reveal>
           <p className="eyebrow">Our method</p>
           <h2 className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">The Human Operating Code™</h2>
-          <p className="mt-5 text-lg leading-relaxed text-body">
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-body">
             The proprietary framework underlying every Accexx Insight program, created by Dr. Laide R. Alexander. Its lens —
             Beliefs, Stories, Emotions, Habits — explains what actually drives behavior, beneath the surface-level action.
           </p>
 
-          <dl className="mt-8 grid gap-x-8 gap-y-6 border-t border-line pt-8 sm:grid-cols-2">
+          <dl className="mt-10 grid gap-x-10 gap-y-8 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
             {bseh.map((item) => (
               <div key={item.letter} className="flex gap-4">
                 <dt className="w-8 shrink-0 font-serif text-4xl font-semibold leading-none text-gold-deep">{item.letter}</dt>
@@ -439,19 +409,19 @@ const stats = [
 
 function Stats() {
   return (
-    <section aria-label="Impact" className="border-y border-line bg-cream">
-      <dl className="container-site grid grid-cols-2 divide-line py-14 lg:grid-cols-4 lg:divide-x lg:py-16">
+    <section aria-label="Impact" className="bg-night text-white">
+      <dl className="container-site grid grid-cols-2 divide-white/10 py-14 lg:grid-cols-4 lg:divide-x lg:py-16">
         {stats.map((s, i) => (
           <div key={s.label} className="flex flex-col px-2 py-5 text-center lg:px-6" data-reveal data-reveal-delay={String(i * 90)}>
-            <dt className="order-2 mt-2 text-sm font-medium text-body">{s.label}</dt>
-            <dd className="text-6xl font-extralight tracking-tight text-navy lg:text-7xl">
+            <dt className="order-2 mt-2 text-sm font-medium text-white/70">{s.label}</dt>
+            <dd className="text-6xl font-extralight tracking-tight text-white lg:text-7xl">
               <Counter value={s.value} suffix={s.suffix} />
             </dd>
           </div>
         ))}
         <div className="flex flex-col px-2 py-5 text-center lg:px-6" data-reveal data-reveal-delay="270">
-          <dt className="order-2 mt-2 text-sm font-medium text-body">Programs delivered in both regions</dt>
-          <dd className="whitespace-nowrap font-serif text-[2.6rem] font-semibold italic leading-[1.4] text-gold-deep sm:text-5xl lg:text-[3.3rem] lg:leading-[1.32]">
+          <dt className="order-2 mt-2 text-sm font-medium text-white/70">Programs delivered in both regions</dt>
+          <dd className="whitespace-nowrap font-serif text-[2.6rem] font-semibold italic leading-[1.4] text-gold sm:text-5xl lg:text-[3.3rem] lg:leading-[1.32]">
             US &amp; Africa
           </dd>
         </div>

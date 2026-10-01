@@ -7,7 +7,6 @@ import { BookingBand, CheckList } from "@/components/services/Blocks";
 import { consultingEngagements } from "@/data/consulting";
 import { coachingStreams } from "@/data/coaching";
 import { links } from "@/lib/site";
-import keynoteStage from "../../../public/images/dr-laide-keynote-stage.jpg";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -145,8 +144,6 @@ export default function ServicesPage() {
           </>
         }
         intro="Accexx Insight helps leaders, entrepreneurs, professionals, and organizations turn uncertainty into clarity, strategy, action, and measurable progress."
-        image={keynoteStage}
-        imageAlt="Dr. Laide R. Alexander speaking on stage"
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>

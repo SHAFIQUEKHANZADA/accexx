@@ -73,3 +73,6 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] **Shipping & returns:** her current shop shows "Complimentary shipping on every order" and "30-day returns" (likely template defaults). Her email says shipping cost should be included at checkout. Which is right?
 - [ ] **Stock levels:** her shop shows "Only 7 left in Forest Green". Not shown on ours until we have real stock numbers.
 - [ ] **The Unfinished Leader description** (only Why Move My Cheese? has one so far).
+
+- [ ] "I prefer we use full pages": full-width sections, or separate pages instead of one long home page? (CLIENT_UPDATES #11)
+- [ ] Keep the headshot in "Meet Dr. A" on the home page? (CLIENT_UPDATES #11)
