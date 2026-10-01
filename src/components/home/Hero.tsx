@@ -23,7 +23,7 @@ export function Hero() {
           </p>
 
           <h1 className="mt-5 font-serif text-[2.8rem] font-normal leading-[1.03] tracking-[-0.01em] text-white sm:text-6xl lg:text-[5.2rem]">
-            <span className="sr-only">From Access to Accexx — Unlock Your Breakthrough</span>
+            <span className="sr-only">From Access to Accexx. Unlock Your Breakthrough.</span>
             <span aria-hidden className="block animate-fade-up" style={delay(120)}>
               From Access to{" "}
               {/* "Access" becomes "Accexx": the door becomes the key. Final state is the SSR/no-motion state. */}
@@ -34,7 +34,7 @@ export function Hero() {
               </span>
             </span>
             <span aria-hidden className="block animate-fade-up" style={delay(220)}>
-              — Unlock Your Breakthrough
+              Unlock Your Breakthrough
             </span>
           </h1>
 

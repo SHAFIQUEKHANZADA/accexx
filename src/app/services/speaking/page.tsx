@@ -11,9 +11,9 @@ import conferencePanel from "../../../../public/images/events/wmmc-2026-01.jpg";
 import bookLaunch from "../../../../public/images/events/book-launch-01.jpg";
 
 export const metadata: Metadata = {
-  title: "Speaking — Book Dr. A",
+  title: "Speaking: Book Dr. A",
   description:
-    "Keynotes, panels, and talks by Dr. Laide R. Alexander that don't just inform — they shift how people think about leadership, culture, and human behavior.",
+    "Keynotes, panels, and talks by Dr. Laide R. Alexander that don't just inform. They shift how people think about leadership, culture, and human behavior.",
   alternates: { canonical: "/services/speaking" },
 };
 
@@ -42,7 +42,7 @@ export default function SpeakingPage() {
             Talks that <em className="text-gold">shift</em> how people think.
           </>
         }
-        intro="Keynotes, panels, and talks that don't just inform — they shift how people think about leadership, culture, and human behavior."
+        intro="Keynotes, panels, and talks that don't just inform. They shift how people think about leadership, culture, and human behavior."
         image={speakingPhoto}
         imageAlt="Dr. Laide R. Alexander speaking to an audience"
       >

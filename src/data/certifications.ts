@@ -18,7 +18,7 @@ export const showCeus = true; // Recommended CEUs are a calculated estimate, not
 
 /** Facilitator text, identical in all 10 source overviews. */
 const FACILITATOR =
-  "Dr. Laide R. Alexander — Forbes Coaches Council member, creator of the Human Operating Code framework, and author of the Amazon best-seller The Unfinished Leader. Alternatively, a professional executive assigned by Accexx Insight who meets this certification's stated facilitator qualifications.";
+  "Dr. Laide R. Alexander, Forbes Coaches Council member, creator of the Human Operating Code framework, and author of the Amazon best-seller The Unfinished Leader. Alternatively, a professional executive assigned by Accexx Insight who meets this certification's stated facilitator qualifications.";
 
 const FORMAT = "Live Virtual or In-Person";
 
@@ -28,7 +28,7 @@ export const certifications: Certification[] = [
     slug: "hoc-lp",
     name: "Certified Human Operating Code™ Leadership Practitioner",
     tagline:
-      "Learn to diagnose and shift team behavior using the Human Operating Code framework — from everyday interventions to leading through conflict and change.",
+      "Learn to diagnose and shift team behavior using the Human Operating Code framework, from everyday interventions to leading through conflict and change.",
     format: FORMAT,
     contactHours: 42,
     ceus: 4.2,
@@ -92,7 +92,7 @@ export const certifications: Certification[] = [
     ceus: 2.4,
     facilitator: FACILITATOR,
     outcome:
-      "Graduates can build and lead a Culture Blueprint — mapping what's actually rewarded, redesigning misaligned systems, and running a real culture-change experiment.",
+      "Graduates can build and lead a Culture Blueprint: mapping what's actually rewarded, redesigning misaligned systems, and running a real culture-change experiment.",
     modules: [
       {
         number: 1,
@@ -127,13 +127,13 @@ export const certifications: Certification[] = [
     slug: "lcp",
     name: "Certified Leader-as-Coach Practitioner",
     tagline:
-      "Build a coaching-style leadership practice — powerful questioning, and coaching through performance conversations, change, and resistance.",
+      "Build a coaching-style leadership practice: powerful questioning, and coaching through performance conversations, change, and resistance.",
     format: FORMAT,
     contactHours: 30,
     ceus: 3,
     facilitator: FACILITATOR,
     outcome:
-      "Graduates can shift fluidly between coaching, directing, and supporting — applying real coaching skills to performance conversations and change situations, demonstrated in an observed coaching session.",
+      "Graduates can shift fluidly between coaching, directing, and supporting, applying real coaching skills to performance conversations and change situations, demonstrated in an observed coaching session.",
     modules: [
       {
         number: 1,
@@ -178,7 +178,7 @@ export const certifications: Certification[] = [
     slug: "hchr-d",
     name: "Certified Human-Centered HR & People Systems Designer",
     tagline:
-      "Audit and redesign HR systems — performance, feedback, onboarding — around genuine human-centered design principles.",
+      "Audit and redesign HR systems (performance, feedback, onboarding) around genuine human-centered design principles.",
     format: FORMAT,
     contactHours: 36,
     ceus: 3.6,
@@ -233,13 +233,13 @@ export const certifications: Certification[] = [
     slug: "el-hoc",
     name: "Certified Education Leadership & Human Operating Code™ Specialist",
     tagline:
-      "Apply the Human Operating Code framework to school leadership — classroom climate, staff culture, discipline systems, and governance.",
+      "Apply the Human Operating Code framework to school leadership: classroom climate, staff culture, discipline systems, and governance.",
     format: FORMAT,
     contactHours: 33,
     ceus: 3.3,
     facilitator: FACILITATOR,
     outcome:
-      "Graduates can lead a full School Culture Project — diagnosing beliefs across teachers, students, and parents, redesigning discipline and staff-culture routines, and presenting evidence of real impact.",
+      "Graduates can lead a full School Culture Project: diagnosing beliefs across teachers, students, and parents, redesigning discipline and staff-culture routines, and presenting evidence of real impact.",
     modules: [
       {
         number: 1,
@@ -311,14 +311,14 @@ export const certifications: Certification[] = [
         title: "Diagnosing a Team's Operating System",
         hours: 7,
         summary:
-          "Learners apply structured diagnostics to identify the 2-3 highest-leverage issues affecting a real team — not every possible problem, but the handful that matter most.",
+          "Learners apply structured diagnostics to identify the 2-3 highest-leverage issues affecting a real team. Not every possible problem, but the handful that matter most.",
       },
       {
         number: 2,
         title: "Facilitating Agreement-Resetting Sessions",
         hours: 7,
         summary:
-          "Learners design and facilitate a session that resets a team's agreements and roles — including navigating real disagreement in the room, not avoiding it.",
+          "Learners design and facilitate a session that resets a team's agreements and roles, including navigating real disagreement in the room, not avoiding it.",
       },
       {
         number: 3,
@@ -362,7 +362,7 @@ export const certifications: Certification[] = [
         title: "Diagnosing Organizational Drivers of Burnout",
         hours: 7,
         summary:
-          "Learners use a structured diagnostic to assess three real organizational drivers of burnout — workload, control, and fairness — and identify the highest-risk areas on a real team.",
+          "Learners use a structured diagnostic to assess three real organizational drivers of burnout (workload, control, and fairness) and identify the highest-risk areas on a real team.",
       },
       {
         number: 3,
@@ -413,7 +413,7 @@ export const certifications: Certification[] = [
         title: "Recognizing Ethical Drift",
         hours: 5,
         summary:
-          "Learners identify how small compromises accumulate into ethical drift over time, and build real personal safeguards against it — before it becomes a pattern too large to easily reverse.",
+          "Learners identify how small compromises accumulate into ethical drift over time, and build real personal safeguards against it, before it becomes a pattern too large to easily reverse.",
       },
       {
         number: 4,
@@ -443,7 +443,7 @@ export const certifications: Certification[] = [
         title: "Mapping the Human Impact of Change",
         hours: 6,
         summary:
-          "Learners build a Change Impact Map identifying who is genuinely affected by a real change initiative, and how — the foundation for everything else in this certification.",
+          "Learners build a Change Impact Map identifying who is genuinely affected by a real change initiative, and how. This is the foundation for everything else in this certification.",
       },
       {
         number: 2,
@@ -457,7 +457,7 @@ export const certifications: Certification[] = [
         title: "Designing Change Journeys with HOC",
         hours: 5,
         summary:
-          "Learners design a full change journey that accounts for beliefs and emotions, not just tasks and timelines, building on the impact map and resistance analysis from Modules 1–2.",
+          "Learners design a full change journey that accounts for beliefs and emotions, not just tasks and timelines, building on the impact map and resistance analysis from Modules 1-2.",
       },
       {
         number: 4,
@@ -488,7 +488,7 @@ export const certifications: Certification[] = [
     slug: "g-hoc-coach",
     name: "Certified Global Human Operating Code™ Coach",
     tagline:
-      "The advanced, selective-entry certification — integrating HOC into 1:1 and team coaching practice across cultural and organizational contexts.",
+      "The advanced, selective-entry certification, integrating HOC into 1:1 and team coaching practice across cultural and organizational contexts.",
     format: FORMAT,
     contactHours: 54,
     ceus: 5.4,
@@ -522,7 +522,7 @@ export const certifications: Certification[] = [
         title: "Designing HOC-Based Coaching Programs",
         hours: 12,
         summary:
-          "Learners design and propose a real, multi-session coaching program tailored to a real client's context, integrating the advanced skills from Modules 1–3 into a coherent program, not just a single session.",
+          "Learners design and propose a real, multi-session coaching program tailored to a real client's context, integrating the advanced skills from Modules 1-3 into a coherent program, not just a single session.",
       },
       {
         number: 5,

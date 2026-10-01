@@ -29,7 +29,7 @@ const services = [
     title: "Coaching",
     href: "/services/coaching",
     icon: Spark,
-    lead: "Coaching that goes deeper than goals. We work at the level of beliefs, stories, and habits — your Human Operating System.",
+    lead: "Coaching that goes deeper than goals. We work at the level of beliefs, stories, and habits: your Human Operating System.",
     body: "One-on-one transformation guided by Dr. A and supported by a network of executive consultants who understand the overcomer and creator journey.",
     meta: `${coachingStreams.length} streams · Executive & Leadership (1:1) · Group & Team`,
     cta: "Explore coaching",
@@ -38,7 +38,7 @@ const services = [
     title: "Speaking",
     href: "/services/speaking",
     icon: Mic,
-    lead: "Keynotes, panels, and talks that don't just inform — they shift how people think about leadership, culture, and human behavior.",
+    lead: "Keynotes, panels, and talks that don't just inform. They shift how people think about leadership, culture, and human behavior.",
     body: "Keynotes and workshops that inspire, equip, and activate audiences to move from surviving to thriving.",
     meta: "Keynotes · Panels · Workshops",
     cta: "Book Dr. A",
@@ -269,7 +269,7 @@ export default function ServicesPage() {
             Ready for your <em className="text-gold-light">breakthrough?</em>
           </>
         }
-        body="Tell us what you're operating today, where you're going, and where the complexity is getting in the way. We help you determine what needs to happen next — and how to make it happen."
+        body="Tell us what you're operating today, where you're going, and where the complexity is getting in the way. We help you determine what needs to happen next, and how to make it happen."
         secondary={{ href: "/contact", label: "Contact us" }}
       />
     </>

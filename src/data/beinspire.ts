@@ -193,7 +193,7 @@ export const beinspireWorkshops: BeinspireWorkshop[] = [
     // Package file titles this "The Last Piece (Series Capstone)"; glossary name used.
     name: "The Last Piece",
     description: "Integrate the full job search process into a practical roadmap with weekly actions and accountability.",
-    audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition — completing the full BEInspire series.",
+    audience: "Senior secondary and tertiary students, recent graduates, and career men and women seeking growth or transition, completing the full BEInspire series.",
     live: {
       contactHours: 3,
       delivery: "in-person or live-virtual",

@@ -25,7 +25,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       "Helps leaders make sense of fast-changing, ambiguous situations and steady their teams when things feel unclear.",
     audience: "Senior leaders, project leaders, school owners, NGO directors.",
     live: {
-      duration: "1–2 days workshop or 4–6 online sessions",
+      duration: "1-2 days workshop or 4-6 online sessions",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -50,10 +50,10 @@ export const leadershipPrograms: LeadershipProgram[] = [
           title: "Basic Scenario Thinking",
           objectives: [
             "Learn a simple scenario-planning tool",
-            "Build 2–3 plausible scenarios for a real challenge",
+            "Build 2-3 plausible scenarios for a real challenge",
             "Identify early-warning signals to watch for",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M3",
@@ -144,7 +144,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Plan how to communicate the decision to stakeholders",
             "Identify a review point to check outcomes",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
       ],
     },
@@ -168,7 +168,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       "Prepares leaders to conduct tough conversations about performance, behavior, ethics, conflict, and change with greater clarity, empathy, and courage.",
     audience: "All people managers, principals, HRBPs, team leaders.",
     live: {
-      duration: "1–2 days or 3–4 virtual sessions with practice labs",
+      duration: "1-2 days or 3-4 virtual sessions with practice labs",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -266,7 +266,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Design accountability practices that don't feel like surveillance",
             "Plan engagement practices for distributed team members",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M3",
@@ -299,7 +299,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       "Equips leaders to recognize conscious and unconscious bias, practice inclusive behaviors, and identify small system changes that improve fairness, belonging, and voice.",
     audience: "Senior and middle leaders, HR/People teams, school leadership teams, boards.",
     live: {
-      duration: "1–2 days or 4–5 virtual sessions",
+      duration: "1-2 days or 4-5 virtual sessions",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -326,14 +326,14 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Practice inviting and valuing diverse voices in a meeting",
             "Recognize and interrupt exclusionary patterns",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M3",
           title: "Designing Small System Changes for Fairness & Belonging",
           objectives: [
             "Audit a real process (hiring, meetings, assignments) for bias risk",
-            "Identify 2–3 small, practical changes",
+            "Identify 2-3 small, practical changes",
             "Plan how to test and introduce a change",
           ],
           duration: "90 min",
@@ -356,7 +356,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-06",
     name: "Leading High-Trust, High-Accountability Teams",
     description:
-      "Strengthens trust and accountability by clarifying agreements, roles, and expectations — resetting the team's operating system where needed.",
+      "Strengthens trust and accountability by clarifying agreements, roles, and expectations, resetting the team's operating system where needed.",
     audience: "Team leaders, heads of department, project leads, school management teams.",
     live: {
       duration: "2 days or 5 virtual sessions plus team assignments",
@@ -427,7 +427,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-07",
     name: "Emotionally Intelligent Leadership in Practice",
     description:
-      "Applies emotional intelligence skills to real leadership situations — conflict, change, feedback, crisis, motivation — building trust and performance.",
+      "Applies emotional intelligence skills to real leadership situations (conflict, change, feedback, crisis, motivation), building trust and performance.",
     audience: "Emerging and mid-level leaders, new principals, high-potential talent.",
     live: {
       duration: "2 days or 6 short virtual sessions",
@@ -447,7 +447,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Practice staying regulated during change-related tension",
             "Recognize personal patterns under pressure",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M2",
@@ -457,7 +457,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Practice leading with composure during a crisis moment",
             "Recognize the emotional needs of the team in a crisis",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M3",
@@ -501,7 +501,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       "Teaches leaders to lead change sideways and upwards by mapping stakeholders, building coalitions, and using influence and storytelling.",
     audience: "Project leads, internal change agents, senior teachers, HRBPs, NGO coordinators.",
     live: {
-      duration: "1–2 days or 4 virtual sessions",
+      duration: "1-2 days or 4 virtual sessions",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -537,7 +537,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Craft a short story that makes the case for change",
             "Practice delivering the story",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M4",
@@ -568,10 +568,10 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-09",
     name: "Purpose-Driven & Values-Anchored Leadership",
     description:
-      "Helps leaders clarify personal and organizational purpose and values — and use them to guide decisions, priorities, and behavior under pressure.",
+      "Helps leaders clarify personal and organizational purpose and values, and use them to guide decisions, priorities, and behavior under pressure.",
     audience: "Senior leaders, school owners, NGO and faith-based leaders, social impact founders.",
     live: {
-      duration: "1.5–2 days or 4–5 virtual sessions",
+      duration: "1.5-2 days or 4-5 virtual sessions",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -588,7 +588,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Compare personal values against organizational values",
             "Identify areas of alignment and tension",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M2",
@@ -628,7 +628,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-10",
     name: "Time, Energy & Focus Management for Leaders",
     description:
-      "Designs more sustainable ways of working — managing energy, attention, and boundaries to reduce burnout risk while maintaining performance.",
+      "Designs more sustainable ways of working: managing energy, attention, and boundaries to reduce burnout risk while maintaining performance.",
     audience: "All leaders and managers, especially in high-demand roles.",
     live: {
       duration: "1 day or 3 virtual sessions",
@@ -646,7 +646,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
           objectives: [
             "Distinguish time management from energy management",
             "Identify personal energy patterns across a typical day/week",
-            "Set 1–2 boundaries to protect energy",
+            "Set 1-2 boundaries to protect energy",
           ],
           duration: "90 min",
         },
@@ -688,10 +688,10 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-11",
     name: "Cross-Cultural & Global Leadership",
     description:
-      "Builds understanding of key cultural lenses and communication styles — anticipating friction and building trust across differences.",
+      "Builds understanding of key cultural lenses and communication styles, anticipating friction and building trust across differences.",
     audience: "Leaders in regional/global roles, international school leaders, NGO/program leaders working across countries.",
     live: {
-      duration: "2 days or 5–6 virtual sessions",
+      duration: "2 days or 5-6 virtual sessions",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -729,7 +729,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Adapt communication style to different audiences",
             "Recognize and repair cross-cultural missteps",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M4",
@@ -760,10 +760,10 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-12",
     name: "Leadership Communication & Storytelling",
     description:
-      "Teaches leaders to craft clear, compelling messages and narratives that align with the Human Operating Code — so people understand, care, and act.",
+      "Teaches leaders to craft clear, compelling messages and narratives that align with the Human Operating Code, so people understand, care, and act.",
     audience: "All leaders who present, brief, or lead change; internal champions and spokespersons.",
     live: {
-      duration: "1–2 days or 4 virtual sessions plus practice",
+      duration: "1-2 days or 4 virtual sessions plus practice",
       format:
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
@@ -790,7 +790,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Practice framing a message to resonate emotionally, not just logically",
             "Test a message against the HOC framework",
           ],
-          duration: "90–120 min",
+          duration: "90-120 min",
         },
         {
           id: "M3",
@@ -810,7 +810,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
             "Deliver a short story or message for peer feedback",
             "Build a personal communication practice plan",
           ],
-          duration: "90–120 min (practice session)",
+          duration: "90-120 min (practice session)",
         },
       ],
     },

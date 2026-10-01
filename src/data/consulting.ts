@@ -42,19 +42,19 @@ export const showConsultingFees = false;
 export const consultingDayRate = "$2,800/day";
 
 export const consultingFraming =
-  "Consulting is a client engagement, not a course — there are no fixed modules, contact hours, or CEUs. Every engagement is scoped to your organization.";
+  "Consulting is a client engagement, not a course. There are no fixed modules, contact hours, or CEUs. Every engagement is scoped to your organization.";
 
 export const notGradedNote =
-  "This engagement is not graded — success is defined by client adoption of the findings, not an external standard.";
+  "This engagement is not graded. Success is defined by client adoption of the findings, not an external standard.";
 
 export const notGradedIntro =
-  "None of these engagements are graded. Progress is reviewed against client-defined outcomes — validated findings, adopted roadmaps, implemented changes — never an external pass/fail standard.";
+  "None of these engagements are graded. Progress is reviewed against client-defined outcomes (validated findings, adopted roadmaps, implemented changes), never an external pass/fail standard.";
 
 export const consultingGroups: ConsultingGroup[] = [
   {
     "id": "hr",
     "title": "HR & People Systems",
-    "intro": "Engagements that redesign the people-facing systems — hiring, onboarding, performance, recognition — that shape everyday culture.",
+    "intro": "Engagements that redesign the people-facing systems (hiring, onboarding, performance, recognition) that shape everyday culture.",
     "engagements": [
       {
         "code": "HR-01",
@@ -62,7 +62,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "HR Systems Audit & Redesign",
         "description": "Audits key people processes (hiring, onboarding, performance, recognition) for alignment with desired culture. Delivers a prioritized redesign roadmap.",
         "whoFor": "HR leaders, People & Culture teams, organizations in growth or transformation.",
-        "duration": "Project-based, scoped to organization size — typically 6–10 weeks for a mid-sized organization.",
+        "duration": "Project-based, scoped to organization size, typically 6-10 weeks for a mid-sized organization.",
         "objectives": [
           "Audit key people processes for cultural alignment",
           "Prioritize which processes need redesign first",
@@ -71,17 +71,17 @@ export const consultingGroups: ConsultingGroup[] = [
         "process": [
           {
             "phase": "Discovery & Diagnosis",
-            "timing": "Weeks 1–3",
+            "timing": "Weeks 1-3",
             "whatHappens": "Stakeholder interviews, process mapping, and review of existing hiring, onboarding, performance, and recognition systems against the organization's stated culture."
           },
           {
             "phase": "Design",
-            "timing": "Weeks 4–6",
+            "timing": "Weeks 4-6",
             "whatHappens": "Co-design of redesigned process elements with the client's HR team, prioritized by impact and feasibility."
           },
           {
             "phase": "Delivery & Handoff",
-            "timing": "Weeks 7–8+",
+            "timing": "Weeks 7-8+",
             "whatHappens": "Presentation of the prioritized redesign roadmap, brief training for the HR team on implementation, and a scheduled 60-day follow-up review."
           }
         ],
@@ -105,9 +105,9 @@ export const consultingGroups: ConsultingGroup[] = [
           "A 60-day check-in confirms real implementation progress"
         ],
         "pricing": {
-          "typicalDuration": "6–10 weeks",
-          "estimatedDays": "10–15 days",
-          "fee": "$28,000 – $42,000"
+          "typicalDuration": "6-10 weeks",
+          "estimatedDays": "10-15 days",
+          "fee": "$28,000 to $42,000"
         }
       },
       {
@@ -116,7 +116,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Performance Management Transformation",
         "description": "Shifts performance management from fear-based appraisal to growth-centered conversations. Redesigns the system and trains managers to use it.",
         "whoFor": "Organizations seeking to overhaul performance culture.",
-        "duration": "Project-based, typically 8–16 weeks.",
+        "duration": "Project-based, typically 8-16 weeks.",
         "objectives": [
           "Diagnose the current performance-management approach for its fear/growth balance",
           "Redesign the system toward growth-centered conversations",
@@ -125,22 +125,22 @@ export const consultingGroups: ConsultingGroup[] = [
         "process": [
           {
             "phase": "Discovery & Diagnosis",
-            "timing": "Weeks 1–3",
+            "timing": "Weeks 1-3",
             "whatHappens": "Interviews or surveys on the current appraisal experience, and review of the existing system's structure and documentation."
           },
           {
             "phase": "Design & Pilot",
-            "timing": "Weeks 4–8",
+            "timing": "Weeks 4-8",
             "whatHappens": "Co-design of the redesigned performance-conversation structure and documentation, piloted with a small group of managers."
           },
           {
             "phase": "Manager Training & Rollout",
-            "timing": "Weeks 9–14",
+            "timing": "Weeks 9-14",
             "whatHappens": "Training managers on the redesigned approach (drawing on the HOC-LP performance & feedback module), with support through the first full cycle."
           },
           {
             "phase": "Handoff & Review",
-            "timing": "Weeks 15–16",
+            "timing": "Weeks 15-16",
             "whatHappens": "Review of pilot-cycle results, final adjustments, and handoff to HR for ongoing ownership."
           }
         ],
@@ -163,16 +163,16 @@ export const consultingGroups: ConsultingGroup[] = [
           "Client's decision to continue the redesigned system after the pilot"
         ],
         "pricing": {
-          "typicalDuration": "8–16 weeks",
-          "estimatedDays": "15–24 days",
-          "fee": "$42,000 – $67,200"
+          "typicalDuration": "8-16 weeks",
+          "estimatedDays": "15-24 days",
+          "fee": "$42,000 to $67,200"
         }
       },
       {
         "code": "HR-03",
         "slug": "hr-03-from-hr-administrator-to-people-culture-leader",
         "name": "From HR Administrator to People & Culture Leader",
-        "description": "Equips HR teams to distinguish between traditional HR and strategic People & Culture roles — mapping how policies and practices affect beliefs, emotions, and behavior.",
+        "description": "Equips HR teams to distinguish between traditional HR and strategic People & Culture roles, mapping how policies and practices affect beliefs, emotions, and behavior.",
         "whoFor": "HR officers, HR generalists, HR managers, People & Culture teams.",
         "duration": "1 day (6 hours).",
         "objectives": [
@@ -193,7 +193,7 @@ export const consultingGroups: ConsultingGroup[] = [
           },
           {
             "phase": "Follow-Up Support",
-            "timing": "2–4 weeks after",
+            "timing": "2-4 weeks after",
             "whatHappens": "An optional 30-minute check-in call to discuss progress on each participant's committed shift."
           }
         ],
@@ -223,23 +223,23 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "HR-04",
         "slug": "hr-04-onboarding-as-operating-system-installation",
         "name": "Onboarding as Operating System Installation",
-        "description": "Designs onboarding experiences that clearly communicate \"how we think and behave here\" — building a 30–60–90 day journey that supports mindset and habit formation.",
+        "description": "Designs onboarding experiences that clearly communicate \"how we think and behave here\", building a 30-60-90 day journey that supports mindset and habit formation.",
         "whoFor": "HR/People & Culture teams, talent managers, line managers.",
         "duration": "1 day (6 hours) + design support.",
         "objectives": [
           "Reframe onboarding as culture installation, not just paperwork",
-          "Design a 30–60–90 day onboarding journey",
+          "Design a 30-60-90 day onboarding journey",
           "Identify specific culture-teaching moments to embed"
         ],
         "process": [
           {
             "phase": "Session Day",
             "timing": "6 hours",
-            "whatHappens": "Why Onboarding Is Culture Installation → Auditing Current Onboarding → Designing the 30–60–90 Journey → Finalizing & Assigning Owners."
+            "whatHappens": "Why Onboarding Is Culture Installation → Auditing Current Onboarding → Designing the 30-60-90 Journey → Finalizing & Assigning Owners."
           },
           {
             "phase": "Design Support",
-            "timing": "2–4 weeks after",
+            "timing": "2-4 weeks after",
             "whatHappens": "The consultant reviews draft onboarding materials and provides written feedback before rollout."
           }
         ],
@@ -269,7 +269,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "HR-05",
         "slug": "hr-05-recruitment-selection-for-culture-fit",
         "name": "Recruitment & Selection for Culture Fit",
-        "description": "Defines behavioral and cultural \"must-haves\" for key roles. Designs interview questions that surface beliefs, narratives, and default behaviors — reducing costly mis-hires.",
+        "description": "Defines behavioral and cultural \"must-haves\" for key roles. Designs interview questions that surface beliefs, narratives, and default behaviors, reducing costly mis-hires.",
         "whoFor": "HR recruiters, HR generalists, hiring managers, People & Culture teams.",
         "duration": "1 day (6 hours).",
         "objectives": [
@@ -309,7 +309,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "HR-06",
         "slug": "hr-06-employee-relations-with-emotional-intelligence",
         "name": "Employee Relations with Emotional Intelligence",
-        "description": "Equips HRBPs and managers to use EQ skills in employee relations — listening, empathy, reframing — handling difficult conversations with professionalism and humanity.",
+        "description": "Equips HRBPs and managers to use EQ skills in employee relations (listening, empathy, reframing), handling difficult conversations with professionalism and humanity.",
         "whoFor": "HR business partners, employee relations specialists, HR managers, line managers.",
         "duration": "1 day (6 hours).",
         "objectives": [
@@ -350,7 +350,7 @@ export const consultingGroups: ConsultingGroup[] = [
   {
     "id": "culture",
     "title": "Organizational Culture & Strategy",
-    "intro": "Engagements that work at the executive and organizational level — diagnosing culture, aligning leadership, and leading change.",
+    "intro": "Engagements that work at the executive and organizational level: diagnosing culture, aligning leadership, and leading change.",
     "engagements": [
       {
         "code": "CS-01",
@@ -358,9 +358,9 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Culture Diagnostic & Blueprint",
         "description": "A structured process to surface \"how things really work around here,\" define the culture you need, and build a practical implementation roadmap.",
         "whoFor": "CEOs, founders, executive teams, boards.",
-        "duration": "1–2 days (6–12 hours): diagnostic plus blueprint design.",
+        "duration": "1-2 days (6-12 hours): diagnostic plus blueprint design.",
         "objectives": [
-          "Surface how things really work — the organization's lived culture",
+          "Surface how things really work: the organization's lived culture",
           "Define the target culture as a concrete Culture Blueprint",
           "Build a practical implementation roadmap"
         ],
@@ -394,7 +394,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "A 90-day review is scheduled to check progress"
         ],
         "pricing": {
-          "typicalDuration": "1–2 days",
+          "typicalDuration": "1-2 days",
           "estimatedDays": "2 days",
           "fee": "$5,600"
         }
@@ -405,7 +405,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Leadership Alignment & Strategy Retreats",
         "description": "Facilitated working sessions for executive teams to align on vision, priorities, and the leadership behaviors that will make or break execution.",
         "whoFor": "Executive teams, senior leadership, boards.",
-        "duration": "1–2 days (retreat style).",
+        "duration": "1-2 days (retreat style).",
         "objectives": [
           "Align the executive team on vision and priorities",
           "Identify the leadership behaviors that will make or break execution",
@@ -414,17 +414,17 @@ export const consultingGroups: ConsultingGroup[] = [
         "process": [
           {
             "phase": "Pre-Retreat Prep",
-            "timing": "1–2 weeks before",
+            "timing": "1-2 weeks before",
             "whatHappens": "Stakeholder interviews and pre-read materials sent to participants ahead of the retreat."
           },
           {
             "phase": "Retreat Day(s)",
-            "timing": "1–2 days",
+            "timing": "1-2 days",
             "whatHappens": "Facilitated vision and priority-alignment sessions, followed by a leadership behavior-commitment workshop."
           },
           {
             "phase": "Post-Retreat Follow-Up",
-            "timing": "2–4 weeks after",
+            "timing": "2-4 weeks after",
             "whatHappens": "A written retreat summary is circulated, followed by a 30-day check-in on action-plan progress."
           }
         ],
@@ -445,7 +445,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "A 30-day follow-up on action-plan progress"
         ],
         "pricing": {
-          "typicalDuration": "1–2 days + prep",
+          "typicalDuration": "1-2 days + prep",
           "estimatedDays": "3 days",
           "fee": "$8,400"
         }
@@ -456,7 +456,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Designing and Shifting Organizational Culture",
         "description": "Diagnoses current culture using behavior and \"unspoken rules.\" Defines target culture in specific behaviors. Identifies HR levers (recruitment, onboarding, performance, rewards) to shift culture.",
         "whoFor": "HR and People & Culture leaders, OD professionals, culture leads, senior leadership teams.",
-        "duration": "1–2 days (6–12 hours).",
+        "duration": "1-2 days (6-12 hours).",
         "objectives": [
           "Diagnose current culture through behavior and unspoken rules",
           "Define the target culture in specific, observable behaviors",
@@ -471,7 +471,7 @@ export const consultingGroups: ConsultingGroup[] = [
           {
             "phase": "Design",
             "timing": "Day 2",
-            "whatHappens": "Definition of target behaviors and identification of HR levers — recruitment, onboarding, performance, rewards — to shift culture toward them."
+            "whatHappens": "Definition of target behaviors and identification of HR levers (recruitment, onboarding, performance, rewards) to shift culture toward them."
           }
         ],
         "tools": [
@@ -491,7 +491,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "HR-lever actions are assigned to specific owners"
         ],
         "pricing": {
-          "typicalDuration": "1–2 days",
+          "typicalDuration": "1-2 days",
           "estimatedDays": "2 days",
           "fee": "$5,600"
         }
@@ -540,7 +540,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "CS-05",
         "slug": "cs-05-change-leadership-support",
         "name": "Change Leadership Support",
-        "description": "Partners with leaders navigating restructuring, growth, or crisis — managing the human side of change: resistance, communication, and adoption.",
+        "description": "Partners with leaders navigating restructuring, growth, or crisis, managing the human side of change: resistance, communication, and adoption.",
         "whoFor": "Organizations in transition.",
         "duration": "Project-based, scoped to the change initiative.",
         "objectives": [
@@ -551,17 +551,17 @@ export const consultingGroups: ConsultingGroup[] = [
         "process": [
           {
             "phase": "Discovery",
-            "timing": "Weeks 1–2",
+            "timing": "Weeks 1-2",
             "whatHappens": "Stakeholder mapping and an assessment of likely resistance patterns for the specific change."
           },
           {
             "phase": "Design",
-            "timing": "Weeks 3–4",
+            "timing": "Weeks 3-4",
             "whatHappens": "Change journey design and a communication plan tailored to the affected groups."
           },
           {
             "phase": "Support Through Launch",
-            "timing": "Weeks 5–X (scoped to the initiative)",
+            "timing": "Weeks 5-X (scoped to the initiative)",
             "whatHappens": "Coaching leaders through the launch and troubleshooting resistance as it arises in real time."
           },
           {
@@ -588,8 +588,8 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "pricing": {
           "typicalDuration": "Project-based",
-          "estimatedDays": "12–18 days",
-          "fee": "$33,600 – $50,400"
+          "estimatedDays": "12-18 days",
+          "fee": "$33,600 to $50,400"
         }
       }
     ]
@@ -597,19 +597,19 @@ export const consultingGroups: ConsultingGroup[] = [
   {
     "id": "education",
     "title": "Education Institutions",
-    "intro": "Engagements built specifically for K-12 and other education institutions — school brand, teaching quality, operations, and student experience.",
+    "intro": "Engagements built specifically for K-12 and other education institutions: school brand, teaching quality, operations, and student experience.",
     "engagements": [
       {
         "code": "EDU-01",
         "slug": "edu-01-school-brand-reality-audit",
         "name": "School Brand & Reality Audit",
-        "description": "A 360° diagnostic of how leadership, teaching, systems, and parent relationships shape the school's market position. Delivers an honest assessment and 3–5 priority actions.",
+        "description": "A 360° diagnostic of how leadership, teaching, systems, and parent relationships shape the school's market position. Delivers an honest assessment and 3-5 priority actions.",
         "whoFor": "Private and public K-12 schools.",
-        "duration": "3–4 hours (half-day) to multi-day, depending on scope.",
+        "duration": "3-4 hours (half-day) to multi-day, depending on scope.",
         "objectives": [
           "Assess how leadership, teaching quality, operations, and parent relationships actually shape the school's reputation",
           "Identify the gap between the school's stated brand and families' lived experience",
-          "Deliver 3–5 honest, prioritized actions the school can realistically act on"
+          "Deliver 3-5 honest, prioritized actions the school can realistically act on"
         ],
         "process": [
           {
@@ -624,8 +624,8 @@ export const consultingGroups: ConsultingGroup[] = [
           },
           {
             "phase": "Findings & Priorities",
-            "timing": "Within 1–2 weeks",
-            "whatHappens": "Delivery of the honest assessment and 3–5 prioritized actions, presented to school leadership."
+            "timing": "Within 1-2 weeks",
+            "whatHappens": "Delivery of the honest assessment and 3-5 prioritized actions, presented to school leadership."
           }
         ],
         "tools": [
@@ -635,7 +635,7 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "deliverables": [
           "Brand & reality audit report",
-          "3–5 prioritized action recommendations",
+          "3-5 prioritized action recommendations",
           "Leadership debrief session"
         ],
         "qualifications": [
@@ -649,15 +649,15 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "pricing": {
           "typicalDuration": "Half-day to multi-day, depending on scope",
-          "estimatedDays": "0.5–2 days",
-          "fee": "$1,400 – $5,600"
+          "estimatedDays": "0.5-2 days",
+          "fee": "$1,400 to $5,600"
         }
       },
       {
         "code": "EDU-02",
         "slug": "edu-02-90-day-school-improvement-action-lab",
         "name": "90-Day School Improvement Action Lab",
-        "description": "A structured facilitation process where the school team converts diagnostic insights into a focused, owned, measurable 90-day improvement plan — not a report that sits on a shelf.",
+        "description": "A structured facilitation process where the school team converts diagnostic insights into a focused, owned, measurable 90-day improvement plan, not a report that sits on a shelf.",
         "whoFor": "Private and public K-12 schools, vocational institutes, colleges/universities.",
         "duration": "1 day (6 hours) per lab.",
         "objectives": [
@@ -711,9 +711,9 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "EDU-03",
         "slug": "edu-03-non-negotiable-standards-for-teaching-discipline",
         "name": "Non-Negotiable Standards for Teaching & Discipline",
-        "description": "Defines clear, realistic non-negotiables for lesson preparation, punctuality, homework, classroom behavior, and parent communication — with simple checklists for monitoring.",
+        "description": "Defines clear, realistic non-negotiables for lesson preparation, punctuality, homework, classroom behavior, and parent communication, with simple checklists for monitoring.",
         "whoFor": "Private and public secondary schools.",
-        "duration": "3–4 hours (half-day).",
+        "duration": "3-4 hours (half-day).",
         "objectives": [
           "Define a short, realistic list of non-negotiable standards across teaching and discipline",
           "Build simple checklists leadership can actually use to monitor adherence",
@@ -755,7 +755,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "Leadership reports using the monitoring checklist within 30 days"
         ],
         "pricing": {
-          "typicalDuration": "3–4 hours (half-day)",
+          "typicalDuration": "3-4 hours (half-day)",
           "estimatedDays": "0.5 day",
           "fee": "$1,400"
         }
@@ -764,11 +764,11 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "EDU-04",
         "slug": "edu-04-practical-classroom-management",
         "name": "Practical Classroom Management",
-        "description": "Equips teachers with 4–6 concrete strategies for managing real classrooms — diverse backgrounds, device distractions, and fee-paying parent expectations.",
+        "description": "Equips teachers with 4-6 concrete strategies for managing real classrooms: diverse backgrounds, device distractions, and fee-paying parent expectations.",
         "whoFor": "Private and public secondary schools.",
         "duration": "1 day (6 hours).",
         "objectives": [
-          "Equip teachers with 4–6 concrete, immediately usable classroom management strategies",
+          "Equip teachers with 4-6 concrete, immediately usable classroom management strategies",
           "Address device distraction and diverse-classroom management specifically",
           "Practice strategies against realistic classroom scenarios"
         ],
@@ -818,7 +818,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "EDU-05",
         "slug": "edu-05-teaching-for-understanding-not-just-coverage",
         "name": "Teaching for Understanding, Not Just Coverage",
-        "description": "Teachers learn a simple lesson structure that keeps students engaged and focused on learning outcomes — plus leaders learn how to review lesson plans and give constructive feedback.",
+        "description": "Teachers learn a simple lesson structure that keeps students engaged and focused on learning outcomes, plus leaders learn how to review lesson plans and give constructive feedback.",
         "whoFor": "Private and public secondary schools.",
         "duration": "1 day (6 hours).",
         "objectives": [
@@ -873,7 +873,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Assessment, Feedback & Protecting Academic Reputation",
         "description": "Improves the quality of tests and exams, builds fast feedback practices for busy classrooms, and develops a simple system for tracking results and identifying struggling students early.",
         "whoFor": "Private and public secondary schools.",
-        "duration": "3–4 hours (half-day) or 1 day (6 hours).",
+        "duration": "3-4 hours (half-day) or 1 day (6 hours).",
         "objectives": [
           "Improve the quality and fairness of tests and exams",
           "Build fast, realistic feedback practices that work in busy classrooms",
@@ -917,8 +917,8 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "pricing": {
           "typicalDuration": "Half-day to 1 day",
-          "estimatedDays": "0.5–1 day",
-          "fee": "$1,400 – $2,800"
+          "estimatedDays": "0.5-1 day",
+          "fee": "$1,400 to $2,800"
         }
       },
       {
@@ -927,7 +927,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Parent Communication & Expectation Management",
         "description": "Clarifies what parents should and should not expect. Designs simple, professional communication routines that build trust instead of conflict.",
         "whoFor": "Private and public secondary schools.",
-        "duration": "3–4 hours (half-day).",
+        "duration": "3-4 hours (half-day).",
         "objectives": [
           "Clarify realistic parent expectations for communication, involvement, and responsiveness",
           "Design simple, professional communication routines for staff to follow consistently",
@@ -969,7 +969,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "A 90-day review shows a reduction in the specific friction points identified at the start"
         ],
         "pricing": {
-          "typicalDuration": "3–4 hours (half-day)",
+          "typicalDuration": "3-4 hours (half-day)",
           "estimatedDays": "0.5 day",
           "fee": "$1,400"
         }
@@ -978,9 +978,9 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "EDU-08",
         "slug": "edu-08-student-support-retention",
         "name": "Student Support & Retention",
-        "description": "Maps the reasons students disengage or transfer. Builds a basic student support flow — noticing, referring, supporting, and following up at-risk students.",
+        "description": "Maps the reasons students disengage or transfer. Builds a basic student support flow: noticing, referring, supporting, and following up at-risk students.",
         "whoFor": "Private and public secondary schools, vocational institutes, colleges.",
-        "duration": "3–4 hours (half-day).",
+        "duration": "3-4 hours (half-day).",
         "objectives": [
           "Map the real, specific reasons students disengage or leave in this institution",
           "Build a basic, workable flow for noticing, referring, supporting, and following up with at-risk students",
@@ -1022,7 +1022,7 @@ export const consultingGroups: ConsultingGroup[] = [
           "A semester review shows the flow was used for at least a meaningful number of real at-risk cases"
         ],
         "pricing": {
-          "typicalDuration": "3–4 hours (half-day)",
+          "typicalDuration": "3-4 hours (half-day)",
           "estimatedDays": "0.5 day",
           "fee": "$1,400"
         }
@@ -1031,12 +1031,12 @@ export const consultingGroups: ConsultingGroup[] = [
         "code": "EDU-09",
         "slug": "edu-09-operations-that-support-learning",
         "name": "Operations That Support Learning",
-        "description": "Maps key operational processes (timetables, homework, records, communication) that affect teaching and learning. Identifies 3–5 friction points and agrees improvements with clear owners.",
+        "description": "Maps key operational processes (timetables, homework, records, communication) that affect teaching and learning. Identifies 3-5 friction points and agrees improvements with clear owners.",
         "whoFor": "Private and public secondary schools.",
         "duration": "1 day (6 hours).",
         "objectives": [
           "Map key operational processes that directly affect teaching and learning",
-          "Identify 3–5 specific friction points causing the most disruption",
+          "Identify 3-5 specific friction points causing the most disruption",
           "Agree on improvements with clear, accountable owners"
         ],
         "process": [
@@ -1062,7 +1062,7 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "deliverables": [
           "Operational process map",
-          "3–5 prioritized friction-point improvements with owners",
+          "3-5 prioritized friction-point improvements with owners",
           "Facilitated full-day session"
         ],
         "qualifications": [
@@ -1086,7 +1086,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "name": "Curriculum-to-Market Alignment Review",
         "description": "Maps what you teach against what employers actually need. Identifies gaps between training content and workplace requirements. Builds a revision roadmap.",
         "whoFor": "Vocational/technical schools, colleges, and universities.",
-        "duration": "1–2 days (6–12 hours).",
+        "duration": "1-2 days (6-12 hours).",
         "objectives": [
           "Map current curriculum content against actual, current employer requirements",
           "Identify specific, prioritized gaps between training content and workplace needs",
@@ -1105,7 +1105,7 @@ export const consultingGroups: ConsultingGroup[] = [
           },
           {
             "phase": "Roadmap Design",
-            "timing": "Within 1–2 weeks",
+            "timing": "Within 1-2 weeks",
             "whatHappens": "Delivery of a prioritized, realistic curriculum revision roadmap."
           }
         ],
@@ -1128,18 +1128,18 @@ export const consultingGroups: ConsultingGroup[] = [
           "Employer stakeholders (where involved) confirm the revised direction addresses their stated needs"
         ],
         "pricing": {
-          "typicalDuration": "1–2 days (6–12 hours)",
-          "estimatedDays": "1–2 days",
-          "fee": "$2,800 – $5,600"
+          "typicalDuration": "1-2 days (6-12 hours)",
+          "estimatedDays": "1-2 days",
+          "fee": "$2,800 to $5,600"
         }
       },
       {
         "code": "EDU-11",
         "slug": "edu-11-accreditation-quality-assurance-readiness",
         "name": "Accreditation & Quality Assurance Readiness",
-        "description": "Prepares leadership and faculty for accreditation reviews — aligning data, processes, quality assurance practices, and evidence collection.",
+        "description": "Prepares leadership and faculty for accreditation reviews, aligning data, processes, quality assurance practices, and evidence collection.",
         "whoFor": "Colleges and universities.",
-        "duration": "3–4 hours (half-day) to multi-day, depending on scope.",
+        "duration": "3-4 hours (half-day) to multi-day, depending on scope.",
         "objectives": [
           "Assess current readiness against the relevant accreditation standard's evidence requirements",
           "Align data collection, processes, and quality assurance practices to what reviewers will actually look for",
@@ -1182,26 +1182,26 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "pricing": {
           "typicalDuration": "Half-day to multi-day, plus ongoing monitoring",
-          "estimatedDays": "0.5–2 days",
-          "fee": "$1,400 – $5,600 (+ ongoing, scoped separately)"
+          "estimatedDays": "0.5-2 days",
+          "fee": "$1,400 to $5,600 (+ ongoing, scoped separately)"
         }
       },
       {
         "code": "EDU-12",
         "slug": "edu-12-institutional-vision-strategy-graduate-outcomes",
         "name": "Institutional Vision, Strategy & Graduate Outcomes",
-        "description": "Facilitates senior leadership and faculty to clarify institutional identity, desired graduate profile, and strategic priorities for the next 12–24 months.",
+        "description": "Facilitates senior leadership and faculty to clarify institutional identity, desired graduate profile, and strategic priorities for the next 12-24 months.",
         "whoFor": "Colleges and universities.",
-        "duration": "3–4 hours (half-day) or 1 day (retreat style).",
+        "duration": "3-4 hours (half-day) or 1 day (retreat style).",
         "objectives": [
           "Clarify a shared institutional identity and desired graduate profile",
-          "Align senior leadership and faculty on strategic priorities for the next 12–24 months",
+          "Align senior leadership and faculty on strategic priorities for the next 12-24 months",
           "Translate the vision into a small number of concrete strategic priorities, not an unfocused wish list"
         ],
         "process": [
           {
             "phase": "Pre-Work",
-            "timing": "1–2 weeks before",
+            "timing": "1-2 weeks before",
             "whatHappens": "Short input-gathering from senior leadership and faculty representatives on current perceptions of identity and priorities."
           },
           {
@@ -1222,7 +1222,7 @@ export const consultingGroups: ConsultingGroup[] = [
         "deliverables": [
           "Facilitated retreat session",
           "Institutional identity and graduate profile statement",
-          "12–24 month strategic priorities summary"
+          "12-24 month strategic priorities summary"
         ],
         "qualifications": [
           "Experience facilitating senior academic leadership strategy sessions",
@@ -1230,13 +1230,13 @@ export const consultingGroups: ConsultingGroup[] = [
         ],
         "successMeasures": [
           "Senior leadership and faculty representatives both affirm the resulting statement as genuinely shared, not imposed",
-          "The strategic priorities are few enough (3–5) to be realistically pursued",
+          "The strategic priorities are few enough (3-5) to be realistically pursued",
           "The priorities are visibly referenced in institutional planning within the following year"
         ],
         "pricing": {
           "typicalDuration": "Half-day or 1-day retreat",
-          "estimatedDays": "0.5–1 day",
-          "fee": "$1,400 – $2,800"
+          "estimatedDays": "0.5-1 day",
+          "fee": "$1,400 to $2,800"
         }
       },
       {

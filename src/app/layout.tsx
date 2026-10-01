@@ -24,7 +24,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — From Access to Accexx`,
+    default: `${site.name} | From Access to Accexx`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: site.name,
     locale: "en_US",
-    title: `${site.name} — From Access to Accexx`,
+    title: `${site.name} | From Access to Accexx`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — From Access to Accexx`,
+    title: `${site.name} | From Access to Accexx`,
     description: site.description,
   },
 };

@@ -7,7 +7,7 @@ export const site = {
   tagline: "We more than find solutions. We ensure transformation.",
   description:
     "Accexx Insight helps leaders, entrepreneurs, professionals, and organizations turn uncertainty into clarity, strategy, action, and measurable progress.",
-  collective: "Dr. A + Executive Consultants — A Collective of Breakthrough.",
+  collective: "Dr. A + Executive Consultants: A Collective of Breakthrough.",
 };
 
 /**

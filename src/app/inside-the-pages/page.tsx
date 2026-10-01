@@ -10,7 +10,7 @@ import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 export const metadata: Metadata = {
   title: "Inside the Pages with Dr. A",
   description:
-    "Every Book. Different Perspective. Inside the Pages with Dr. A is where books become conversations — armchairs, a passage read aloud together, and space for people to say something true.",
+    "Every Book. Different Perspective. Inside the Pages with Dr. A is where books become conversations: armchairs, a passage read aloud together, and space for people to say something true.",
   alternates: { canonical: "/inside-the-pages" },
 };
 
@@ -117,7 +117,7 @@ export default function InsideThePagesPage() {
 
           <div className="mt-14 grid items-start gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-line bg-cream p-8 sm:p-10" data-reveal>
-              <h3 className="heading text-3xl">Other authors — the Open Floor</h3>
+              <h3 className="heading text-3xl">Other authors: the Open Floor</h3>
               <ul className="mt-6 space-y-4">
                 {insideThePagesPage.openFloor.map((item) => (
                   <li key={item.slice(0, 24)} className="flex gap-3 text-body">
@@ -128,7 +128,7 @@ export default function InsideThePagesPage() {
               </ul>
             </div>
             <div className="rounded-3xl border border-line bg-white p-8 shadow-sm sm:p-10" data-reveal data-reveal-delay="100">
-              <h3 className="heading text-3xl">Invited resources — the Resource Corner</h3>
+              <h3 className="heading text-3xl">Invited resources: the Resource Corner</h3>
               <dl className="mt-6 divide-y divide-line">
                 {insideThePagesPage.resources.map((r) => (
                   <div key={r.type} className="grid gap-1 py-4 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-6">

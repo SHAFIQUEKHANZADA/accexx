@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 // Default share image for every route (placeholder branding until the logo arrives).
-export const alt = "Accexx Insight — From Access to Accexx. Unlock your breakthrough.";
+export const alt = "Accexx Insight: From Access to Accexx. Unlock your breakthrough.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

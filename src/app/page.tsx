@@ -17,7 +17,7 @@ import forbesGraphic from "../../public/images/forbes-editors-choice.jpg";
 import insideThePagesSet from "../../public/images/inside-the-pages-set.jpg";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name} — From Access to Accexx. Unlock Your Breakthrough.` },
+  title: { absolute: `${site.name} | From Access to Accexx. Unlock Your Breakthrough.` },
   description:
     "Consulting, coaching, speaking and education from Dr. Laide R. Alexander and her team of executive consultants. We more than find solutions. We ensure transformation.",
   alternates: { canonical: "/" },
@@ -65,7 +65,7 @@ function Credibility() {
         <figure className="flex items-center gap-5">
           <Image
             src={forbesGraphic}
-            alt="Forbes Coaches Council Editor's Choice: The Greed In It — A Look At Modern Leadership, by Dr. Laide Alexander"
+            alt="Forbes Coaches Council Editor's Choice: The Greed In It: A Look At Modern Leadership, by Dr. Laide Alexander"
             sizes="80px"
             className="size-20 shrink-0 rounded-xl shadow-md"
           />
@@ -189,7 +189,7 @@ function Paths() {
                   <ul className="mb-6 mt-4 space-y-1.5 text-[0.92rem] text-ink">
                     {group.items.slice(0, 3).map((item) => (
                       <li key={item} className="flex gap-2.5">
-                        <span aria-hidden className="text-gold-deep">—</span>
+                        <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
                         {item}
                       </li>
                     ))}
@@ -258,7 +258,7 @@ function Offerings() {
             <OfferCard
               title="Coaching"
               icon={<Spark width={20} height={20} />}
-              body="Coaching that goes deeper than goals. We work at the level of beliefs, stories, and habits — your Human Operating System."
+              body="Coaching that goes deeper than goals. We work at the level of beliefs, stories, and habits: your Human Operating System."
               href="/services/coaching"
               cta="Learn More"
             />
@@ -268,7 +268,7 @@ function Offerings() {
             <OfferCard
               title="Speaking"
               icon={<Quote width={20} height={20} />}
-              body="Keynotes, panels, and talks that don't just inform — they shift how people think about leadership, culture, and human behavior."
+              body="Keynotes, panels, and talks that don't just inform. They shift how people think about leadership, culture, and human behavior."
               href="/services/speaking"
               cta="Book Dr. A"
             />
@@ -294,7 +294,7 @@ function Offerings() {
 const bseh = [
   { letter: "B", name: "Beliefs", line: "What you would have to believe for your story to be true." },
   { letter: "S", name: "Stories", line: "The narrative you tell yourself about why a situation is the way it is." },
-  { letter: "E", name: "Emotions", line: "What you actually feel — not what you think you should feel." },
+  { letter: "E", name: "Emotions", line: "What you actually feel, not what you think you should feel." },
   { letter: "H", name: "Habits", line: "The recurring behavior at the end of the chain." },
 ];
 
@@ -307,8 +307,8 @@ function Method() {
           <p className="eyebrow">Our method</p>
           <h2 className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">The Human Operating Code™</h2>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-body">
-            The proprietary framework underlying every Accexx Insight program, created by Dr. Laide R. Alexander. Its lens —
-            Beliefs, Stories, Emotions, Habits — explains what actually drives behavior, beneath the surface-level action.
+            The proprietary framework underlying every Accexx Insight program, created by Dr. Laide R. Alexander. Its lens
+            (Beliefs, Stories, Emotions, Habits) explains what actually drives behavior, beneath the surface-level action.
           </p>
 
           <dl className="mt-10 grid gap-x-10 gap-y-8 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">

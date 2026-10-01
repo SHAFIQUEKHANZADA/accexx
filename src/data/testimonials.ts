@@ -11,7 +11,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Dr. A didn't just consult with our leadership team — she activated us. Six months later, we're operating from a different altitude.",
+      "Dr. A didn't just consult with our leadership team. She activated us. Six months later, we're operating from a different altitude.",
     role: "Executive Director",
     organization: "Nonprofit, Atlanta",
     confirmed: false,
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Her keynote didn't inspire us for an hour — it reframed how our team thinks about breakthrough. Months later, they're still quoting her.",
+      "Her keynote didn't inspire us for an hour. It reframed how our team thinks about breakthrough. Months later, they're still quoting her.",
     role: "Head of People",
     organization: "Fortune 500",
     confirmed: false,

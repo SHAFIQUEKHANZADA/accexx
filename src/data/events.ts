@@ -12,10 +12,10 @@ export const insideThePages = {
   tagline: "Every Book. Different Perspective.",
   lede: "Where books become conversations.",
   summary:
-    "What if the point wasn't to sell a book at a table, but to sit in a room together and let a book become a conversation? Not a lecture. Not a sermon. Not a book club with an assigned reading schedule. Something closer to a living room — armchairs, real light, a passage read aloud together, and space for people to say something true.",
+    "What if the point wasn't to sell a book at a table, but to sit in a room together and let a book become a conversation? Not a lecture. Not a sermon. Not a book club with an assigned reading schedule. Something closer to a living room: armchairs, real light, a passage read aloud together, and space for people to say something true.",
   sequence: [
-    { title: "Arrival", body: "Music plays — warm, ambient, conversational volume — as guests find seats and mingle." },
-    { title: "The Bell", body: "The bell rings. This is the cue, not an announcement — the room quiets and turns toward the page." },
+    { title: "Arrival", body: "Music plays (warm, ambient, conversational volume) as guests find seats and mingle." },
+    { title: "The Bell", body: "The bell rings. This is the cue, not an announcement. The room quiets and turns toward the page." },
     { title: "Reading Together", body: "The passage is read aloud, or an audio excerpt plays, while the room follows along in genuine quiet." },
     { title: "Return to Warmth", body: "Music returns at the close, alongside light finger food and drinks." },
   ],
@@ -78,18 +78,18 @@ export const bookLaunch = {
  *  sections (host pool, facilitator playbook, Phase 1 roadmap) are deliberately left out. */
 export const insideThePagesPage = {
   story: [
-    "Two books written. A regular book signing was the obvious next step — the thing every author is told to do. But a table, a stack of books, a line of people, a signature, a polite thank you — it's forgettable. It doesn't hold a conversation. It doesn't let a room actually meet the book, or meet the author.",
-    "Inside the Pages with Dr. A started from a different question: what if the point wasn't to sell a book at a table, but to sit in a room together and let a book become a conversation? Not a lecture. Not a sermon. Not a book club with an assigned reading schedule. Something closer to a living room — armchairs, real light, a passage read aloud together, and space for people to say something true.",
-    "With six more manuscripts still ahead, this isn't a one-time event format — it's meant to be the ongoing way new books meet their first real audience, and eventually, a way other authors get the same thing.",
+    "Two books written. A regular book signing was the obvious next step, the thing every author is told to do. But a table, a stack of books, a line of people, a signature, a polite thank you. It's forgettable. It doesn't hold a conversation. It doesn't let a room actually meet the book, or meet the author.",
+    "Inside the Pages with Dr. A started from a different question: what if the point wasn't to sell a book at a table, but to sit in a room together and let a book become a conversation? Not a lecture. Not a sermon. Not a book club with an assigned reading schedule. Something closer to a living room: armchairs, real light, a passage read aloud together, and space for people to say something true.",
+    "With six more manuscripts still ahead, this isn't a one-time event format. It's meant to be the ongoing way new books meet their first real audience, and eventually, a way other authors get the same thing.",
   ],
   staging:
-    "The same staged set travels to every venue — a backyard, a church, an office lounge — so the room always signals \"this is Inside the Pages\" before anyone says a word.",
+    "The same staged set travels to every venue (a backyard, a church, an office lounge), so the room always signals \"this is Inside the Pages\" before anyone says a word.",
   stagingDetail:
-    "A recognizable, portable set — the same mustard backdrop and armchairs whether the room is a backyard, a fellowship hall, or an office lounge — so the brand travels with the experience, not a fixed venue. And a bell, not an announcement, to mark the moment the room goes quiet and turns toward the page.",
+    "A recognizable, portable set: the same mustard backdrop and armchairs whether the room is a backyard, a fellowship hall, or an office lounge. The brand travels with the experience, not a fixed venue. And a bell, not an announcement, to mark the moment the room goes quiet and turns toward the page.",
   openFloorIntro:
     "This is what keeps Inside the Pages from being only \"Dr. A's event.\" It turns each session into a genuine resource for anyone in the room who is writing, has written, or wants to write.",
   openFloor: [
-    "A short, structured window (2–3 minutes each, 2–4 authors per event) for other authors in the room — attendees, not just the featured panelist — to introduce their own book and where to find it.",
+    "A short, structured window (2-3 minutes each, 2-4 authors per event) for other authors in the room (attendees, not just the featured panelist) to introduce their own book and where to find it.",
     "Self-identify at check-in (\"Are you an author? Would you like 2 minutes on the Open Floor?\") so this stays organized rather than an unplanned free-for-all.",
     "An Open Floor author today can become a featured guest at a future event.",
   ],
@@ -100,6 +100,6 @@ export const insideThePagesPage = {
     { type: "Cover designers / formatters", offer: "The practical production side most first-time authors don't know they need" },
     { type: "Marketing / PR contacts / Technology", offer: "How a book actually finds readers after it's published" },
   ],
-  resourcesNote: "Resource types rotate from event to event, rather than trying to have all five at once — this keeps the Resource Corner focused.",
+  resourcesNote: "Resource types rotate from event to event, rather than trying to have all five at once. This keeps the Resource Corner focused.",
   closing: "More to come. Become a member of the Accexx Circle if you are interested in joining the conversation.",
 };

@@ -10,7 +10,7 @@ import logoLight from "../../../public/images/accexx-insight-logo-light.png";
  */
 export function Logo({ tone = "dark", className = "" }: { tone?: "dark" | "light"; className?: string }) {
   return (
-    <Link href="/" aria-label="Accexx Insight — home" className={`inline-flex shrink-0 items-center ${className}`}>
+    <Link href="/" aria-label="Accexx Insight home" className={`inline-flex shrink-0 items-center ${className}`}>
       <Image
         src={tone === "dark" ? logoDark : logoLight}
         alt="Accexx Insight"

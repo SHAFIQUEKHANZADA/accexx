@@ -20,7 +20,7 @@ export const whatWeDo = {
     "Track progress and turn intentions into measurable results",
   ],
   outro:
-    "Whether the challenge involves leadership, business growth, team performance, career direction, or organizational transformation, we help clients determine what needs to happen next—and how to make it happen.",
+    "Whether the challenge involves leadership, business growth, team performance, career direction, or organizational transformation, we help clients determine what needs to happen next, and how to make it happen.",
 };
 
 export type AudienceGroup = { name: string; summary: string; lead: string; items: string[] };

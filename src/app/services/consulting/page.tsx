@@ -155,7 +155,7 @@ export default function ConsultingPage() {
             <InquiryForm
               formType="consulting-proposal"
               topicOptions={[
-                "Not sure yet — help me choose",
+                "Not sure yet, help me choose",
                 ...consultingEngagements.map((e) => `${e.code} ${e.name}`),
               ]}
               cta="Request a proposal"

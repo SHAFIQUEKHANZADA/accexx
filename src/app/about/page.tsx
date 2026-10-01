@@ -152,7 +152,7 @@ export default function AboutPage() {
         <div className="container-site flex flex-col items-start gap-6 py-10 sm:flex-row sm:items-center sm:gap-8">
           <Image
             src={forbesGraphic}
-            alt="Forbes Coaches Council Editor's Choice: The Greed In It — A Look At Modern Leadership, by Dr. Laide Alexander"
+            alt="Forbes Coaches Council Editor's Choice: The Greed In It: A Look At Modern Leadership, by Dr. Laide Alexander"
             sizes="112px"
             className="size-24 shrink-0 rounded-2xl shadow-md sm:size-28"
           />
@@ -185,7 +185,7 @@ export default function AboutPage() {
             <ul className="mt-4 grid border-t border-line sm:grid-cols-2 sm:gap-x-10">
               {whatWeDo.items.map((item) => (
                 <li key={item} className="flex gap-3 border-b border-line py-4 text-[1rem] text-ink">
-                  <span aria-hidden className="text-gold-deep">—</span>
+                  <span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-gold" />
                   {item}
                 </li>
               ))}
@@ -276,7 +276,7 @@ export default function AboutPage() {
           </div>
 
           <h3 className="mt-16 text-sm font-bold uppercase tracking-[0.18em] text-navy">Executive Consultants</h3>
-          <p className="mt-2 max-w-2xl text-body">Dr. A + Executive Consultants — A Collective of Breakthrough.</p>
+          <p className="mt-2 max-w-2xl text-body">Dr. A + Executive Consultants: A Collective of Breakthrough.</p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {consultants.map((m, i) => (
               <div key={m.name} data-reveal data-reveal-delay={String(i * 80)}>

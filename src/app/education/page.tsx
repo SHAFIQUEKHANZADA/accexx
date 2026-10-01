@@ -34,7 +34,7 @@ const families = [
     title: "Leadership Development",
     count: leadershipPrograms.length,
     unit: "programs",
-    text: "Flexible, high-impact workshops targeting specific leadership skills — stand-alone or combinable with each other. Certificate of Participation.",
+    text: "Flexible, high-impact workshops targeting specific leadership skills. Stand-alone or combinable with each other. Certificate of Participation.",
   },
   {
     href: "/education/beinspire",

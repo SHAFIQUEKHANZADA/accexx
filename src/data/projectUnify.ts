@@ -23,9 +23,9 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "school-to-work-readiness",
     name: "Certificate in School to Work Readiness",
     description:
-      "Prepares final-year students and new graduates for the transition from school to the workplace — covering expectations, professional conduct, and practical job-search skills.",
+      "Prepares final-year students and new graduates for the transition from school to the workplace, covering expectations, professional conduct, and practical job-search skills.",
     audience: "Final-year students, interns, NYSC members, new graduates.",
-    prerequisites: "None — open to any final-year student, intern, or recent graduate preparing to enter the workforce.",
+    prerequisites: "None. Open to any final-year student, intern, or recent graduate preparing to enter the workforce.",
     recommendedCeus: 1,
     credential: "Certificate",
     modules: [
@@ -41,13 +41,13 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     description:
       "Equips new hires and early-career professionals with the professionalism, communication, and self-management skills to succeed from Day 1.",
     audience: "Interns, NYSC members, graduate trainees, staff in their first 3 years of work.",
-    prerequisites: "None — designed for anyone in their first three years of employment.",
+    prerequisites: "None. Designed for anyone in their first three years of employment.",
     recommendedCeus: 1,
     credential: "Certificate",
     modules: [
       { number: 1, title: "Professionalism From Day 1", hours: 3 },
       { number: 2, title: "Managing Expectations, Communication, and Feedback", hours: 4 },
-      { number: 3, title: "Building the Day 1–90 Plan", hours: 3 },
+      { number: 3, title: "Building the Day 1-90 Plan", hours: 3 },
     ],
     cohort: { contactHours: 10, inPerson: 3000, virtual: 2550, additionalParticipant: 240 },
   },
@@ -55,10 +55,10 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "career-navigation-mobility",
     name: "Certificate in Career Navigation & Mobility",
     description:
-      "Helps working professionals map their current skills, interests, and career options — then build a realistic career strategy and development plan.",
+      "Helps working professionals map their current skills, interests, and career options, then build a realistic career strategy and development plan.",
     audience: "Staff at all levels considering next steps; talent and pipeline groups.",
     prerequisites:
-      "None — open to any employee considering their next career step, whether advancement, lateral move, or change of field.",
+      "None. Open to any employee considering their next career step, whether advancement, lateral move, or change of field.",
     recommendedCeus: 1,
     credential: "Certificate",
     modules: [
@@ -88,7 +88,7 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "core-workforce-skills",
     name: "Certificate in Core Workforce Skills",
     description:
-      "Builds the essential skills every modern workplace demands — communication, teamwork, problem-solving, adaptability, and basic leadership.",
+      "Builds the essential skills every modern workplace demands: communication, teamwork, problem-solving, adaptability, and basic leadership.",
     audience: "General staff, support staff, junior to mid-level employees.",
     prerequisites: "None.",
     recommendedCeus: 1,
@@ -120,9 +120,9 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "accountability-culture",
     name: "Certificate in Accountability Culture",
     description:
-      "Helps teams move from blame to ownership — clarifying expectations, building follow-through, and creating a culture where people learn from mistakes without fear.",
+      "Helps teams move from blame to ownership, clarifying expectations, building follow-through, and creating a culture where people learn from mistakes without fear.",
     audience: "Managers, supervisors, whole teams working on culture.",
-    prerequisites: "None — most effective when delivered to an intact team together.",
+    prerequisites: "None. Most effective when delivered to an intact team together.",
     recommendedCeus: 0.8,
     credential: "Certificate",
     modules: [
@@ -136,7 +136,7 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "workplace-ethics-integrity",
     name: "Certificate in Workplace Ethics & Integrity",
     description:
-      "Equips staff to navigate common ethical dilemmas — gifts, shortcuts, conflicts of interest, speaking up — with clarity and organizational values as their guide.",
+      "Equips staff to navigate common ethical dilemmas (gifts, shortcuts, conflicts of interest, speaking up) with clarity and organizational values as their guide.",
     audience: "All staff; especially finance, procurement, frontline, and leadership.",
     prerequisites: "None.",
     recommendedCeus: 0.6,
@@ -185,7 +185,7 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "business-etiquette-professional-presence",
     name: "Certificate in Business Etiquette & Professional Presence",
     description:
-      "Builds practical business etiquette skills — appearance, communication, meetings, email, business dining, cross-cultural courtesy — that strengthen credibility and respect.",
+      "Builds practical business etiquette skills (appearance, communication, meetings, email, business dining, cross-cultural courtesy) that strengthen credibility and respect.",
     audience: "Emerging leaders, client-facing staff, executives, entrepreneurs.",
     prerequisites: "None.",
     recommendedCeus: 0.8,
@@ -217,7 +217,7 @@ export const projectUnifyCertificates: CatalogCourse[] = [
     slug: "service-excellence-for-schools",
     name: "Certificate in Service Excellence for Schools",
     description:
-      "Helps school staff see parent and student experience as part of the school's brand — and gives them practical tools for communication, complaints, and professional conduct.",
+      "Helps school staff see parent and student experience as part of the school's brand, and gives them practical tools for communication, complaints, and professional conduct.",
     audience: "School front-desk, admissions, administrators, senior teachers, leadership.",
     prerequisites: "None.",
     recommendedCeus: 0.9,

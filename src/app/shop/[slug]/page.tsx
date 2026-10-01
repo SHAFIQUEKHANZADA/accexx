@@ -127,7 +127,7 @@ export default async function ProductPage({ params }: Props) {
             {product.flag && <Row label="Note" value={product.flag} />}
             <Row
               label={product.giftCard ? "Delivery" : "Shipping & tax"}
-              value={product.giftCard ? "No shipping — delivered instantly by email" : "Calculated at checkout"}
+              value={product.giftCard ? "No shipping, delivered instantly by email" : "Calculated at checkout"}
             />
           </dl>
         </div>

@@ -153,7 +153,7 @@ export function ProductPurchase({ product }: { product: Product }) {
                 step="1"
                 value={customAmount}
                 onChange={(e) => setCustomAmount(e.target.value)}
-                placeholder={`${gift.min}–${gift.max}`}
+                placeholder={`${gift.min}-${gift.max}`}
                 className={`mt-1.5 ${field}`}
               />
             </label>
@@ -231,7 +231,7 @@ export function ProductPurchase({ product }: { product: Product }) {
         </p>
       )}
       <p className="mt-3 text-xs text-muted">
-        {gift ? "No shipping — delivered instantly by email." : "Taxes and shipping are calculated at checkout."}
+        {gift ? "No shipping. Delivered instantly by email." : "Taxes and shipping are calculated at checkout."}
       </p>
     </div>
   );

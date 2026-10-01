@@ -12,7 +12,7 @@ import insideThePagesSet from "../../../public/images/inside-the-pages-set.jpg";
 export const metadata: Metadata = {
   title: "Books & Events",
   description:
-    "Books by Dr. Laide R. Alexander — The Unfinished Leader and Why Move My Cheese? — plus the Why Move My Cheese? Leadership Conference and Inside the Pages with Dr. A.",
+    "Books by Dr. Laide R. Alexander (The Unfinished Leader and Why Move My Cheese?), plus the Why Move My Cheese? Leadership Conference and Inside the Pages with Dr. A.",
   alternates: { canonical: "/books" },
 };
 

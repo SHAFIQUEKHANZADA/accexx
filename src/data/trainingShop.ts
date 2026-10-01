@@ -19,7 +19,7 @@ import type { CatalogCourse } from "./types";
 
 /** Family intro, adapted only by dropping the internal cross-reference to the Master Index. */
 export const trainingShopIntro =
-  "Non-certificate programs, genuinely new and distinct from the 15 Project Unify Certificate Programs. Completion is based on attendance and participation in all modules, plus a completed personal action plan — not a graded rubric. Participants receive a Certificate of Participation.";
+  "Non-certificate programs, genuinely new and distinct from the 15 Project Unify Certificate Programs. Completion is based on attendance and participation in all modules, plus a completed personal action plan, not a graded rubric. Participants receive a Certificate of Participation.";
 
 const PARTICIPATION = "Certificate of Participation" as const;
 
@@ -154,7 +154,7 @@ export const trainingShopCourses: CatalogCourse[] = [
     name: "AI Basics for the Everyday Employee",
     track: "Stream 4: Practical AI Literacy",
     description:
-      "A plain-language, entry-level introduction to AI for employees with no technical background — what AI actually is, where it already shows up in everyday work tools, and how to use it responsibly and well.",
+      "A plain-language, entry-level introduction to AI for employees with no technical background: what AI actually is, where it already shows up in everyday work tools, and how to use it responsibly and well.",
     audience:
       "Any employee, regardless of role or technical background, who uses or will soon use AI-powered tools at work.",
     credential: PARTICIPATION,

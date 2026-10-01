@@ -50,7 +50,7 @@ export type LiveModule = {
   id: string;
   title: string;
   objectives: string[];
-  /** Duration as written, e.g. "2–3 hrs" (omit if not stated). */
+  /** Duration as written, e.g. "2-3 hrs" (omit if not stated). */
   duration?: string;
 };
 

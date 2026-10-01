@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const e = getEngagement(slug);
   if (!e) return {};
   return {
-    title: `${e.name} (${e.code}) — Consulting`,
+    title: `${e.name} (${e.code}) | Consulting`,
     description: e.description,
     alternates: { canonical: `/services/consulting/${e.slug}` },
   };

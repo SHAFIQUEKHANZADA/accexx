@@ -154,7 +154,7 @@ const capColourList: [string, string, StaticImageData][] = [
   ["Olive", "#4d5536", capOlive],
 ];
 
-const cheeseTagline = "When the cheese moves, do you disappear—or decide?";
+const cheeseTagline = "When the cheese moves, do you disappear or decide?";
 export const products: Product[] = [
   {
     slug: "the-unfinished-leader",
@@ -187,7 +187,7 @@ export const products: Product[] = [
     cover: whyMoveMyCheeseCover,
     description: [
       "Jobs end. Churches shift. Relationships change. Callings evolve. One day you look up and realize: the cheese is not where you left it.",
-      "In Why Move My Cheese?, Dr. Laide R. Alexander helps you tell the truth about your “why”—why you stay, why you go, why you hide, and why you hand your power to other people.",
+      "In Why Move My Cheese?, Dr. Laide R. Alexander helps you tell the truth about your “why”: why you stay, why you go, why you hide, and why you hand your power to other people.",
     ],
     formats: cheeseFormats,
     variants: bookVariants("why-move-my-cheese", cheeseFormats, 38),

@@ -26,7 +26,7 @@ export default function LeadershipPage() {
         }
         intro={
           <p>
-            {leadershipPrograms.length} flexible, high-impact workshops targeting specific leadership skills — stand-alone or
+            {leadershipPrograms.length} flexible, high-impact workshops targeting specific leadership skills. Stand-alone or
             combinable with each other. Built for in-person and online delivery. Attendees receive a Certificate of
             Participation.
           </p>

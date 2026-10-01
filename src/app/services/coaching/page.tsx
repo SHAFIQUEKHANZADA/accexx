@@ -12,7 +12,7 @@ import portrait from "../../../../public/images/dr-laide-portrait-bw.jpg";
 export const metadata: Metadata = {
   title: "Coaching",
   description:
-    "Executive & Leadership Coaching (1:1) and Group & Team Coaching with Dr. Laide R. Alexander. Coaching that goes deeper than goals — at the level of beliefs, stories, and habits.",
+    "Executive & Leadership Coaching (1:1) and Group & Team Coaching with Dr. Laide R. Alexander. Coaching that goes deeper than goals, at the level of beliefs, stories, and habits.",
   alternates: { canonical: "/services/coaching" },
 };
 
@@ -26,7 +26,7 @@ export default function CoachingPage() {
             Coaching that goes <em className="text-gold">deeper than goals.</em>
           </>
         }
-        intro="We work at the level of beliefs, stories, and habits — your Human Operating System."
+        intro="We work at the level of beliefs, stories, and habits: your Human Operating System."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>

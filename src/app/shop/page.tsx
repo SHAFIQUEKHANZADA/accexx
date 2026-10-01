@@ -10,12 +10,12 @@ import insideThePagesSet from "../../../public/images/inside-the-pages-set.jpg";
 import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 
 export const metadata: Metadata = {
-  title: { absolute: "Accexx Insight Shop — Books & Swag" },
+  title: { absolute: "Accexx Insight Shop | Books & Swag" },
   description:
     "Every Page. A New Possibility. Shop books by Dr. Laide R. Alexander, The Unfinished Leader and Why Move My Cheese?, plus Accexx Insight merch and gift cards.",
   alternates: { canonical: "/shop" },
-  openGraph: { title: "Accexx Insight Shop — Books & Swag" },
-  twitter: { title: "Accexx Insight Shop — Books & Swag" },
+  openGraph: { title: "Accexx Insight Shop | Books & Swag" },
+  twitter: { title: "Accexx Insight Shop | Books & Swag" },
 };
 
 export default function ShopPage() {

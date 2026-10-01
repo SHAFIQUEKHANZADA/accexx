@@ -18,7 +18,7 @@ import type { CatalogCourse } from "./types";
 
 /** Family intro, as written in the source. */
 export const shortCoursesIntro =
-  "Non-certificate programs. Completion is based on attendance and participation in all modules, plus a completed personal action plan — not a graded rubric. Participants receive a Certificate of Participation.";
+  "Non-certificate programs. Completion is based on attendance and participation in all modules, plus a completed personal action plan, not a graded rubric. Participants receive a Certificate of Participation.";
 
 const PARTICIPATION = "Certificate of Participation" as const;
 
@@ -28,7 +28,7 @@ export const hocShortCourses: CatalogCourse[] = [
     name: "Upgrade Your Inner Operating System",
     track: "Track 1: Personal Mastery & Self-Leadership",
     description:
-      "Helps professionals identify the limiting beliefs and thinking patterns driving unhelpful behavior — and replace them with a clear personal operating code.",
+      "Helps professionals identify the limiting beliefs and thinking patterns driving unhelpful behavior, and replace them with a clear personal operating code.",
     audience: "Mid-level and senior professionals, emerging leaders, high-potential staff.",
     prerequisites: "None.",
     credential: PARTICIPATION,
@@ -44,14 +44,14 @@ export const hocShortCourses: CatalogCourse[] = [
     name: "Self-Leadership for Emerging Leaders",
     track: "Track 1: Personal Mastery & Self-Leadership",
     description:
-      "Supports supervisors, team leads, and young managers in shifting from individual contributor to leader mindset — with EQ tools and a practical 60–90 day plan.",
+      "Supports supervisors, team leads, and young managers in shifting from individual contributor to leader mindset, with EQ tools and a practical 60-90 day plan.",
     audience: "Supervisors, team leads, heads of department, young managers, high-potential staff.",
-    prerequisites: "None — most relevant for those newly or soon stepping into a leadership role.",
+    prerequisites: "None. Most relevant for those newly or soon stepping into a leadership role.",
     credential: PARTICIPATION,
     modules: [
       { number: 1, title: "Individual Contributor vs. Leader Mindset", hours: 2 },
       { number: 2, title: "Clarifying Responsibilities and Cutting Low-Value Work", hours: 2 },
-      { number: 3, title: "EQ Tools and the 60–90 Day Plan", hours: 2 },
+      { number: 3, title: "EQ Tools and the 60-90 Day Plan", hours: 2 },
     ],
     cohort: { contactHours: 6, inPerson: 1800, virtual: 1530, additionalParticipant: 144 },
   },
@@ -60,7 +60,7 @@ export const hocShortCourses: CatalogCourse[] = [
     name: "Emotional Intelligence (EQ) for Leaders & Teams",
     track: "Track 2: Emotional Intelligence & Relationship Systems",
     description:
-      "Builds practical EQ skills — recognizing triggers, pausing before reacting, listening to reduce defensiveness, and handling difficult conversations with confidence.",
+      "Builds practical EQ skills: recognizing triggers, pausing before reacting, listening to reduce defensiveness, and handling difficult conversations with confidence.",
     audience: "Leaders and teams across sectors, especially in high-pressure or people-intensive roles.",
     prerequisites: "None.",
     credential: PARTICIPATION,
@@ -76,7 +76,7 @@ export const hocShortCourses: CatalogCourse[] = [
     name: "Conflict, Feedback & Difficult Conversations",
     track: "Track 2: Emotional Intelligence & Relationship Systems",
     description:
-      "Gives people managers a simple framework to prepare for and hold difficult conversations — giving feedback that is clear, specific, and respectful while de-escalating tension.",
+      "Gives people managers a simple framework to prepare for and hold difficult conversations, giving feedback that is clear, specific, and respectful while de-escalating tension.",
     audience: "All people managers, principals, HRBPs, team leaders, supervisors.",
     prerequisites: "Current people-management responsibility.",
     credential: PARTICIPATION,
@@ -108,7 +108,7 @@ export const hocShortCourses: CatalogCourse[] = [
     name: "Focus, Attention & Digital Discipline",
     track: "Track 3: High-Performance Habits & Productivity",
     description:
-      "Addresses distraction and digital overload — giving professionals 3–5 strategies to protect focus, set healthier device boundaries, and create a personal attention protocol.",
+      "Addresses distraction and digital overload, giving professionals 3-5 strategies to protect focus, set healthier device boundaries, and create a personal attention protocol.",
     audience: "All professionals and leaders struggling with distraction, digital overload, and multitasking.",
     prerequisites: "None.",
     credential: PARTICIPATION,
