@@ -121,3 +121,20 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
   - Header: Education is now an item in the Services dropdown (Services stays highlighted on /education pages).
 - ❓ "I prefer we use **full pages**": meaning unclear (full-width sections vs separate full pages instead of one long home page). Ask.
 - 🟡 Meet Dr. A on the home page still has her headshot (it is the section about her); confirm she wants to keep it.
+
+## #12 — Email from Dr. A to Hilal, 2026-10-01 23:52 ("Feedback on the Website")
+"First let me start by saying, I love the website."
+- **About:** lead with Accexx Insight as an organization (what we do, who we are, our core values), not with Dr. A. ✅ `/about` now opens with "About Accexx Insight"; sections: who we are, what we do, **core values**, who we serve, core promise, Meet Dr. A teaser, partners, team.
+  - ❓ **Core values:** she is sending them. Interim: the 8 values from her draft site (`coreValues` in `src/data/about.ts`).
+- **Meet Dr. A, The Visionary Behind Accexx Insight:** its own landing page with the full story. ✅ `/about/dr-a` (hero, present roles, full story, Person Behind the Title, Forbes, career history). In the About menu.
+  - ❓ She texted Hilal a layout for it (2026-10-01 ~1:32pm her time). Not received by us yet.
+- **Remove Galen College of Nursing from the present.** ✅ Present roles: Founder & CEO, Accexx Insight; Founder & Chairperson, The Transformation Platform (Thetplat); Member, Forbes Coaches Council. Galen is listed under career history only (`/about/dr-a`). Home "Meet Dr. A" updated.
+  - Note: Thetplat is where events will eventually go, with its own website (TEDx-style) to be worked on next.
+- **Services:** full pictures. ✅ Consulting, Speaking and Education headers are now full-width photos (`PageHero full`). Speaking uses the original black-and-white photo of her from behind facing the audience (`speaking-stage-audience-bw.jpg`, from `reference/bio-images/IMG_20211001_193720_841.jpg`, not AI-enhanced).
+  - ❓ "Mimic the page I sent via text" (consulting + education): not received by us yet.
+  - ❓ More photos for "In the room" and the conference showing people, not just her: pending.
+- **Books & Events:**
+  - ✅ Book covers larger (native 1000 × 1500 files, no upscaling).
+  - ✅ Large video frames for the conference and the book launch (`VideoFeature`; "video coming soon" until the files arrive; set `video` in `src/data/events.ts`).
+  - ✅ Inside the Pages photo larger on /books and /inside-the-pages (full container width, native resolution).
+  - ❓ Videos (conference, book launch), more book/conference/launch photos, merchandise for the shop: pending.

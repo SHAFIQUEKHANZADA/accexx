@@ -40,7 +40,8 @@ export const mainNav: NavItem[] = [
     label: "About",
     href: "/about",
     children: [
-      { label: "About Dr. A", href: "/about", description: "Educator, author, coach and consultant" },
+      { label: "About Accexx Insight", href: "/about", description: "Who we are, what we do, our values" },
+      { label: "Meet Dr. A", href: "/about/dr-a", description: "The visionary behind Accexx Insight" },
       { label: "Who We Serve", href: "/about#who-we-serve", description: "Organizations, leaders, founders, professionals" },
       { label: "Our Team", href: "/about#team", description: "The people behind the platform" },
     ],

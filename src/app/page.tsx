@@ -373,8 +373,7 @@ function MeetDrA() {
               business founder.
             </p>
             <p>
-              She currently serves as Regional Director of Enrollment for the State of Texas at Galen College of Nursing,
-              where she leads growth, fiscal sustainability, and business continuity strategy. She is the author of{" "}
+              She is also Founder &amp; Chairperson of The Transformation Platform (Thetplat), the author of{" "}
               <em className="font-semibold text-navy">The Unfinished Leader</em> and{" "}
               <em className="font-semibold text-navy">Why Move My Cheese?</em>, and host of the annual Why Move My Cheese?
               Conference.
@@ -384,7 +383,7 @@ function MeetDrA() {
             True power in leadership is not found in perfection, but in purpose, presence, and the courage to keep evolving.
           </blockquote>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/about" variant="navy">
+            <ButtonLink href="/about/dr-a" variant="navy">
               Full Bio
             </ButtonLink>
             <ButtonLink href={links.booking} variant="outline">

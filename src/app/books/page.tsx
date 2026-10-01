@@ -4,6 +4,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Gallery } from "@/components/ui/Gallery";
 import { ButtonLink } from "@/components/ui/Button";
 import { SignupForm } from "@/components/ui/SignupForm";
+import { VideoFeature } from "@/components/ui/VideoFeature";
 import { books, formatPrice } from "@/data/products";
 import { bookLaunch, conference2026, insideThePages } from "@/data/events";
 import styledBook from "../../../public/images/why-move-my-cheese-styled.jpg";
@@ -32,8 +33,7 @@ export default function BooksPage() {
               Read. Imagine. Become. <span className="font-sans text-sm font-bold not-italic tracking-wider text-gold-deep">#R.I.B</span>
             </p>
             <p className="mt-4">
-              Practical wisdom and proven strategies to help you navigate change, own your &lsquo;why,&rsquo; and lead a life
-              that lasts.
+              Practical wisdom and proven strategies to help you navigate change, own your &lsquo;why,&rsquo; and lead a life that lasts.
             </p>
           </>
         }
@@ -60,13 +60,20 @@ export default function BooksPage() {
             {books.map((b, i) => (
               <article
                 key={b.slug}
-                className={`grid items-center gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-16 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
+                className={`grid items-center gap-10 md:grid-cols-2 lg:gap-20 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
                 data-reveal
               >
-                <div className="mx-auto w-full max-w-xs md:max-w-sm">
+                <div className="mx-auto w-full max-w-sm md:max-w-md">
                   {b.cover && (
                     <div className="relative aspect-[2/3] overflow-hidden rounded-l-sm rounded-r-md shadow-[0_30px_60px_-20px_rgba(31,56,100,0.45)]">
-                      <Image src={b.cover} alt={`${b.name} book cover`} fill placeholder="blur" sizes="(min-width: 768px) 30vw, 70vw" className="object-cover" />
+                      <Image
+                        src={b.cover}
+                        alt={`${b.name} book cover`}
+                        fill
+                        placeholder="blur"
+                        sizes="(min-width: 768px) 448px, 384px"
+                        className="object-cover"
+                      />
                     </div>
                   )}
                 </div>
@@ -86,10 +93,14 @@ export default function BooksPage() {
                           {f.status === "available" && f.price ? (
                             <span className="text-ink">
                               <span className="font-semibold">{formatPrice(f.price)}</span>
-                              {f.format === "Hardcover" && b.compareAt && <s className="ml-2 text-sm text-muted">{formatPrice(b.compareAt)}</s>}
+                              {f.format === "Hardcover" && b.compareAt && (
+                                <s className="ml-2 text-sm text-muted">{formatPrice(b.compareAt)}</s>
+                              )}
                             </span>
                           ) : (
-                            <span className="rounded-full bg-gold-soft px-3 py-1 text-xs font-semibold text-gold-deep">{f.note ?? "Coming soon"}</span>
+                            <span className="rounded-full bg-gold-soft px-3 py-1 text-xs font-semibold text-gold-deep">
+                              {f.note ?? "Coming soon"}
+                            </span>
                           )}
                         </li>
                       ))}
@@ -116,8 +127,8 @@ export default function BooksPage() {
                 Why Move My Cheese? <em className="text-gold">Leadership Conference</em>
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
-                Created and hosted by Dr. Laide R. Alexander, the annual Why Move My Cheese? Conference brings leaders across
-                corporate, education, and nonprofit sectors together to navigate change and transformation.
+                Created and hosted by Dr. Laide R. Alexander, the annual Why Move My Cheese? Conference brings leaders across corporate,
+                education, and nonprofit sectors together to navigate change and transformation.
               </p>
             </div>
             <div className="rounded-3xl border border-gold/40 bg-white p-7 shadow-sm sm:p-8" data-reveal data-reveal-delay="120">
@@ -125,16 +136,23 @@ export default function BooksPage() {
               <p className="heading mt-3 text-3xl">Details coming soon.</p>
               <p className="mt-2 text-[0.95rem] text-body">Be the first to hear the dates and venue.</p>
               <div className="mt-6">
-                <SignupForm formType="conference-interest" cta="Notify me" success="Thank you. We'll let you know as soon as the dates are announced." />
+                <SignupForm
+                  formType="conference-interest"
+                  cta="Notify me"
+                  success="Thank you. We'll let you know as soon as the dates are announced."
+                />
               </div>
             </div>
+          </div>
+
+          <div className="mt-16" data-reveal>
+            <VideoFeature src={conference2026.video} poster={conference2026.photos[6].src} title={conference2026.title} />
           </div>
 
           <h3 className="mt-16 text-sm font-bold uppercase tracking-[0.18em] text-navy">{conference2026.title}: highlights</h3>
           <div className="mt-6">
             <Gallery photos={conference2026.photos} />
           </div>
-          {/* Conference video: pending from Dr. A (TODO_CLIENT.md). */}
         </div>
       </section>
 
@@ -145,7 +163,10 @@ export default function BooksPage() {
           <h2 id="launch-heading" className="heading mt-4 text-4xl sm:text-5xl">
             {bookLaunch.title}
           </h2>
-          <div className="mt-10">
+          <div className="mt-10" data-reveal>
+            <VideoFeature src={bookLaunch.video} poster={bookLaunch.photos[0].src} title={bookLaunch.title} />
+          </div>
+          <div className="mt-8">
             <Gallery photos={bookLaunch.photos} />
           </div>
         </div>
@@ -153,24 +174,35 @@ export default function BooksPage() {
 
       {/* Inside the Pages teaser ---------------------------------------------- */}
       <section className="bg-navy py-20 text-white lg:py-24">
-        <div className="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[1465/794] overflow-hidden rounded-3xl" data-reveal>
-            <Image src={insideThePagesSet} alt="The Inside the Pages with Dr. A set" fill placeholder="blur" sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+        <div className="container-site">
+          <div className="relative aspect-[1465/794] overflow-hidden rounded-3xl shadow-2xl shadow-black/30" data-reveal>
+            <Image
+              src={insideThePagesSet}
+              alt="The Inside the Pages with Dr. A set"
+              fill
+              placeholder="blur"
+              sizes="(min-width: 1280px) 1200px, 100vw"
+              className="object-cover"
+            />
           </div>
-          <div data-reveal data-reveal-delay="120">
-            <p className="eyebrow text-gold-light!">New event series</p>
-            <h2 className="mt-4 font-serif text-4xl font-semibold sm:text-5xl">
-              Inside the Pages <em className="text-gold-light">with Dr. A</em>
-            </h2>
-            <p className="mt-4 font-serif text-2xl italic text-gold-light">
-              &ldquo;{insideThePages.tagline}&rdquo; {insideThePages.lede}
-            </p>
-            <p className="mt-5 text-white/80">
-              First session: <span className="font-semibold text-white">{insideThePages.schedule[0].label}</span> at{" "}
-              <span className="font-semibold text-white">{insideThePages.schedule[0].venue}</span>.
-            </p>
-            <div className="mt-8">
-              <ButtonLink href="/inside-the-pages">Discover Inside the Pages</ButtonLink>
+          <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16" data-reveal data-reveal-delay="120">
+            <div>
+              <p className="eyebrow text-gold-light!">New event series</p>
+              <h2 className="mt-4 font-serif text-4xl font-semibold sm:text-5xl">
+                Inside the Pages <em className="text-gold-light">with Dr. A</em>
+              </h2>
+            </div>
+            <div>
+              <p className="font-serif text-2xl italic text-gold-light">
+                &ldquo;{insideThePages.tagline}&rdquo; {insideThePages.lede}
+              </p>
+              <p className="mt-5 text-white/80">
+                First session: <span className="font-semibold text-white">{insideThePages.schedule[0].label}</span> at{" "}
+                <span className="font-semibold text-white">{insideThePages.schedule[0].venue}</span>.
+              </p>
+              <div className="mt-8">
+                <ButtonLink href="/inside-the-pages">Discover Inside the Pages</ButtonLink>
+              </div>
             </div>
           </div>
         </div>

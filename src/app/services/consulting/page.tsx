@@ -38,7 +38,7 @@ export default function ConsultingPage() {
               We don&apos;t just diagnose. We redesign the systems, behaviors, and beliefs that shape your organization&apos;s
               performance.
             </p>
-            <p className="mt-3 text-base text-muted sm:text-lg">
+            <p className="mt-3 text-base text-white/75 sm:text-lg">
               {consultingEngagements.length} engagements across HR &amp; people systems, culture &amp; strategy, and education
               institutions.
             </p>
@@ -46,10 +46,12 @@ export default function ConsultingPage() {
         }
         image={consultingMeeting}
         imageAlt="A consultant presenting to a team around a meeting table"
+        full
+        imagePosition="center 35%"
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#engagements">Browse engagements</ButtonLink>
-          <ButtonLink href="#proposal" variant="outline">
+          <ButtonLink href="#proposal" variant="outline-light">
             Request a proposal
           </ButtonLink>
         </div>

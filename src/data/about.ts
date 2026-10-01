@@ -88,7 +88,7 @@ export const corePromise =
 
 // Source: reference/text/site_current-live_accexxinsight.com.txt ("About Me").
 export const bio = {
-  roles: "Member, Forbes Coaches Council · Regional Director of Enrollment State of Texas, Galen College of Nursing",
+  roles: "Founder & CEO, Accexx Insight · Founder & Chairperson, The Transformation Platform (Thetplat) · Member, Forbes Coaches Council",
   educator:
     "Dr. Laide Alexander is a distinguished leadership and human behavior expert with a doctorate in Educational & Leadership Management, an MBA in Human Resources Management, and a degree in Business Management. She is currently completing a post-doctoral program in Applied Behavior Analysis (ABA). She is the author of The Unfinished Leader and Why Move My Cheese?",
   builder:
@@ -100,6 +100,25 @@ export const bio = {
   philosophy:
     "True power in leadership is not found in perfection, but in purpose, presence, and the courage to keep evolving.",
 };
+
+// TODO_CLIENT: Dr. A is sending the official core values (email, 2026-10-01). Interim: the eight values
+// from her draft site (reference/text/site_draft_upload.x01works.com.ng.txt).
+export const coreValues = ["Empathy", "Integrity", "Transformation", "Empowerment", "Resilience", "Growth", "Connection", "Accountability"];
+
+// Dr. A's email, 2026-10-01: these are her present roles. Galen College of Nursing is history, not present.
+export const presentRoles = [
+  { title: "Founder & CEO", org: "Accexx Insight" },
+  { title: "Founder & Chairperson", org: "The Transformation Platform (Thetplat)" },
+  { title: "Member", org: "Forbes Coaches Council" },
+];
+
+// Past roles. Sources: the draft site bio ("college president, professor, and business founder") + her email.
+export const pastRoles = [
+  "Regional Director of Enrollment for the State of Texas, Galen College of Nursing",
+  "College president",
+  "Professor",
+  "Business founder",
+];
 
 // Source: reference/text/site_draft_upload.x01works.com.ng.txt ("Meet Dr. A").
 export const shortBio =

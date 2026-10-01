@@ -1,76 +1,45 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
-import { Quote } from "@/components/ui/icons";
+import { PageHero } from "@/components/ui/PageHero";
 import { TeamCard } from "@/components/about/TeamCard";
 import { consultants, leadership, maxConsultants } from "@/data/team";
-import { bio, corePromise, partners, shortBio, whatWeDo, whoWeAre, whoWeServe } from "@/data/about";
+import { corePromise, coreValues, partners, presentRoles, whatWeDo, whoWeAre, whoWeServe } from "@/data/about";
 import { links } from "@/lib/site";
 import headshot from "../../../public/images/dr-laide-headshot.jpg";
-import portraitBw from "../../../public/images/dr-laide-portrait-bw.jpg";
-import forbesGraphic from "../../../public/images/forbes-editors-choice.jpg";
+import conferencePanel from "../../../public/images/events/wmmc-2026-02.jpg";
 import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 
 export const metadata: Metadata = {
-  title: "About Dr. A",
+  title: "About Accexx Insight",
   description:
-    "Meet Dr. Laide R. Alexander and the Accexx Insight team: a strategy, leadership, and transformation partner helping individuals and organizations move from uncertainty to clear, purposeful action.",
+    "Accexx Insight is a strategy, leadership, and transformation partner helping individuals and organizations move from uncertainty to clear, purposeful action.",
   alternates: { canonical: "/about" },
 };
 
-const bioParts = [
-  { title: "Educator, Author, Thought Leader", text: bio.educator },
-  { title: "Builder of Communities and Platforms", text: bio.builder },
-  { title: "Coach, Consultant, and Speaker", text: bio.coach },
-];
-
+// Dr. A (email, 2026-10-01): About leads with the organization (who we are, what we do, core values),
+// not with her. Her story has its own page: /about/dr-a.
 export default function AboutPage() {
   return (
     <>
-      {/* Hero: same shell as PageHero, but with a portrait frame so the headshot isn't cropped at the forehead. */}
-      <section className="relative overflow-hidden border-b border-line bg-cream">
-        <UnfinishedCircle className="pointer-events-none absolute -right-32 -top-32 size-[30rem] text-gold/50" />
-        <div className="container-site relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] lg:gap-16 lg:py-20">
-          <div>
-            <p className="eyebrow animate-fade-up">About Dr. A</p>
-            <h1
-              className="heading mt-4 animate-fade-up text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4rem]"
-              style={{ animationDelay: "80ms" }}
-            >
-              Dr. Laide R. <em className="text-gold">Alexander</em>
-            </h1>
-            <p className="mt-4 animate-fade-up text-sm font-semibold text-navy/80" style={{ animationDelay: "120ms" }}>
-              Founder &amp; CEO, Accexx Insight LLC · Member, Forbes Coaches Council
-            </p>
-            <p
-              className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-body sm:text-xl"
-              style={{ animationDelay: "160ms" }}
-            >
-              {shortBio}
-            </p>
-            <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "240ms" }}>
-              <ButtonLink href={links.booking}>Book Dr. A</ButtonLink>
-              <ButtonLink href="#team" variant="outline">
-                Meet the Team
-              </ButtonLink>
-            </div>
-          </div>
-          <div
-            className="relative mx-auto aspect-[4/5] w-full max-w-sm animate-fade-up overflow-hidden rounded-[2rem] shadow-xl shadow-navy/15 lg:max-w-none"
-            style={{ animationDelay: "160ms" }}
-          >
-            <Image
-              src={headshot}
-              alt="Dr. Laide R. Alexander, Founder & CEO of Accexx Insight"
-              fill
-              preload
-              placeholder="blur"
-              sizes="(min-width: 1024px) 34vw, (min-width: 640px) 24rem, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
+      <PageHero
+        eyebrow="About Accexx Insight"
+        title={
+          <>
+            From uncertainty to <em className="text-gold">clear, purposeful action.</em>
+          </>
+        }
+        intro={whoWeAre[0]}
+        image={conferencePanel}
+        imageAlt="A panel discussion on stage at the Why Move My Cheese? Leadership Conference 2026"
+      >
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>
+          <ButtonLink href="#team" variant="outline">
+            Meet the Team
+          </ButtonLink>
         </div>
-      </section>
+      </PageHero>
 
       {/* Who we are ------------------------------------------------------------ */}
       <section className="bg-white py-20 lg:py-28" aria-labelledby="who-heading">
@@ -78,93 +47,13 @@ export default function AboutPage() {
           <div data-reveal>
             <p className="eyebrow">Who we are</p>
             <h2 id="who-heading" className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">
-              From uncertainty to <em className="text-gold">clear, purposeful action.</em>
+              Insight, structure, and <em className="text-gold">practical guidance.</em>
             </h2>
           </div>
           <div className="space-y-5 text-[1.05rem] leading-relaxed text-body sm:text-lg" data-reveal data-reveal-delay="120">
-            {whoWeAre.map((p) => (
+            {whoWeAre.slice(1).map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Full bio --------------------------------------------------------------- */}
-      <section className="bg-cream py-20 lg:py-28" aria-labelledby="bio-heading">
-        <div className="container-site">
-          <div className="max-w-3xl" data-reveal>
-            <p className="eyebrow">About me</p>
-            <h2 id="bio-heading" className="heading mt-4 text-4xl sm:text-5xl">
-              The full <em className="text-gold">story.</em>
-            </h2>
-            <p className="mt-4 text-sm font-medium text-muted">{bio.roles}</p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {bioParts.map((part, i) => (
-              <article
-                key={part.title}
-                className="rounded-3xl border border-line bg-white p-7 shadow-sm sm:p-8"
-                data-reveal
-                data-reveal-delay={String(i * 100)}
-              >
-                <span className="font-serif text-4xl font-semibold text-gold">0{i + 1}</span>
-                <h3 className="heading mt-3 text-2xl leading-tight sm:text-[1.7rem]">{part.title}</h3>
-                <p className="mt-4 text-[0.95rem] leading-relaxed text-body">{part.text}</p>
-              </article>
-            ))}
-          </div>
-
-          {/* The person behind the title */}
-          <div className="mt-16 grid items-center gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:mt-20 lg:gap-16">
-            <div className="relative mx-auto w-full max-w-md md:max-w-none" data-reveal>
-              <div className="relative aspect-[1299/1464] overflow-hidden rounded-[2rem] shadow-xl shadow-navy/15">
-                <Image
-                  src={portraitBw}
-                  alt="Dr. Laide R. Alexander, black-and-white portrait"
-                  fill
-                  placeholder="blur"
-                  sizes="(min-width: 768px) 45vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <UnfinishedCircle className="pointer-events-none absolute -bottom-10 -left-10 size-40 text-gold" />
-            </div>
-            <div data-reveal data-reveal-delay="120">
-              <span className="font-serif text-4xl font-semibold text-gold">04</span>
-              <h3 className="heading mt-3 text-3xl sm:text-4xl">The Person Behind the Title</h3>
-              <p className="mt-5 text-[1.05rem] leading-relaxed text-body sm:text-lg">{bio.person}</p>
-              <figure className="mt-10 border-l-2 border-gold pl-6">
-                <Quote className="text-gold" width={28} height={28} />
-                <blockquote className="mt-3 font-serif text-2xl font-medium italic leading-snug text-navy sm:text-3xl">
-                  {bio.philosophy}
-                </blockquote>
-                <figcaption className="eyebrow mt-4">Philosophy in Practice</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Forbes recognition ---------------------------------------------------- */}
-      <section className="border-y border-line bg-white" aria-label="Recognition">
-        {/* TODO_CLIENT: link to the Forbes article once the URL is supplied. */}
-        <div className="container-site flex flex-col items-start gap-6 py-10 sm:flex-row sm:items-center sm:gap-8">
-          <Image
-            src={forbesGraphic}
-            alt="Forbes Coaches Council Editor's Choice: The Greed In It: A Look At Modern Leadership, by Dr. Laide Alexander"
-            sizes="112px"
-            className="size-24 shrink-0 rounded-2xl shadow-md sm:size-28"
-          />
-          <div>
-            <p className="eyebrow">Forbes Coaches Council · Editor&apos;s Choice</p>
-            <p className="mt-2 font-serif text-2xl font-semibold leading-tight text-navy sm:text-3xl">
-              &ldquo;The Greed In It: A Look At Modern Leadership&rdquo;
-            </p>
-            <p className="mt-2 text-[0.95rem] text-body">
-              As a member of the Forbes Coaches Council, Dr. Alexander is recognized among a select group of the world&apos;s
-              most respected leadership authorities.
-            </p>
           </div>
         </div>
       </section>
@@ -191,6 +80,27 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Core values ---------------------------------------------------------- */}
+      {/* TODO_CLIENT: Dr. A is sending the official core values. Interim: the eight values from her draft site. */}
+      <section className="border-t border-line bg-white py-20 lg:py-24" aria-labelledby="values-heading">
+        <div className="container-site">
+          <div className="max-w-3xl" data-reveal>
+            <p className="eyebrow">Our core values</p>
+            <h2 id="values-heading" className="heading mt-4 text-4xl sm:text-5xl">
+              What we <em className="text-gold">stand on.</em>
+            </h2>
+          </div>
+          <ul className="mt-10 grid grid-cols-2 border-l border-t border-line sm:grid-cols-4">
+            {coreValues.map((v, i) => (
+              <li key={v} className="border-b border-r border-line px-5 py-7 sm:px-7" data-reveal data-reveal-delay={String((i % 4) * 80)}>
+                <span className="font-serif text-lg font-semibold text-gold-deep">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mt-2 block font-serif text-2xl font-semibold text-navy">{v}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -256,6 +166,46 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Meet Dr. A: teaser for her own page ---------------------------------- */}
+      <section className="bg-white py-20 lg:py-24" aria-labelledby="dra-heading">
+        <div className="container-site grid items-center gap-10 md:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16">
+          <div
+            className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-[2rem] shadow-xl shadow-navy/15 md:max-w-none"
+            data-reveal
+          >
+            <Image
+              src={headshot}
+              alt="Dr. Laide R. Alexander"
+              fill
+              placeholder="blur"
+              sizes="(min-width: 768px) 34vw, 20rem"
+              className="object-cover object-top"
+            />
+          </div>
+          <div data-reveal data-reveal-delay="120">
+            <p className="eyebrow">Meet Dr. A</p>
+            <h2 id="dra-heading" className="heading mt-4 text-4xl sm:text-5xl">
+              The Visionary Behind <em className="text-gold">Accexx Insight</em>
+            </h2>
+            <ul className="mt-6 space-y-2 text-[1.02rem] text-ink">
+              {presentRoles.map((r) => (
+                <li key={r.org} className="flex gap-3">
+                  <span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-gold" />
+                  <span>
+                    <span className="font-semibold text-navy">{r.title}</span>, {r.org}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <ButtonLink href="/about/dr-a" variant="navy">
+                Read her full story
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Team ------------------------------------------------------------------ */}
       <section id="team" className="scroll-mt-20 border-t border-line bg-cream py-20 lg:py-28" aria-labelledby="team-heading">
         <div className="container-site">
@@ -275,7 +225,10 @@ export default function AboutPage() {
             ))}
           </div>
           {consultants.length < maxConsultants && (
-            <div data-reveal className="mt-6 flex flex-col items-start justify-between gap-3 rounded-3xl border border-dashed border-gold/50 bg-white/60 px-7 py-6 sm:flex-row sm:items-center">
+            <div
+              data-reveal
+              className="mt-6 flex flex-col items-start justify-between gap-3 rounded-3xl border border-dashed border-gold/50 bg-white/60 px-7 py-6 sm:flex-row sm:items-center"
+            >
               <div>
                 <p className="font-serif text-2xl font-semibold text-navy">More consultants joining the collective</p>
                 <p className="mt-1 text-sm text-body">Dr. A + Executive Consultants: A Collective of Breakthrough.</p>
@@ -291,7 +244,10 @@ export default function AboutPage() {
       {/* CTA ------------------------------------------------------------------- */}
       <section className="bg-white py-20 lg:py-24">
         <div className="container-site">
-          <div className="relative overflow-hidden rounded-[2rem] border border-gold/40 bg-gold-soft px-6 py-12 text-center sm:px-12 lg:py-16" data-reveal>
+          <div
+            className="relative overflow-hidden rounded-[2rem] border border-gold/40 bg-gold-soft px-6 py-12 text-center sm:px-12 lg:py-16"
+            data-reveal
+          >
             <UnfinishedCircle className="pointer-events-none absolute -bottom-24 -right-20 size-72 text-gold" />
             <h2 className="heading relative text-4xl sm:text-5xl">
               Let&apos;s Talk About Your <em className="text-gold-deep">Business.</em>

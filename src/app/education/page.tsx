@@ -84,10 +84,11 @@ export default function EducationPage() {
         }
         image={lecture}
         imageAlt="A presenter leading a session in a lecture room"
+        full
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#programs">Explore programs</ButtonLink>
-          <ButtonLink href={links.coursePortal} variant="outline">
+          <ButtonLink href={links.coursePortal} variant="outline-light">
             Student Login
           </ButtonLink>
         </div>

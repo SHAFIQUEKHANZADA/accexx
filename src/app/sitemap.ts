@@ -12,6 +12,7 @@ import { products } from "@/data/products";
 const staticRoutes = [
   "/",
   "/about",
+  "/about/dr-a",
   "/services",
   "/services/consulting",
   "/services/coaching",

@@ -76,3 +76,8 @@ Update this file whenever an item arrives or a new placeholder is added.
 
 - [ ] "I prefer we use full pages": full-width sections, or separate pages instead of one long home page? (CLIENT_UPDATES #11)
 - [ ] Keep the headshot in "Meet Dr. A" on the home page? (CLIENT_UPDATES #11)
+
+- [ ] Official **core values** list (interim: the 8 draft-site values). (CLIENT_UPDATES #12)
+- [ ] Layout she texted Hilal for **Meet Dr. A** page, and the pages to mimic for **Consulting** and **Education**. (CLIENT_UPDATES #12)
+- [ ] **Videos:** Why Move My Cheese? Conference and Book Launch (mp4 or links). (CLIENT_UPDATES #12)
+- [ ] More photos: In the room / conference (people, not just Dr. A), books, book launch; merchandise list for the shop. (CLIENT_UPDATES #12)

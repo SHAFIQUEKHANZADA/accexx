@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { BookingBand, CheckList } from "@/components/services/Blocks";
 import { InquiryForm } from "@/components/services/InquiryForm";
 import { links } from "@/lib/site";
-import speakingPhoto from "../../../../public/images/dr-laide-speaking.jpg";
+import stageAudience from "../../../../public/images/speaking-stage-audience-bw.jpg";
 import conferenceTalk from "../../../../public/images/events/wmmc-2026-04.jpg";
 import conferencePanel from "../../../../public/images/events/wmmc-2026-01.jpg";
 import bookLaunch from "../../../../public/images/events/book-launch-01.jpg";
@@ -43,12 +43,14 @@ export default function SpeakingPage() {
           </>
         }
         intro="Keynotes, panels, and talks that don't just inform. They shift how people think about leadership, culture, and human behavior."
-        image={speakingPhoto}
-        imageAlt="Dr. Laide R. Alexander speaking to an audience"
+        image={stageAudience}
+        imageAlt="Dr. Laide R. Alexander on stage at the lectern, facing a full auditorium"
+        full
+        imagePosition="center 22%"
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book Dr. A</ButtonLink>
-          <ButtonLink href="#inquiry" variant="outline">
+          <ButtonLink href="#inquiry" variant="outline-light">
             Send a speaking inquiry
           </ButtonLink>
         </div>

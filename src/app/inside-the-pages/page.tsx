@@ -21,39 +21,50 @@ export default function InsideThePagesPage() {
       {/* Hero: the set itself */}
       <section className="relative overflow-hidden bg-cream">
         <UnfinishedCircle className="pointer-events-none absolute -bottom-56 -right-40 size-[34rem] text-gold/50" />
-        <div className="container-site relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-14 lg:py-20">
-          <div>
-            <p className="eyebrow animate-fade-up">Inside the Pages with Dr. A</p>
-            <h1 className="heading mt-4 animate-fade-up text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4rem]" style={{ animationDelay: "80ms" }}>
-              Every Book. <em className="text-gold">Different Perspective.</em>
-            </h1>
-            <p className="mt-5 animate-fade-up font-serif text-2xl font-medium italic text-navy/80" style={{ animationDelay: "160ms" }}>
-              {insideThePages.lede}
-            </p>
-            <div className="mt-8 animate-fade-up rounded-2xl border border-line bg-white p-5 shadow-sm" style={{ animationDelay: "240ms" }}>
-              <p className="eyebrow text-[0.65rem]">{insideThePages.scheduleTitle}</p>
-              <p className="mt-2 flex flex-wrap items-baseline gap-x-3">
-                <span className="text-3xl font-light tracking-tight text-navy">{next.label}</span>
-                <span className="font-semibold text-gold-deep">{next.venue}</span>
+        {/* Dr. A (2026-10-01): the set photo larger and catchy, so it spans the full container width. */}
+        <div className="container-site relative py-14 sm:py-16 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-14">
+            <div>
+              <p className="eyebrow animate-fade-up">Inside the Pages with Dr. A</p>
+              <h1
+                className="heading mt-4 animate-fade-up text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4rem]"
+                style={{ animationDelay: "80ms" }}
+              >
+                Every Book. <em className="text-gold">Different Perspective.</em>
+              </h1>
+              <p className="mt-5 animate-fade-up font-serif text-2xl font-medium italic text-navy/80" style={{ animationDelay: "160ms" }}>
+                {insideThePages.lede}
               </p>
-              {/* Time, address and ticketing pending from Dr. A (TODO_CLIENT.md). */}
-              <p className="mt-1 text-sm text-muted">Time and address to be announced to the Accexx Circle.</p>
             </div>
-            <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "300ms" }}>
-              <ButtonLink href="#join">Join the conversation</ButtonLink>
-              <ButtonLink href="#schedule" variant="outline">
-                See the schedule
-              </ButtonLink>
+            <div>
+              <div className="animate-fade-up rounded-2xl border border-line bg-white p-5 shadow-sm" style={{ animationDelay: "240ms" }}>
+                <p className="eyebrow text-[0.65rem]">{insideThePages.scheduleTitle}</p>
+                <p className="mt-2 flex flex-wrap items-baseline gap-x-3">
+                  <span className="text-3xl font-light tracking-tight text-navy">{next.label}</span>
+                  <span className="font-semibold text-gold-deep">{next.venue}</span>
+                </p>
+                {/* Time, address and ticketing pending from Dr. A (TODO_CLIENT.md). */}
+                <p className="mt-1 text-sm text-muted">Time and address to be announced to the Accexx Circle.</p>
+              </div>
+              <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "300ms" }}>
+                <ButtonLink href="#join">Join the conversation</ButtonLink>
+                <ButtonLink href="#schedule" variant="outline">
+                  See the schedule
+                </ButtonLink>
+              </div>
             </div>
           </div>
-          <div className="relative aspect-[1465/794] animate-fade-up overflow-hidden rounded-[2rem] shadow-2xl shadow-navy/20" style={{ animationDelay: "120ms" }}>
+          <div
+            className="relative mt-12 aspect-[1465/794] animate-fade-up overflow-hidden rounded-[2rem] shadow-2xl shadow-navy/20"
+            style={{ animationDelay: "120ms" }}
+          >
             <Image
               src={setPhoto}
               alt="The Inside the Pages with Dr. A set: mustard backdrop, armchairs, reading lounge and event banner"
               fill
               preload
               placeholder="blur"
-              sizes="(min-width: 1024px) 55vw, 100vw"
+              sizes="(min-width: 1280px) 1200px, 100vw"
               className="object-cover"
             />
           </div>
@@ -94,7 +105,12 @@ export default function InsideThePagesPage() {
           </div>
           <ol className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {insideThePages.sequence.map((step, i) => (
-              <li key={step.title} className="rounded-3xl border border-line bg-white p-7 shadow-sm" data-reveal data-reveal-delay={String(i * 80)}>
+              <li
+                key={step.title}
+                className="rounded-3xl border border-line bg-white p-7 shadow-sm"
+                data-reveal
+                data-reveal-delay={String(i * 80)}
+              >
                 <span className="grid size-11 place-items-center rounded-full bg-gold text-sm font-bold text-white">{i + 1}</span>
                 <h3 className="heading mt-5 text-2xl">{step.title}</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-body">{step.body}</p>
@@ -163,7 +179,9 @@ export default function InsideThePagesPage() {
                 data-reveal
                 data-reveal-delay={String(Math.min(i, 8) * 40)}
               >
-                <p className={`text-xs font-bold uppercase tracking-[0.16em] ${i === 0 ? "text-white/85" : "text-gold-light"}`}>Session #{e.number}</p>
+                <p className={`text-xs font-bold uppercase tracking-[0.16em] ${i === 0 ? "text-white/85" : "text-gold-light"}`}>
+                  Session #{e.number}
+                </p>
                 <p className="mt-2 text-2xl font-light tracking-tight">{e.label}</p>
                 <p className={`mt-1 text-sm ${i === 0 ? "font-semibold" : "text-white/60"}`}>{e.venue ?? "Venue TBA"}</p>
               </li>

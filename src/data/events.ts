@@ -46,6 +46,8 @@ export const conference2026 = {
   title: "Why Move My Cheese? Leadership Conference 2026",
   // Next conference dates not provided yet (TODO_CLIENT.md).
   nextEdition: null as null | { label: string; venue: string | null },
+  // Video pending from Dr. A (TODO_CLIENT.md). Drop the mp4 in public/videos/ and set the path here.
+  video: null as string | null,
   photos: [
     photo("/images/events/wmmc-2026-01.jpg", "Dr. Laide Alexander on the panel at the Why Move My Cheese? Leadership Conference 2026", 1394, 928),
     photo("/images/events/wmmc-2026-03.jpg", "Dr. Laide Alexander speaking at the conference", 1512, 1006),
@@ -61,6 +63,8 @@ export const conference2026 = {
 
 export const bookLaunch = {
   title: "Book Launch & Signing",
+  // Video pending from Dr. A: "the larger part can be the video" (email, 2026-10-01).
+  video: null as string | null,
   photos: [
     photo("/images/events/book-launch-01.jpg", "Dr. Laide Alexander speaking at her book launch and signing", 2000, 1420),
     photo("/images/events/book-launch-02.jpg", "Dr. Laide Alexander with a reader holding The Unfinished Leader", 1600, 1575),
