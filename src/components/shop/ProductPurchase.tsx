@@ -11,7 +11,7 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /** Price, variant picker (formats, colour swatches or gift card amounts), quantity and Add to bag. */
 export function ProductPurchase({ product }: { product: Product }) {
   const variants = product.variants ?? [];
-  const [variantId, setVariantId] = useState(defaultVariant(product)?.id);
+  const [variantId, setVariantId] = useState(defaultVariant(product)?.id ?? product.variants?.[0]?.id);
   const [qty, setQty] = useState(1);
   const gift = product.giftCard;
 
@@ -68,7 +68,7 @@ export function ProductPurchase({ product }: { product: Product }) {
   return (
     <div>
       <p className="text-2xl text-ink">
-        <span className="font-semibold">{price ? formatPrice(price) : "Enter an amount"}</span>
+        <span className="font-semibold">{product.pricePending ? "Price coming soon" : price ? formatPrice(price) : "Enter an amount"}</span>
         {compareAt && !isCustom && <s className="ml-3 text-lg text-muted">{formatPrice(compareAt)}</s>}
         {compareAt && !isCustom && (
           <span className="ml-3 rounded-full bg-gold-soft px-2.5 py-1 align-middle text-xs font-bold text-gold-deep">

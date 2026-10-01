@@ -81,3 +81,7 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] Layout she texted Hilal for **Meet Dr. A** page, and the pages to mimic for **Consulting** and **Education**. (CLIENT_UPDATES #12)
 - [ ] **Videos:** Why Move My Cheese? Conference and Book Launch (mp4 or links). (CLIENT_UPDATES #12)
 - [ ] More photos: In the room / conference (people, not just Dr. A), books, book launch; merchandise list for the shop. (CLIENT_UPDATES #12)
+
+- [ ] **Merch prices** (4 caps, 4 T-shirts, mug) and **original photo files** (current ones are cut from the lineup image). (CLIENT_UPDATES #13)
+- [ ] Approve the **#R.I.B mug** concept design (or send a real cup photo). (CLIENT_UPDATES #13)
+- [ ] **Webinar + conference attendee lists** (CSV) and **certificate of attendance** wording/design. (CLIENT_UPDATES #13)

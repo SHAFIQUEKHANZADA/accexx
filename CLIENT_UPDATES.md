@@ -138,3 +138,15 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
   - ✅ Large video frames for the conference and the book launch (`VideoFeature`; "video coming soon" until the files arrive; set `video` in `src/data/events.ts`).
   - ✅ Inside the Pages photo larger on /books and /inside-the-pages (full container width, native resolution).
   - ❓ Videos (conference, book launch), more book/conference/launch photos, merchandise for the shop: pending.
+
+## #13 — WhatsApp from Dr. A, 2026-10-01 23:42 → 2026-10-02 01:06
+- **x01works pages to mimic** (About, Consulting, Education on mobile): full-photo headers with title, one line and the gold tagline. ✅ Consulting, Speaking, Education already match (#12).
+- **About Us: "remove the picture… slightly mimic home page, but no conference picture."** ✅ `/about` header is now the home-style dark navy + gold light-waves, no photo (`PageHero waves`).
+- **Merchandise** (lineup image, `reference/shop-images/merch-lineup-2026-10-02.png`): ✅ added to the shop as NEW, "Price coming soon", not addable to the bag:
+  - Caps (one size, 3 each): Logo Cap (tan), Move Mindset Cap (black), Adapt. Lead. Transform. Cap (grey), Move Different. Cap (olive)
+  - T-shirts (3 each: 1 M, 1 L, 1 XL): Move Different. Lead Better. (white), Adapt. Lead. Transform. (black), Icon Tee (dark grey), Mindset. Strategy. Impact. (forest green)
+  - Photos are cut from her lineup image (low resolution). ❓ Original files + **prices**.
+- **Cups:** no picture. **"Use AI to make some merchandise with #R.I.B, Read, Imagine, Become"**: ✅ concept mug (white + navy) in the shop, marked "Concept design. Final product photos coming soon." ❓ Her approval + price.
+- **SMS:** she wants it; sorting out numbers first. Asked what A2P 10DLC is (answered: US carrier registration for business texting; brand + campaign in GHL).
+- **Attendees:** hundreds of webinar + conference attendees to import into GHL, and they need **certificates of attendance**. ❓ Lists (CSV) + certificate wording/design. (GHL work, Hilal.)
+- Bank micro-deposit verification: payment admin, not the website.

@@ -17,8 +17,11 @@ export function ShopCatalog() {
     const list = products.filter(
       (p) => (collection === "all" || p.collections.includes(collection)) && (category === "all" || p.category === category),
     );
-    if (sort === "price-asc") return [...list].sort((a, b) => a.price - b.price);
-    if (sort === "price-desc") return [...list].sort((a, b) => b.price - a.price);
+    // Items without a price yet always sort last.
+    const byPrice = (dir: 1 | -1) => (a: (typeof list)[number], b: (typeof list)[number]) =>
+      Number(!!a.pricePending) - Number(!!b.pricePending) || dir * (a.price - b.price);
+    if (sort === "price-asc") return [...list].sort(byPrice(1));
+    if (sort === "price-desc") return [...list].sort(byPrice(-1));
     return list;
   }, [collection, category, sort]);
 

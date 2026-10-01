@@ -53,16 +53,22 @@ export function ProductCard({ product }: { product: Product }) {
         </h3>
         {product.author && <p className="mt-1 text-xs text-muted">by {product.author}</p>}
         <p className="mt-2 text-ink">
-          <span className="font-semibold">{formatPrice(product.price)}</span>
-          {product.compareAt && <s className="ml-2 text-sm text-muted">{formatPrice(product.compareAt)}</s>}
+          {product.pricePending ? (
+            <span className="text-sm font-semibold text-gold-deep">Price coming soon</span>
+          ) : (
+            <>
+              <span className="font-semibold">{formatPrice(product.price)}</span>
+              {product.compareAt && <s className="ml-2 text-sm text-muted">{formatPrice(product.compareAt)}</s>}
+            </>
+          )}
         </p>
-        {product.giftCard ? (
+        {product.giftCard || product.pricePending ? (
           // Gift cards need an amount + recipient, so they're set up on the product page.
           <Link
             href={`/shop/${product.slug}`}
             className="mt-4 inline-flex h-11 w-full max-w-56 items-center justify-center rounded-full border border-navy/25 text-sm font-semibold tracking-wide text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white"
           >
-            Choose amount
+            {product.giftCard ? "Choose amount" : "View details"}
           </Link>
         ) : (
           <button

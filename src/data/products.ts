@@ -11,6 +11,16 @@ import capWhite from "../../public/images/products/o-face-cap-white.jpg";
 import capSteelBlue from "../../public/images/products/o-face-cap-steel-blue.jpg";
 import capOlive from "../../public/images/products/o-face-cap-olive.jpg";
 import giftCardImage from "../../public/images/products/store-gift-card.jpg";
+import capTan from "../../public/images/products/cap-tan.jpg";
+import capMoveMindset from "../../public/images/products/cap-black.jpg";
+import capAdaptLead from "../../public/images/products/cap-grey.jpg";
+import capMoveDifferent from "../../public/images/products/cap-olive.jpg";
+import teeWhite from "../../public/images/products/tee-white.jpg";
+import teeBlack from "../../public/images/products/tee-black.jpg";
+import teeDarkGrey from "../../public/images/products/tee-dark-grey.jpg";
+import teeForestGreen from "../../public/images/products/tee-forest-green.jpg";
+import ribMugWhite from "../../public/images/products/rib-mug-white.jpg";
+import ribMugNavy from "../../public/images/products/rib-mug-navy.jpg";
 
 export type ProductBadge = "NEW" | "BESTSELLER";
 
@@ -108,6 +118,8 @@ export type Product = {
   description?: string[];
   /** Label for the typographic placeholder tile when there is no photo yet. */
   placeholderLabel?: string;
+  /** Price not supplied yet: shown as "Price coming soon" and not addable to the bag (`price` is ignored). */
+  pricePending?: boolean;
 };
 
 const bookVariants = (slug: string, formats: BookFormat[], compareAt?: number): ProductVariant[] =>
@@ -240,6 +252,86 @@ export const products: Product[] = [
     ],
   },
 ];
+
+
+/* Merch, from Dr. A's WhatsApp lineup (2026-10-02, reference/shop-images/merch-lineup-2026-10-02.png).
+   Stock per her sheet: caps 3 each (one size); T-shirts 3 each (1 M, 1 L, 1 XL).
+   TODO_CLIENT: prices + original photo files (current images are cut from the lineup). */
+const PRICE_SOON = "Price coming soon";
+
+const merchCap = (slug: string, name: string, subtitle: string, photo: StaticImageData, photoAlt: string): Product => ({
+  slug,
+  name,
+  subtitle,
+  price: 0,
+  pricePending: true,
+  badge: "NEW",
+  type: "headwear",
+  category: "apparel",
+  collections: ["summer-drop"],
+  photo,
+  photoAlt,
+  variants: [{ id: `${slug}-one-size`, label: "One Size", options: { Size: "One Size" }, status: "coming-soon", note: PRICE_SOON }],
+});
+
+const merchTee = (slug: string, name: string, subtitle: string, photo: StaticImageData, photoAlt: string): Product => ({
+  slug,
+  name,
+  subtitle,
+  price: 0,
+  pricePending: true,
+  badge: "NEW",
+  type: "apparel",
+  category: "apparel",
+  collections: ["summer-drop"],
+  photo,
+  photoAlt,
+  variants: ["M", "L", "XL"].map((size) => ({
+    id: `${slug}-${size.toLowerCase()}`,
+    label: size,
+    options: { Size: size },
+    status: "coming-soon" as const,
+    note: PRICE_SOON,
+  })),
+});
+
+products.push(
+  merchCap("logo-cap-tan", "Logo Cap", "Tan · Open-circle logo", capTan, "Tan cap with the Accexx open-circle logo"),
+  merchCap("move-mindset-cap", "Move Mindset Cap", "Black · Move Mindset. Move Future.", capMoveMindset, "Black cap: Move Mindset. Move Future."),
+  merchCap("adapt-lead-transform-cap", "Adapt. Lead. Transform. Cap", "Grey", capAdaptLead, "Grey cap: Adapt. Lead. Transform."),
+  merchCap("move-different-cap", "Move Different. Cap", "Olive", capMoveDifferent, "Olive cap: Move Different."),
+  merchTee("move-different-lead-better-tee", "Move Different. Lead Better. Tee", "White T-shirt", teeWhite, "White T-shirt: Move Different. Lead Better."),
+  merchTee("adapt-lead-transform-tee", "Adapt. Lead. Transform. Tee", "Black T-shirt", teeBlack, "Black T-shirt: Adapt. Lead. Transform."),
+  merchTee("home-work-world-tee", "Icon Tee", "Dark grey T-shirt · Home, work and world icons", teeDarkGrey, "Dark grey T-shirt with home, briefcase and globe icons"),
+  merchTee("mindset-strategy-impact-tee", "Mindset. Strategy. Impact. Tee", "Forest green T-shirt", teeForestGreen, "Forest green T-shirt: Mindset. Strategy. Impact."),
+  {
+    slug: "read-imagine-become-mug",
+    name: "Read. Imagine. Become. Mug",
+    subtitle: "#R.I.B",
+    price: 0,
+    pricePending: true,
+    badge: "NEW",
+    type: "drinkware",
+    category: "other",
+    collections: ["summer-drop"],
+    photo: ribMugWhite,
+    photoAlt: "Concept design: white mug with Read. Imagine. Become. #R.I.B",
+    // Concept mockups made at Dr. A's request ("use AI to make some merchandise with #R.I.B"). Replace with real photos.
+    description: ["Concept design. Final product photos coming soon."],
+    variants: [
+      ["White", "#ffffff", ribMugWhite],
+      ["Navy", "#1f3864", ribMugNavy],
+    ].map(([colour, swatch, image]) => ({
+      id: `read-imagine-become-mug-${(colour as string).toLowerCase()}`,
+      label: colour as string,
+      options: { Colour: colour as string },
+      status: "coming-soon" as const,
+      note: PRICE_SOON,
+      swatch: swatch as string,
+      image: image as StaticImageData,
+    })),
+  },
+);
 
 export const books = products.filter((p) => p.type === "book");
 

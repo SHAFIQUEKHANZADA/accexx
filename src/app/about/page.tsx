@@ -7,7 +7,6 @@ import { consultants, leadership, maxConsultants } from "@/data/team";
 import { corePromise, coreValues, partners, presentRoles, whatWeDo, whoWeAre, whoWeServe } from "@/data/about";
 import { links } from "@/lib/site";
 import headshot from "../../../public/images/dr-laide-headshot.jpg";
-import conferencePanel from "../../../public/images/events/wmmc-2026-02.jpg";
 import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 
 export const metadata: Metadata = {
@@ -30,12 +29,11 @@ export default function AboutPage() {
           </>
         }
         intro={whoWeAre[0]}
-        image={conferencePanel}
-        imageAlt="A panel discussion on stage at the Why Move My Cheese? Leadership Conference 2026"
+        waves
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>
-          <ButtonLink href="#team" variant="outline">
+          <ButtonLink href="#team" variant="outline-light">
             Meet the Team
           </ButtonLink>
         </div>

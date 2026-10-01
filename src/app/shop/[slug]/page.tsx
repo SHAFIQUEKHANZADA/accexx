@@ -41,8 +41,8 @@ export default async function ProductPage({ params }: Props) {
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
   const isBook = product.type === "book";
   // Bundle: this item + up to two others (gift cards need recipient details, so they're never auto-added).
-  const together = [product, ...products.filter((p) => p.slug !== product.slug && !p.giftCard)].slice(0, 3);
-  const canBundle = !product.giftCard && together.length > 1;
+  const together = [product, ...products.filter((p) => p.slug !== product.slug && !p.giftCard && !p.pricePending)].slice(0, 3);
+  const canBundle = !product.giftCard && !product.pricePending && together.length > 1;
 
   return (
     <>
