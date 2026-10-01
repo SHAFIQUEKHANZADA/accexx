@@ -167,7 +167,7 @@ export default function BooksPage() {
             <VideoFeature src={bookLaunch.video} poster={bookLaunch.videoPoster} title={bookLaunch.title} />
           </div>
           <div className="mt-8">
-            <Gallery photos={bookLaunch.photos} />
+            <Gallery photos={bookLaunch.people} />
           </div>
         </div>
       </section>

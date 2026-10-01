@@ -83,16 +83,26 @@ export const bookLaunch = {
   // Dr. A: "the larger part can be the video" (email, 2026-10-01). Video received 2026-10-02.
   video: "/videos/book-launch-2026.mp4" as string | null,
   videoPoster: "/videos/book-launch-2026-poster.jpg",
+  // Dr. A (2026-10-02): book event photos that show the people. Used on /books. Originals: reference/whatsapp-images/2026-10-02-book-event/.
+  people: [
+    photo("/images/events/book-launch-p01.jpg", "Guests on the book launch panel holding Dr. A's books", 1600, 1066),
+    photo("/images/events/book-launch-p02.jpg", "The book launch panel in front of a full room", 1200, 1600),
+    photo("/images/events/book-launch-p03.jpg", "Guests listening at the book launch", 1600, 980),
+    photo("/images/events/book-launch-p04.jpg", "A guest sharing his thoughts with the microphone", 1491, 994),
+    photo("/images/events/book-launch-p05.jpg", "Dr. Laide Alexander with two guests holding her books", 1491, 994),
+    photo("/images/events/book-launch-p06.jpg", "A guest speaking to the room", 1600, 1066),
+    photo("/images/events/book-launch-p07.jpg", "The audience at the book launch", 1600, 1066),
+    photo("/images/events/book-launch-p08.jpg", "Dr. Laide Alexander with readers and their books", 1491, 994),
+    photo("/images/events/book-launch-p09.jpg", "A guest asking a question", 1600, 1066),
+    photo("/images/events/book-launch-p10.jpg", "A guest sharing a story with the microphone", 1491, 994),
+    photo("/images/events/book-launch-p11.jpg", "Guests in conversation at the book launch", 1600, 1066),
+    photo("/images/events/book-launch-p12.jpg", "Guests seated at the book launch", 1600, 982),
+    photo("/images/events/book-launch-p13.jpg", "Families and guests at the book launch", 1478, 863),
+  ],
+  // Home "In the room" uses the first two.
   photos: [
     photo("/images/events/book-launch-01.jpg", "Dr. Laide Alexander speaking at her book launch and signing", 2000, 1420),
     photo("/images/events/book-launch-02.jpg", "Dr. Laide Alexander with a reader holding The Unfinished Leader", 1600, 1575),
-    photo("/images/events/book-launch-06.jpg", "Readers with copies of Why Move My Cheese?", 2000, 1333),
-    photo("/images/events/book-launch-09.jpg", "Dr. Laide Alexander in conversation at the book launch", 1491, 994),
-    photo("/images/events/book-launch-04.jpg", "Dr. Laide Alexander with readers and their signed books", 1491, 994),
-    photo("/images/events/book-launch-07.jpg", "Dr. Laide Alexander addressing guests at the book launch", 1491, 994),
-    photo("/images/events/book-launch-05.jpg", "Dr. Laide Alexander with readers holding The Unfinished Leader", 1491, 994),
-    photo("/images/events/book-launch-14.jpg", "Portrait of Dr. Laide Alexander at the book launch", 863, 1461),
-    photo("/images/events/book-launch-17.jpg", "Stacks of Why Move My Cheese? at the signing table", 2000, 1333),
   ],
 };
 
