@@ -266,33 +266,25 @@ export default function AboutPage() {
             </h2>
             <p className="mt-4 text-lg text-body">The people behind the platform</p>
           </div>
-          <h3 className="mt-12 text-sm font-bold uppercase tracking-[0.18em] text-navy">Leadership</h3>
-          <div className="mt-5 grid max-w-4xl gap-6 sm:grid-cols-2">
-            {leadership.map((m, i) => (
-              <div key={m.name} data-reveal data-reveal-delay={String(i * 100)}>
+          {/* Leadership + executive consultants in one row (room for 8 consultants, see data/team.ts). */}
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[...leadership, ...consultants].map((m, i) => (
+              <div key={m.name} data-reveal data-reveal-delay={String((i % 3) * 100)}>
                 <TeamCard member={m} />
               </div>
             ))}
           </div>
-
-          <h3 className="mt-16 text-sm font-bold uppercase tracking-[0.18em] text-navy">Executive Consultants</h3>
-          <p className="mt-2 max-w-2xl text-body">Dr. A + Executive Consultants: A Collective of Breakthrough.</p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {consultants.map((m, i) => (
-              <div key={m.name} data-reveal data-reveal-delay={String(i * 80)}>
-                <TeamCard member={m} />
-              </div>
-            ))}
-            {consultants.length < maxConsultants && (
-              <div data-reveal className="flex min-h-64 flex-col justify-center rounded-3xl border border-dashed border-gold/50 bg-white/60 p-7 text-center">
+          {consultants.length < maxConsultants && (
+            <div data-reveal className="mt-6 flex flex-col items-start justify-between gap-3 rounded-3xl border border-dashed border-gold/50 bg-white/60 px-7 py-6 sm:flex-row sm:items-center">
+              <div>
                 <p className="font-serif text-2xl font-semibold text-navy">More consultants joining the collective</p>
-                <p className="mt-2 text-sm text-body">Interested in working with Accexx Insight?</p>
-                <a href="/contact" className="mt-4 text-sm font-semibold text-gold-deep hover:text-navy">
-                  Contact us →
-                </a>
+                <p className="mt-1 text-sm text-body">Dr. A + Executive Consultants: A Collective of Breakthrough.</p>
               </div>
-            )}
-          </div>
+              <a href="/contact" className="text-sm font-semibold text-gold-deep hover:text-navy">
+                Interested in working with us? Contact us →
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
