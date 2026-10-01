@@ -16,7 +16,7 @@ import lecture from "../../../public/images/education-lecture.jpg";
 export const metadata: Metadata = {
   title: "Education",
   description:
-    "Certifications, leadership development, career workshops and short courses from Accexx Insight, all built on the Human Operating Code™ framework and delivered to cohorts in person or virtually.",
+    "Certifications, leadership development, career workshops and short courses from Accexx Insight, all built on the Human Operating Codes™ framework and delivered to cohorts in person or virtually.",
   alternates: { canonical: "/education" },
 };
 
@@ -73,18 +73,19 @@ export default function EducationPage() {
         eyebrow="Education"
         title={
           <>
-            Programs built on the <em className="text-gold">Human Operating Code™</em>
+            Programs built on the <em className="text-gold">Human Operating Codes™</em>
           </>
         }
         intro={
           <p>
-            The Human Operating Code™ is the proprietary framework underlying every Accexx Insight program. Choose a program
+            The Human Operating Codes™ framework underlies every Accexx Insight program. Choose a program
             family below, then bring it to your team as a cohort, in person or virtually.
           </p>
         }
         image={lecture}
         imageAlt="A presenter leading a session in a lecture room"
         full
+        imagePosition="center top"
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#programs">Explore programs</ButtonLink>

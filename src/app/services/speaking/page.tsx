@@ -6,9 +6,9 @@ import { BookingBand, CheckList } from "@/components/services/Blocks";
 import { InquiryForm } from "@/components/services/InquiryForm";
 import { links } from "@/lib/site";
 import stageAudience from "../../../../public/images/speaking-stage-audience-bw.jpg";
-import conferenceTalk from "../../../../public/images/events/wmmc-2026-04.jpg";
-import conferencePanel from "../../../../public/images/events/wmmc-2026-01.jpg";
-import bookLaunch from "../../../../public/images/events/book-launch-01.jpg";
+import conferenceGroup from "../../../../public/images/events/wmmc-2026-p01.jpg";
+import conferenceRoom from "../../../../public/images/events/wmmc-2026-p02.jpg";
+import launchAudience from "../../../../public/images/events/book-launch-p07.jpg";
 
 export const metadata: Metadata = {
   title: "Speaking: Book Dr. A",
@@ -46,7 +46,7 @@ export default function SpeakingPage() {
         image={stageAudience}
         imageAlt="Dr. Laide R. Alexander on stage at the lectern, facing a full auditorium"
         full
-        imagePosition="center 22%"
+        imagePosition="center 40%"
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book Dr. A</ButtonLink>
@@ -108,10 +108,11 @@ export default function SpeakingPage() {
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
             <figure className="md:col-span-2 lg:col-span-1 lg:row-span-2" data-reveal>
-              <div className="relative aspect-[1394/928] overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[28rem]">
+              {/* Dr. A (2026-10-02): "For the speaking, please show the people as much as possible." */}
+              <div className="relative aspect-[1502/1000] overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:min-h-[28rem]">
                 <Image
-                  src={conferencePanel}
-                  alt="Dr. Laide R. Alexander on a panel at the Why Move My Cheese? Leadership Conference 2026"
+                  src={conferenceRoom}
+                  alt="Attendees at round tables during the Why Move My Cheese? Leadership Conference 2026"
                   fill
                   placeholder="blur"
                   sizes="(min-width: 1024px) 58vw, 100vw"
@@ -119,14 +120,14 @@ export default function SpeakingPage() {
                 />
               </div>
               <figcaption className="mt-3 text-sm text-muted">
-                Panel discussion · <span className="font-semibold text-navy">Why Move My Cheese? Leadership Conference 2026</span>
+                Attendees in session · <span className="font-semibold text-navy">Why Move My Cheese? Leadership Conference 2026</span>
               </figcaption>
             </figure>
             <figure data-reveal data-reveal-delay="100">
-              <div className="relative aspect-[1502/1000] overflow-hidden rounded-3xl">
+              <div className="relative aspect-[1439/785] overflow-hidden rounded-3xl">
                 <Image
-                  src={conferenceTalk}
-                  alt="Dr. Laide R. Alexander addressing the room at the Why Move My Cheese? Leadership Conference 2026"
+                  src={conferenceGroup}
+                  alt="Attendees together at the Why Move My Cheese? backdrop"
                   fill
                   placeholder="blur"
                   sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
@@ -138,10 +139,10 @@ export default function SpeakingPage() {
               </figcaption>
             </figure>
             <figure data-reveal data-reveal-delay="160">
-              <div className="relative aspect-[2000/1420] overflow-hidden rounded-3xl">
+              <div className="relative aspect-[1600/1066] overflow-hidden rounded-3xl">
                 <Image
-                  src={bookLaunch}
-                  alt="Dr. Laide R. Alexander speaking at her Book Launch & Signing"
+                  src={launchAudience}
+                  alt="The audience at the Book Launch & Signing"
                   fill
                   placeholder="blur"
                   sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"

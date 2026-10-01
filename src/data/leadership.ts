@@ -103,7 +103,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
       outcomes: [
         "Connect big-picture strategy to day-to-day choices",
         "Assess the human impact of decisions",
-        "Use both analytical tools and Human Operating Code insights (values, emotions, narratives) to make better, more sustainable decisions",
+        "Use both analytical tools and Human Operating Codes insights (values, emotions, narratives) to make better, more sustainable decisions",
       ],
       modules: [
         {
@@ -506,7 +506,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
         "Lead change sideways and upwards by mapping stakeholders, building coalitions, using influence and storytelling",
-        "Apply Human Operating Code insights to understand resistance and motivate buy-in",
+        "Apply Human Operating Codes insights to understand resistance and motivate buy-in",
       ],
       modules: [
         {
@@ -760,7 +760,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
     slug: "ld-12",
     name: "Leadership Communication & Storytelling",
     description:
-      "Teaches leaders to craft clear, compelling messages and narratives that align with the Human Operating Code, so people understand, care, and act.",
+      "Teaches leaders to craft clear, compelling messages and narratives that align with the Human Operating Codes, so people understand, care, and act.",
     audience: "All leaders who present, brief, or lead change; internal champions and spokespersons.",
     live: {
       duration: "1-2 days or 4 virtual sessions plus practice",
@@ -768,7 +768,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
         "In-person workshop or virtual sessions (see duration options above); stand-alone or combinable with other programs in this series",
       outcomes: [
         "Craft clear, compelling messages and narratives",
-        "Align communication with the Human Operating Code so people understand, care, and act",
+        "Align communication with the Human Operating Codes so people understand, care, and act",
         "Communicate more effectively in change and everyday leadership",
       ],
       modules: [
@@ -784,7 +784,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
         },
         {
           id: "M2",
-          title: "Aligning Communication with the Human Operating Code",
+          title: "Aligning Communication with the Human Operating Codes",
           objectives: [
             "Connect messages to underlying beliefs, values, and stories",
             "Practice framing a message to resonate emotionally, not just logically",
@@ -817,7 +817,7 @@ export const leadershipPrograms: LeadershipProgram[] = [
     selfPaced: {
       lessons: [
         { title: "Crafting Clear, Compelling Messages", format: "Video + Worksheet", time: "~6 min" },
-        { title: "Aligning Communication with the Human Operating Code", format: "Video + Worksheet", time: "~7 min" },
+        { title: "Aligning Communication with the Human Operating Codes", format: "Video + Worksheet", time: "~7 min" },
         { title: "Communicating Through Change", format: "Video + Worksheet", time: "~6 min" },
         { title: "Practicing Everyday Leadership Communication", format: "Video + Worksheet", time: "~6 min" },
       ],

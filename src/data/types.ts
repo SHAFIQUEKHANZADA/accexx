@@ -18,7 +18,7 @@ export type Certification = {
   code: string;
   /** URL slug, lower-case, e.g. "hoc-lp". */
   slug: string;
-  /** Full credential name, e.g. "Certified Human Operating Code™ Leadership Practitioner". */
+  /** Full credential name, e.g. "Certified Human Operating Codes™ Leadership Practitioner". */
   name: string;
   /** One-line description under the title in the source. */
   tagline: string;

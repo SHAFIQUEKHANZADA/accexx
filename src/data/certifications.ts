@@ -18,7 +18,7 @@ export const showCeus = true; // Recommended CEUs are a calculated estimate, not
 
 /** Facilitator text, identical in all 10 source overviews. */
 const FACILITATOR =
-  "Dr. Laide R. Alexander, Forbes Coaches Council member, creator of the Human Operating Code framework, and author of the Amazon best-seller The Unfinished Leader. Alternatively, a professional executive assigned by Accexx Insight who meets this certification's stated facilitator qualifications.";
+  "Dr. Laide R. Alexander, Forbes Coaches Council member, creator of the Human Operating Codes framework, and author of the Amazon best-seller The Unfinished Leader. Alternatively, a professional executive assigned by Accexx Insight who meets this certification's stated facilitator qualifications.";
 
 const FORMAT = "Live Virtual or In-Person";
 
@@ -26,9 +26,9 @@ export const certifications: Certification[] = [
   {
     code: "HOC-LP",
     slug: "hoc-lp",
-    name: "Certified Human Operating Code™ Leadership Practitioner",
+    name: "Certified Human Operating Codes™ Leadership Practitioner",
     tagline:
-      "Learn to diagnose and shift team behavior using the Human Operating Code framework, from everyday interventions to leading through conflict and change.",
+      "Learn to diagnose and shift team behavior using the Human Operating Codes framework, from everyday interventions to leading through conflict and change.",
     format: FORMAT,
     contactHours: 42,
     ceus: 4.2,
@@ -38,7 +38,7 @@ export const certifications: Certification[] = [
     modules: [
       {
         number: 1,
-        title: "Introduction to the Human Operating Code",
+        title: "Introduction to the Human Operating Codes",
         hours: 6,
         summary:
           "Learn the Beliefs-Stories-Emotions-Habits framework and use it to diagnose your own operating code.",
@@ -231,9 +231,9 @@ export const certifications: Certification[] = [
   {
     code: "EL-HOC",
     slug: "el-hoc",
-    name: "Certified Education Leadership & Human Operating Code™ Specialist",
+    name: "Certified Education Leadership & Human Operating Codes™ Specialist",
     tagline:
-      "Apply the Human Operating Code framework to school leadership: classroom climate, staff culture, discipline systems, and governance.",
+      "Apply the Human Operating Codes framework to school leadership: classroom climate, staff culture, discipline systems, and governance.",
     format: FORMAT,
     contactHours: 33,
     ceus: 3.3,
@@ -428,7 +428,7 @@ export const certifications: Certification[] = [
   {
     code: "CHOC-F",
     slug: "choc-f",
-    name: "Certified Change & Human Operating Code™ Facilitator",
+    name: "Certified Change & Human Operating Codes™ Facilitator",
     tagline:
       "Map the human impact of change, understand resistance, and facilitate change journeys that build real ownership and adoption.",
     format: FORMAT,
@@ -486,7 +486,7 @@ export const certifications: Certification[] = [
   {
     code: "G-HOC Coach",
     slug: "g-hoc-coach",
-    name: "Certified Global Human Operating Code™ Coach",
+    name: "Certified Global Human Operating Codes™ Coach",
     tagline:
       "The advanced, selective-entry certification, integrating HOC into 1:1 and team coaching practice across cultural and organizational contexts.",
     format: FORMAT,

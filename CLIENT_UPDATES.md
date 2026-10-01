@@ -159,3 +159,13 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
 - "**Can you put the same almost closed circle on the cup too?**" ❓ Regenerate both mugs with the brush-stroke teal/gold open circle from the caps and T-shirts (GPT).
 - "**Then bold the logo**": ❓ unclear (the cup circle, or the site header logo). Ask.
 - Bank micro-deposits and SMS: admin, not the website.
+
+## #15 — WhatsApp from Dr. A, 2026-10-02 02:01 → 02:40
+- "Love. Love Love the landing page for Dr. A." ✅
+- **"Please change all Human Operating code to Human Operating Codes."** ✅ All 22 occurrences on the site, including the 4 certification names (Certified Human Operating Codes™ Leadership Practitioner, … Specialist, … Facilitator, … Coach). ❗ The GHL course titles need the same change (Hilal).
+- **"Under education the coaches head needs to show."** ✅ Education header photo cropped from the top, so the presenter's head shows.
+- **"For the speaking, please show the people as much as possible."** ✅ Speaking header shows more of the audience; "Recent stages" now uses crowd photos (conference attendees, attendee group, book launch audience).
+- **"Crop off the videographer's info… Why Move My Cheese should be the end." "Same with the book signing."** ✅ Both videos trimmed before the videographer credit card (conference ends on the Why Move My Cheese? logo, 3:46; book launch 3:20). Re-encoded smaller (63 MB total, was 81 MB).
+- "Ok, will share via Google docs": originals coming by Drive.
+- New merch sheet ("These are items for the store": caps, tees, hoodies, bottles, totes, lanyards). ❓ Need the image file + prices.
+- "Then bold the logo": ❓ still unclear (cup circle vs site logo).

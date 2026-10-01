@@ -9,7 +9,7 @@ import { certifications } from "@/data/certifications";
 export const metadata: Metadata = {
   title: "HOC Certifications",
   description:
-    "The HOC™ Flagship Certification Suite: 10 certifications built on the Human Operating Code™ framework, delivered live virtually or in person to cohorts.",
+    "The HOC™ Flagship Certification Suite: 10 certifications built on the Human Operating Codes™ framework, delivered live virtually or in person to cohorts.",
   alternates: { canonical: "/education/certifications" },
 };
 

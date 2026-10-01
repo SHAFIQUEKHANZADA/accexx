@@ -34,7 +34,7 @@ export const coachingStreams: CoachingStream[] = [
     slug: "executive-leadership",
     name: "Executive & Leadership Coaching (1:1)",
     description:
-      "One-to-one coaching for senior leaders grounded in the Human Operating Code framework. Goes beyond goal-setting to work with the beliefs, stories, and emotional patterns that drive or derail leadership.",
+      "One-to-one coaching for senior leaders grounded in the Human Operating Codes framework. Goes beyond goal-setting to work with the beliefs, stories, and emotional patterns that drive or derail leadership.",
     whoFor: "CEOs, school owners, senior leaders, founders, high-potential leaders in transition.",
     focusAreas: [
       "Leading through transition or growth",

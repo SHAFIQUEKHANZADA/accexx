@@ -288,7 +288,7 @@ function Offerings() {
   );
 }
 
-/* The Human Operating Code™ ------------------------------------------------------ */
+/* The Human Operating Codes™ ------------------------------------------------------ */
 
 // Copy: glossary (HOC, BSEH) + HOC-LP Module 1 (BSEH self-diagnostic prompts).
 const bseh = [
@@ -305,7 +305,7 @@ function Method() {
       <div className="container-site">
         <div data-reveal>
           <p className="eyebrow">Our method</p>
-          <h2 className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">The Human Operating Code™</h2>
+          <h2 className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">The Human Operating Codes™</h2>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-body">
             The proprietary framework underlying every Accexx Insight program, created by Dr. Laide R. Alexander. Its lens
             (Beliefs, Stories, Emotions, Habits) explains what actually drives behavior, beneath the surface-level action.
