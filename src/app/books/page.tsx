@@ -146,12 +146,12 @@ export default function BooksPage() {
           </div>
 
           <div className="mt-16" data-reveal>
-            <VideoFeature src={conference2026.video} poster={conference2026.photos[6].src} title={conference2026.title} />
+            <VideoFeature src={conference2026.video} poster={conference2026.videoPoster} title={conference2026.title} />
           </div>
 
           <h3 className="mt-16 text-sm font-bold uppercase tracking-[0.18em] text-navy">{conference2026.title}: highlights</h3>
           <div className="mt-6">
-            <Gallery photos={conference2026.photos} />
+            <Gallery photos={conference2026.people} />
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function BooksPage() {
             {bookLaunch.title}
           </h2>
           <div className="mt-10" data-reveal>
-            <VideoFeature src={bookLaunch.video} poster={bookLaunch.photos[0].src} title={bookLaunch.title} />
+            <VideoFeature src={bookLaunch.video} poster={bookLaunch.videoPoster} title={bookLaunch.title} />
           </div>
           <div className="mt-8">
             <Gallery photos={bookLaunch.photos} />

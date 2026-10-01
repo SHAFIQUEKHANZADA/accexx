@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
+import { PageHero } from "@/components/ui/PageHero";
 import { Quote } from "@/components/ui/icons";
 import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 import { bio, pastRoles, presentRoles, shortBio } from "@/data/about";
@@ -27,58 +28,49 @@ const bioParts = [
 export default function MeetDrAPage() {
   return (
     <>
-      {/* Hero: portrait frame so the headshot isn't cropped at the forehead. */}
-      <section className="relative overflow-hidden border-b border-line bg-cream">
-        <UnfinishedCircle className="pointer-events-none absolute -right-32 -top-32 size-[30rem] text-gold/50" />
-        <div className="container-site relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] lg:gap-16 lg:py-20">
-          <div>
-            <p className="eyebrow animate-fade-up">Meet Dr. A</p>
-            <h1
-              className="heading mt-4 animate-fade-up text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4rem]"
-              style={{ animationDelay: "80ms" }}
-            >
-              The Visionary Behind <em className="text-gold">Accexx Insight</em>
-            </h1>
-            <p className="mt-5 animate-fade-up font-serif text-2xl font-semibold text-navy" style={{ animationDelay: "120ms" }}>
-              Dr. Laide R. Alexander
-            </p>
-            <ul className="mt-4 animate-fade-up space-y-1.5 text-[0.95rem] text-ink" style={{ animationDelay: "140ms" }}>
+      {/* Dr. A (2026-10-02): the dark-dress photo as a big background, like the other pages; along the x01works About path. */}
+      <PageHero
+        eyebrow="Meet Dr. A"
+        title={
+          <>
+            The Visionary Behind <em>Accexx Insight</em>
+          </>
+        }
+        intro={
+          <>
+            <p className="font-serif text-2xl font-semibold text-white sm:text-3xl">Dr. Laide R. Alexander</p>
+            <ul className="mt-4 space-y-1.5 text-base text-white/90 sm:text-lg">
               {presentRoles.map((r) => (
                 <li key={r.org} className="flex gap-3">
-                  <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                  <span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-gold" />
                   <span>
-                    <span className="font-semibold text-navy">{r.title}</span>, {r.org}
+                    <span className="font-semibold text-white">{r.title}</span>, {r.org}
                   </span>
                 </li>
               ))}
             </ul>
-            <p
-              className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-body"
-              style={{ animationDelay: "160ms" }}
-            >
-              {shortBio}
-            </p>
-            <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "240ms" }}>
-              <ButtonLink href={links.booking}>Book Dr. A</ButtonLink>
-              <ButtonLink href="#story" variant="outline">
-                Read the full story
-              </ButtonLink>
-            </div>
-          </div>
-          <div
-            className="relative mx-auto aspect-[4/5] w-full max-w-sm animate-fade-up overflow-hidden rounded-[2rem] shadow-xl shadow-navy/15 lg:max-w-none"
-            style={{ animationDelay: "160ms" }}
-          >
-            <Image
-              src={headshot}
-              alt="Dr. Laide R. Alexander, Founder & CEO of Accexx Insight"
-              fill
-              preload
-              placeholder="blur"
-              sizes="(min-width: 1024px) 34vw, (min-width: 640px) 24rem, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
+            <p className="mt-5 font-serif text-xl italic text-gold-light sm:text-2xl">We more than find solutions. We ensure transformation.</p>
+          </>
+        }
+        image={headshot}
+        imageAlt="Dr. Laide R. Alexander, Founder & CEO of Accexx Insight"
+        full
+        imagePosition="center 18%"
+      >
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <ButtonLink href={links.booking}>Book Dr. A</ButtonLink>
+          <ButtonLink href="#story" variant="outline-light">
+            Read the full story
+          </ButtonLink>
+        </div>
+      </PageHero>
+
+      {/* Intro ------------------------------------------------------------------- */}
+      <section className="border-b border-line bg-cream py-14 lg:py-16">
+        <div className="container-site">
+          <p className="max-w-3xl text-lg leading-relaxed text-body sm:text-xl" data-reveal>
+            {shortBio}
+          </p>
         </div>
       </section>
 

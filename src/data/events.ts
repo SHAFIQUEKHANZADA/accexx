@@ -46,8 +46,25 @@ export const conference2026 = {
   title: "Why Move My Cheese? Leadership Conference 2026",
   // Next conference dates not provided yet (TODO_CLIENT.md).
   nextEdition: null as null | { label: string; venue: string | null },
-  // Video pending from Dr. A (TODO_CLIENT.md). Drop the mp4 in public/videos/ and set the path here.
-  video: null as string | null,
+  // Conference recap video from Dr. A (WhatsApp, 2026-10-02). Originals: reference/whatsapp-images/2026-10-02/.
+  video: "/videos/wmmc-2026-highlights.mp4" as string | null,
+  videoPoster: "/videos/wmmc-2026-highlights-poster.jpg",
+  // Dr. A (2026-10-02): conference photos that show people, not just her. Used on /books.
+  people: [
+    photo("/images/events/wmmc-2026-p01.jpg", "Attendees at the Why Move My Cheese? backdrop", 1439, 785),
+    photo("/images/events/wmmc-2026-p02.jpg", "Attendees working at round tables in the ballroom", 1502, 1000),
+    photo("/images/events/wmmc-2026-p03.jpg", "A speaker at the lectern during the conference", 1502, 1000),
+    photo("/images/events/wmmc-2026-p04.jpg", "Attendees seated at conference tables", 1512, 1006),
+    photo("/images/events/wmmc-2026-p05.jpg", "Three attendees at the conference backdrop", 1465, 794),
+    photo("/images/events/wmmc-2026-p06.jpg", "Attendees working through their conference materials", 1502, 1000),
+    photo("/images/events/wmmc-2026-p07.jpg", "Two attendees in conversation", 1502, 1000),
+    photo("/images/events/wmmc-2026-p08.jpg", "Two attendees at the conference backdrop", 1374, 959),
+    photo("/images/events/wmmc-2026-p09.jpg", "Attendees networking between sessions", 1502, 1000),
+    photo("/images/events/wmmc-2026-p10.jpg", "Two attendees at the conference backdrop", 1386, 1600),
+    photo("/images/events/wmmc-2026-p11.jpg", "Attendees at a table during a session", 1600, 1064),
+    photo("/images/events/wmmc-2026-p12.jpg", "The conference ballroom during a session", 1433, 719),
+    photo("/images/events/wmmc-2026-02.jpg", "Conference panel discussion on stage", 1512, 1006),
+  ],
   photos: [
     photo("/images/events/wmmc-2026-01.jpg", "Dr. Laide Alexander on the panel at the Why Move My Cheese? Leadership Conference 2026", 1394, 928),
     photo("/images/events/wmmc-2026-03.jpg", "Dr. Laide Alexander speaking at the conference", 1512, 1006),
@@ -63,8 +80,9 @@ export const conference2026 = {
 
 export const bookLaunch = {
   title: "Book Launch & Signing",
-  // Video pending from Dr. A: "the larger part can be the video" (email, 2026-10-01).
-  video: null as string | null,
+  // Dr. A: "the larger part can be the video" (email, 2026-10-01). Video received 2026-10-02.
+  video: "/videos/book-launch-2026.mp4" as string | null,
+  videoPoster: "/videos/book-launch-2026-poster.jpg",
   photos: [
     photo("/images/events/book-launch-01.jpg", "Dr. Laide Alexander speaking at her book launch and signing", 2000, 1420),
     photo("/images/events/book-launch-02.jpg", "Dr. Laide Alexander with a reader holding The Unfinished Leader", 1600, 1575),

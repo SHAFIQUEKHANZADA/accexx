@@ -17,7 +17,7 @@ export function VideoFeature({
   return (
     <figure className={`relative aspect-video overflow-hidden rounded-3xl bg-night shadow-2xl shadow-navy/25 ${className}`}>
       {src ? (
-        <video controls preload="metadata" poster={poster} className="size-full object-cover" aria-label={title}>
+        <video controls playsInline preload="metadata" poster={poster} className="size-full object-cover" aria-label={title}>
           <source src={src} type="video/mp4" />
         </video>
       ) : (

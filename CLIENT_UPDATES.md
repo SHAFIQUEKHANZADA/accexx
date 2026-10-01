@@ -150,3 +150,12 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
 - **SMS:** she wants it; sorting out numbers first. Asked what A2P 10DLC is (answered: US carrier registration for business texting; brand + campaign in GHL).
 - **Attendees:** hundreds of webinar + conference attendees to import into GHL, and they need **certificates of attendance**. ❓ Lists (CSV) + certificate wording/design. (GHL work, Hilal.)
 - Bank micro-deposit verification: payment admin, not the website.
+
+## #14 — WhatsApp from Dr. A, 2026-10-02 01:21 → 01:58
+- "**I love the About.**" "I see the changes, but just a few left."
+- **Meet Dr. A** must be its own page along the x01works About path (full photo header, name, roles, tagline), "and make it even better". "Use the picture there with the dark dress, just make it bigger, like background and big like the other pages, the rest can stay as is." ✅ `/about/dr-a` header is now the dark-dress headshot as a full background (`PageHero full`), name, present roles, tagline, buttons; rest unchanged.
+- **Conference video + photos** (WhatsApp 01:25 / 01:47). ✅ `/books`: conference recap video (3:49) plays in the large frame; the highlights grid now shows attendees (12 new people photos + the panel). ✅ Book launch video (3:23) is the main item of the Book Launch section. Files: `public/videos/` (remuxed for streaming, not re-encoded); original photos in `reference/whatsapp-images/2026-10-02/`. Home "In the room" unchanged (Shafique asked to keep it).
+- "**Human Operation codes (plural)**". Hilal told her he'd change "Human Operation Code" to "Human Operation Codes". ❓ Not changed yet: the source docs and course names say "Human Operating Code™" (singular, "Operating"), used in certification titles and in GHL. Confirm the exact wording (Operating vs Operation, singular vs plural) before renaming site-wide.
+- "**Can you put the same almost closed circle on the cup too?**" ❓ Regenerate both mugs with the brush-stroke teal/gold open circle from the caps and T-shirts (GPT).
+- "**Then bold the logo**": ❓ unclear (the cup circle, or the site header logo). Ask.
+- Bank micro-deposits and SMS: admin, not the website.
