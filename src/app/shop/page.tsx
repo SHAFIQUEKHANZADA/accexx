@@ -4,9 +4,10 @@ import { ButtonLink } from "@/components/ui/Button";
 import { ShopCatalog } from "@/components/shop/ShopCatalog";
 import { ShopPopup } from "@/components/shop/ShopPopup";
 import { books } from "@/data/products";
-import { conference2026, insideThePages } from "@/data/events";
+import { insideThePages } from "@/data/events";
 import headshot from "../../../public/images/dr-laide-headshot.jpg";
 import insideThePagesSet from "../../../public/images/inside-the-pages-set.jpg";
+import sessionPhoto from "../../../public/images/events/wmmc-2026-session.jpg";
 import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
 
 export const metadata: Metadata = {
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
 };
 
 export default function ShopPage() {
-  const conferencePhoto = conference2026.photos[0];
   const firstSession = insideThePages.schedule[0];
 
   return (
@@ -121,29 +121,40 @@ export default function ShopPage() {
       </section>
 
       {/* Conference ------------------------------------------------------------- */}
+      {/* Dr. A (2026-10-03): use the session photo (speaker at the lectern, full room) instead of the panel photo.
+          It is a wide strip, so it runs full width under the text. */}
       <section className="bg-navy py-16 text-white lg:py-24" aria-labelledby="conf-heading">
-        <div className="container-site grid items-center gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-16">
-          <div data-reveal>
-            <p className="eyebrow text-gold-light!">The annual conference</p>
-            <h2 id="conf-heading" className="mt-4 font-serif text-4xl font-semibold sm:text-5xl">
-              Why Move My Cheese? <em className="text-gold-light">Leadership Conference</em>
-            </h2>
-            <p className="mt-5 max-w-xl leading-relaxed text-white/80">
-              Created and hosted by Dr. Laide R. Alexander, the annual Why Move My Cheese? Conference brings leaders across corporate,
-              education, and nonprofit sectors together to navigate change and transformation.
-            </p>
-            <p className="mt-4 text-sm font-semibold text-gold-light">Next conference: details coming soon.</p>
-            <div className="mt-8">
-              <ButtonLink href="/books#conference" variant="outline-light">
-                See the conference
-              </ButtonLink>
+        <div className="container-site">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:items-end lg:gap-16" data-reveal>
+            <div>
+              <p className="eyebrow text-gold-light!">The annual conference</p>
+              <h2 id="conf-heading" className="mt-4 font-serif text-4xl font-semibold sm:text-5xl">
+                Why Move My Cheese? <em className="text-gold-light">Leadership Conference</em>
+              </h2>
+            </div>
+            <div>
+              <p className="leading-relaxed text-white/80">
+                Created and hosted by Dr. Laide R. Alexander, the annual Why Move My Cheese? Conference brings leaders across corporate,
+                education, and nonprofit sectors together to navigate change and transformation.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-gold-light">Next conference: details coming soon.</p>
+              <div className="mt-6">
+                <ButtonLink href="/books#conference" variant="outline-light">
+                  See the conference
+                </ButtonLink>
+              </div>
             </div>
           </div>
-          {conferencePhoto && (
-            <div className="relative aspect-3/2 overflow-hidden rounded-3xl" data-reveal data-reveal-delay="120">
-              <Image src={conferencePhoto.src} alt={conferencePhoto.alt} fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
-            </div>
-          )}
+          <div className="relative mt-12 aspect-[1596/452] overflow-hidden rounded-3xl" data-reveal data-reveal-delay="120">
+            <Image
+              src={sessionPhoto}
+              alt="A speaker at the lectern addressing a full room at the Why Move My Cheese? Leadership Conference 2026"
+              fill
+              placeholder="blur"
+              sizes="(min-width: 1280px) 1200px, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
