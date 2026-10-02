@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PageHero } from "@/components/ui/PageHero";
 import { Gallery } from "@/components/ui/Gallery";
 import { ButtonLink } from "@/components/ui/Button";
 import { SignupForm } from "@/components/ui/SignupForm";
 import { VideoFeature } from "@/components/ui/VideoFeature";
 import { books, formatPrice } from "@/data/products";
 import { bookLaunch, conference2026, insideThePages } from "@/data/events";
-import styledBook from "../../../public/images/why-move-my-cheese-styled.jpg";
+import headshot from "../../../public/images/dr-laide-headshot.jpg";
 import insideThePagesSet from "../../../public/images/inside-the-pages-set.jpg";
 
 export const metadata: Metadata = {
@@ -20,33 +19,63 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Books & Events"
-        title={
-          <>
-            Every Page. <em className="text-gold">A New Possibility.</em>
-          </>
-        }
-        intro={
-          <>
-            <p className="font-serif text-2xl font-medium italic text-navy/80">
-              Read. Imagine. Become. <span className="font-sans text-sm font-bold not-italic tracking-wider text-gold-deep">#R.I.B</span>
-            </p>
-            <p className="mt-4">
+      {/* Hero: modelled on her current shop banner (Dr. A, 2026-10-03: "For books can you do something like this?"):
+          portrait left, headline + taglines centre, both covers right. */}
+      <section className="relative overflow-hidden border-b border-line bg-linear-to-br from-cream via-white to-sand">
+        <div className="container-site relative grid items-end gap-10 pt-12 sm:pt-16 lg:grid-cols-[minmax(0,4fr)_minmax(0,5fr)_minmax(0,4fr)] lg:gap-10 lg:pt-16">
+          {/* Portrait */}
+          <div className="relative order-2 mx-auto w-full max-w-xs animate-fade-up lg:order-1 lg:max-w-none" style={{ animationDelay: "120ms" }}>
+            <div className="relative aspect-4/5 overflow-hidden rounded-t-[2rem]">
+              <Image src={headshot} alt="Dr. Laide R. Alexander" fill preload placeholder="blur" sizes="(min-width: 1024px) 30vw, 20rem" className="object-cover object-top" />
+              <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-deep/90 via-navy-deep/40 to-transparent p-5 pt-20 text-white">
+                <p className="font-serif text-2xl italic text-gold-light">Laide R. Alexander</p>
+                <p className="mt-1 text-xs font-medium text-white/85 sm:text-sm">Author. Speaker. Transformation Leader.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="order-1 pb-4 lg:order-2 lg:pb-16">
+            <p className="eyebrow animate-fade-up">Books &amp; Events</p>
+            {/* Tagline wording pending confirmation: her email says "Every New Page." (TODO_CLIENT.md). */}
+            <h1 className="heading mt-4 animate-fade-up text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-[3.6rem]" style={{ animationDelay: "80ms" }}>
+              Every Page. <em className="text-gold">A New Possibility.</em>
+            </h1>
+            <span aria-hidden className="mt-6 block h-[3px] w-20 rounded-full bg-linear-to-r from-gold to-transparent" />
+            <p className="mt-6 max-w-md animate-fade-up text-lg leading-relaxed text-body" style={{ animationDelay: "160ms" }}>
               Practical wisdom and proven strategies to help you navigate change, own your &lsquo;why,&rsquo; and lead a life that lasts.
             </p>
-          </>
-        }
-        image={styledBook}
-        imageAlt="Why Move My Cheese? by Dr. Laide R. Alexander on a reading table"
-      >
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/shop">Shop Books</ButtonLink>
-          <ButtonLink href="#conference" variant="outline">
-            The Conference
-          </ButtonLink>
+            <p className="mt-6 animate-fade-up font-serif text-3xl font-medium italic text-navy/85" style={{ animationDelay: "200ms" }}>
+              Read. Imagine. Become.{" "}
+              <span className="whitespace-nowrap font-sans text-sm font-bold not-italic tracking-wider text-gold-deep">#R.I.B</span>
+            </p>
+            <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "240ms" }}>
+              <ButtonLink href="/shop" variant="navy">
+                Shop Books
+              </ButtonLink>
+              <ButtonLink href="#conference" variant="outline">
+                The Conference
+              </ButtonLink>
+            </div>
+          </div>
+
+          {/* Both covers, standing */}
+          <div className="order-3 flex animate-fade-up items-end justify-center gap-4 pb-12 sm:gap-6 lg:pb-16" style={{ animationDelay: "160ms" }}>
+            {books.map((b, i) =>
+              b.cover ? (
+                <div
+                  key={b.slug}
+                  className={`relative aspect-2/3 w-[44%] max-w-48 shrink-0 overflow-hidden rounded-l-[2px] rounded-r-md bg-white shadow-[0_30px_50px_-18px_rgba(31,56,100,0.55)] ring-1 ring-black/5 ${
+                    i === 1 ? "lg:-translate-y-6" : ""
+                  }`}
+                >
+                  <Image src={b.cover} alt={`${b.name} book cover`} fill placeholder="blur" sizes="(min-width: 1024px) 12rem, 40vw" className="object-cover" />
+                </div>
+              ) : null,
+            )}
+          </div>
         </div>
-      </PageHero>
+      </section>
 
       {/* Books ---------------------------------------------------------------- */}
       <section className="bg-white py-20 lg:py-28" aria-labelledby="books-heading">

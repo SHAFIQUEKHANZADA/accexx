@@ -169,3 +169,9 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
 - "Ok, will share via Google docs": originals coming by Drive.
 - New merch sheet ("These are items for the store": caps, tees, hoodies, bottles, totes, lanyards). ❓ Need the image file + prices.
 - "Then bold the logo": ❓ still unclear (cup circle vs site logo).
+
+## #16 — WhatsApp from Dr. A, 2026-10-03 08:46 → 09:27
+- **"For books can you do something like this?"** (screenshot of her current shop banner: portrait left, headline centre, both covers right). ✅ `/books` header rebuilt that way: headshot with "Laide R. Alexander / Author. Speaker. Transformation Leader.", "Every Page. A New Possibility.", "Read. Imagine. Become. #R.I.B", Shop Books + The Conference, both covers standing. (Kept the new taglines, not "Lead Others. Leave a Legacy.")
+- **"Instead of this… use this instead"**: replace the panel photo in the navy conference band (Shop page, and the home "Why Move My Cheese?" band) with the photo of the young man speaking at the lectern to the room. ❓ Need the full-size file (WhatsApp copy is a cropped strip).
+- share.google link: appears to point to her current site (title "We more than find solutions…"), not the Drive originals.
+- Phone/Zoom questions (to Hilal): Zoom stays (GHL calendar integration); the GHL number is the main line (needs A2P 10DLC); a 1-800 number is optional.
