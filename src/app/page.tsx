@@ -689,7 +689,9 @@ function Faq() {
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-xl font-semibold text-navy sm:text-2xl [&::-webkit-details-marker]:hidden">
                 {f.q}
                 <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full border border-line text-gold-deep transition-transform group-open:rotate-45">
-                  +
+                  <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
                 </span>
               </summary>
               <p className="mt-3 max-w-2xl leading-relaxed text-body">{f.a}</p>
