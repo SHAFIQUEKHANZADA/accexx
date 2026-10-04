@@ -202,3 +202,8 @@ Client is happy with the website overall. Order of work: 1 Website → 2 Store �
 - Possible military/leadership client (not final) may change courses, flows and LMS structure.
 - Deposit: Hilal sends payment instructions (+ an alternative channel).
 - Status (2026-10-05) ✅ tagline changed everywhere (9 places incl. page titles, footer, social image); ✅ "overcomer and creator" reworded to leaders/organizations (home hero, Philosophy, Coaching, Services); ✅ phone field on all lead forms: Accexx Circle signup (every page), shop 10% popup, conference "notify me", Inside the Pages, Request a Cohort (contact + inquiry forms already had it). Signup forms show an unticked SMS opt-in once a number is entered (needed for A2P 10DLC); ✅ home FAQ (6 questions from existing copy) + FAQPage/Organization structured data for Google and AI search.
+
+## #18 — New logo, 2026-10-04 (public/Logo)
+- New mark: navy "A" shaped as an open doorway with a gold crossbar; wordmark "ACCEXX Insight" (full lockup also shows the tagline).
+- ✅ Applied site-wide (2026-10-05): header (navy) and footer (white) via `Logo` / `LogoMark` (inline SVG), browser-tab icon (`src/app/icon.svg`), link-preview image. Files kept in `public/brand/`; old circled-"A" logo files removed.
+- Note: the lockup's tagline reads "We do more than find solutions. We enable transformation." (full stop); the site uses the meeting wording "…solutions, we enable transformation." Confirm which punctuation she prefers.
