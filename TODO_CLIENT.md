@@ -85,3 +85,7 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] **Merch prices** (4 caps, 4 T-shirts, mug) and **original photo files** (current ones are cut from the lineup image). (CLIENT_UPDATES #13)
 - [ ] Approve the **#R.I.B mug** concept design (or send a real cup photo). (CLIENT_UPDATES #13)
 - [ ] **Webinar + conference attendee lists** (CSV) and **certificate of attendance** wording/design. (CLIENT_UPDATES #13)
+
+- [ ] Approve the **SMS opt-in wording** on the signup forms ("Yes, text me updates from Accexx Insight. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."). Also used for the A2P 10DLC application. (CLIENT_UPDATES #17)
+- [ ] Forward **Dr. Laide's latest email** with wording changes, and confirm **which two images** to remove (meeting 2026-10-03).
+- [ ] Company website links for **client logos**; **LinkedIn post links** for the blog. (CLIENT_UPDATES #17)

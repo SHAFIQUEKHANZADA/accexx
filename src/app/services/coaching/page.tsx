@@ -56,7 +56,7 @@ export default function CoachingPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-body">
               One-on-one transformation guided by Dr. A and supported by a network of executive consultants who understand
-              the overcomer and creator journey.
+              what it takes to lead, grow, and change.
             </p>
             <p className="mt-4 text-[0.95rem] leading-relaxed text-muted">{coachingFraming}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -223,7 +223,7 @@ export default function CoachingPage() {
             Ready for your <em className="text-gold-light">breakthrough?</em>
           </>
         }
-        body="We more than find solutions. We ensure transformation."
+        body="We do more than find solutions, we enable transformation."
       />
     </>
   );

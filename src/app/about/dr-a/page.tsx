@@ -49,7 +49,7 @@ export default function MeetDrAPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 font-serif text-xl italic text-gold-light sm:text-2xl">We more than find solutions. We ensure transformation.</p>
+            <p className="mt-5 font-serif text-xl italic text-gold-light sm:text-2xl">We do more than find solutions, we enable transformation.</p>
           </>
         }
         image={headshot}

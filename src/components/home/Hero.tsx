@@ -39,10 +39,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-white/85 sm:text-xl" style={delay(320)}>
-            Helping the overcomer and creator become the best and live the best life.
+            Helping leaders and organizations become their best and achieve lasting results.
           </p>
           <p className="mt-3 animate-fade-up font-serif text-xl italic text-gold-light sm:text-2xl" style={delay(400)}>
-            We more than find solutions. We ensure transformation.
+            We do more than find solutions, we enable transformation.
           </p>
 
           <ul aria-label="Our values" className="mt-7 flex max-w-2xl animate-fade-up flex-wrap gap-2" style={delay(480)}>

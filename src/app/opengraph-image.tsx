@@ -45,7 +45,7 @@ export default function OpengraphImage() {
             From Access to&nbsp;<span style={{ color: "#c9974b", fontStyle: "italic" }}>Accexx</span>
           </div>
           <div style={{ fontSize: 30, color: "#9c7437", fontStyle: "italic" }}>
-            We more than find solutions. We ensure transformation.
+            We do more than find solutions, we enable transformation.
           </div>
         </div>
       </div>

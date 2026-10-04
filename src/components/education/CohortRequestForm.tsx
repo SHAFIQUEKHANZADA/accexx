@@ -66,10 +66,16 @@ export function CohortRequestForm({
           <input name="email" type="email" required autoComplete="email" className={`h-12 ${field}`} />
         </label>
         <label className="block">
+          <span className={label}>
+            Phone <span className="font-normal text-muted">(optional)</span>
+          </span>
+          <input name="phone" type="tel" autoComplete="tel" className={`h-12 ${field}`} />
+        </label>
+        <label className="block">
           <span className={label}>Organization</span>
           <input name="organization" autoComplete="organization" className={`h-12 ${field}`} />
         </label>
-        <label className="block">
+        <label className="block sm:col-span-2">
           <span className={label}>Preferred format</span>
           <select name="preferredFormat" defaultValue="" className={`h-12 ${field}`}>
             <option value="">No preference</option>

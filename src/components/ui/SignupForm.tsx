@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 type Status = "idle" | "sending" | "done" | "error";
 
 /**
- * Email signup that posts to /api/forms (→ GHL webhook) with a `formType`.
+ * Signup (name, email, optional phone + SMS opt-in) that posts to /api/forms (→ GHL webhook) with a `formType`.
  * `tone="dark"` for navy panels, `tone="light"` for white/cream sections.
  */
 export function SignupForm({
@@ -24,6 +24,7 @@ export function SignupForm({
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
   const dark = tone === "dark";
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -41,6 +42,7 @@ export function SignupForm({
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");
       setStatus("done");
       form.reset();
+      setPhone("");
     } catch (err) {
       setStatus("error");
       setMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
@@ -88,6 +90,29 @@ export function SignupForm({
           />
         </label>
       </div>
+      {/* Phone for SMS follow-up (meeting 2026-10-03). Optional; texting needs the opt-in below (A2P 10DLC). */}
+      <label className="block">
+        <span className="sr-only">Mobile number (optional)</span>
+        <input
+          name="phone"
+          type="tel"
+          autoComplete="tel"
+          placeholder="Mobile number (optional)"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className={`h-12 w-full rounded-full border px-5 text-sm focus:outline-none ${input}`}
+        />
+      </label>
+      {phone.trim() && (
+        // TODO_CLIENT: confirm the SMS opt-in wording (also needed for the A2P 10DLC application).
+        <label className={`flex items-start gap-3 px-1 text-xs leading-relaxed ${dark ? "text-white/75" : "text-muted"}`}>
+          <input type="checkbox" name="smsConsent" value="yes" className="mt-0.5 size-4 shrink-0 accent-gold" />
+          <span>
+            Yes, text me updates from Accexx Insight. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out,
+            HELP for help.
+          </span>
+        </label>
+      )}
       {authorOption && (
         <label className={`flex items-start gap-3 px-1 text-sm ${dark ? "text-white/80" : "text-body"}`}>
           <input type="checkbox" name="isAuthor" value="yes" className="mt-0.5 size-4 accent-gold" />

@@ -11,7 +11,7 @@ import { testimonials } from "@/data/testimonials";
 import { books, formatPrice } from "@/data/products";
 import { bookLaunch, conference2026, insideThePages } from "@/data/events";
 import { links, site } from "@/lib/site";
-import { corePromise, whoWeServe } from "@/data/about";
+import { corePromise, presentRoles, whatWeDo, whoWeAre, whoWeServe } from "@/data/about";
 import headshot from "../../public/images/dr-laide-headshot.jpg";
 import forbesGraphic from "../../public/images/forbes-editors-choice.jpg";
 import insideThePagesSet from "../../public/images/inside-the-pages-set.jpg";
@@ -19,7 +19,7 @@ import insideThePagesSet from "../../public/images/inside-the-pages-set.jpg";
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | From Access to Accexx. Unlock Your Breakthrough.` },
   description:
-    "Consulting, coaching, speaking and education from Dr. Laide R. Alexander and her team of executive consultants. We more than find solutions. We ensure transformation.",
+    "Consulting, coaching, speaking and education from Dr. Laide R. Alexander and her team of executive consultants. We do more than find solutions, we enable transformation.",
   alternates: { canonical: "/" },
 };
 
@@ -38,6 +38,7 @@ export default function Home() {
       <Books />
       <InsideThePages />
       <Voices />
+      <Faq />
       <FinalCta />
     </>
   );
@@ -117,7 +118,7 @@ function Philosophy() {
             the breakthrough you have been waiting for.
           </p>
           <p>
-            Accexx Insight exists to equip the overcomer and creator with the tools, strategies, and mindset to step fully
+            Accexx Insight exists to equip leaders and organizations with the tools, strategies, and mindset to step fully
             into their purpose.
           </p>
         </div>
@@ -621,6 +622,85 @@ function Voices() {
   );
 }
 
+/* FAQ: more useful content on the home page for Google and AI search (meeting 2026-10-03).
+   Every answer comes from existing client copy (about.ts, the course data, her bio). ------------------- */
+
+const faqs: { q: string; a: string }[] = [
+  { q: "What does Accexx Insight do?", a: `${whoWeAre[0]} ${whatWeDo.intro}` },
+  {
+    q: "Who does Accexx Insight work with?",
+    a: `${whoWeServe.map((g) => g.name).join(", ").replace(/, ([^,]*)$/, ", and $1")}. ${corePromise}`,
+  },
+  {
+    q: "What are the Human Operating Codes™?",
+    a: "The Human Operating Codes™ are the proprietary framework underlying every Accexx Insight program, created by Dr. Laide R. Alexander. Its lens (Beliefs, Stories, Emotions, Habits) explains what actually drives behavior, beneath the surface-level action.",
+  },
+  {
+    q: "What services and programs do you offer?",
+    a: "Consulting, coaching, speaking, and education. The education catalogue includes 10 HOC certifications, 12 leadership development programs, 10 BEInspire© career workshops, 15 Project Unify© certificates, 8 HOC short courses, and 10 Project Unify© Training Shop courses, delivered to cohorts in person or virtually.",
+  },
+  {
+    q: "Who is Dr. Laide R. Alexander?",
+    a: `${presentRoles.map((r) => `${r.title}, ${r.org}`).join("; ")}. She is the author of The Unfinished Leader and Why Move My Cheese?, and host of the annual Why Move My Cheese? Conference.`,
+  },
+  {
+    q: "How do I get started?",
+    a: "Book a discovery call with Dr. A, or send us a message through the contact page. Tell us what you are working on, and we will help you decide what needs to happen next.",
+  },
+];
+
+function Faq() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: site.name,
+        url: site.url,
+        slogan: site.tagline,
+        founder: { "@type": "Person", name: "Dr. Laide R. Alexander" },
+        address: { "@type": "PostalAddress", addressLocality: "Houston", addressRegion: "TX", addressCountry: "US" },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      },
+    ],
+  };
+  return (
+    <section className="bg-white py-20 lg:py-28" aria-labelledby="faq-heading">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <div className="container-site grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-20">
+        <div data-reveal>
+          <p className="eyebrow">Questions</p>
+          <h2 id="faq-heading" className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">
+            Frequently asked <em className="text-gold">questions.</em>
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-body">Still have a question? We are happy to talk it through.</p>
+          <div className="mt-8">
+            <ButtonLink href="/contact" variant="outline">
+              Contact Us
+            </ButtonLink>
+          </div>
+        </div>
+        <div className="divide-y divide-line border-y border-line" data-reveal data-reveal-delay="120">
+          {faqs.map((f) => (
+            <details key={f.q} className="group py-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-xl font-semibold text-navy sm:text-2xl [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full border border-line text-gold-deep transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 max-w-2xl leading-relaxed text-body">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* Final CTA (the Accexx Circle signup + Contact Us band follows on every page, from the layout) */
 
 function FinalCta() {
@@ -634,7 +714,7 @@ function FinalCta() {
         <h2 className="mt-8 font-serif text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">
           Ready for Your <em className="text-gold-light">Breakthrough?</em>
         </h2>
-        <p className="mt-6 text-lg text-white/80">We more than find solutions. We ensure transformation.</p>
+        <p className="mt-6 text-lg text-white/80">We do more than find solutions, we enable transformation.</p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>
           <ButtonLink href="#accexx-circle" variant="outline-light">

@@ -30,7 +30,7 @@ const services = [
     href: "/services/coaching",
     icon: Spark,
     lead: "Coaching that goes deeper than goals. We work at the level of beliefs, stories, and habits: your Human Operating System.",
-    body: "One-on-one transformation guided by Dr. A and supported by a network of executive consultants who understand the overcomer and creator journey.",
+    body: "One-on-one transformation guided by Dr. A and supported by a network of executive consultants who understand what it takes to lead, grow, and change.",
     meta: `${coachingStreams.length} streams · Executive & Leadership (1:1) · Group & Team`,
     cta: "Explore coaching",
   },
@@ -140,7 +140,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            We more than find solutions. <em className="text-gold">We ensure transformation.</em>
+            We do more than find solutions, <em className="text-gold">we enable transformation.</em>
           </>
         }
         intro="Accexx Insight helps leaders, entrepreneurs, professionals, and organizations turn uncertainty into clarity, strategy, action, and measurable progress."

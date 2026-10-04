@@ -4,7 +4,7 @@ export type NavItem = NavLink & { children?: NavLink[] };
 export const site = {
   name: "Accexx Insight",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.accexxinsight.com",
-  tagline: "We more than find solutions. We ensure transformation.",
+  tagline: "We do more than find solutions, we enable transformation.",
   description:
     "Accexx Insight helps leaders, entrepreneurs, professionals, and organizations turn uncertainty into clarity, strategy, action, and measurable progress.",
   collective: "Dr. A + Executive Consultants: A Collective of Breakthrough.",

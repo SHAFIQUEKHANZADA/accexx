@@ -36,7 +36,7 @@ export function JoinBand() {
         <div className="flex flex-col justify-center rounded-3xl bg-navy p-7 text-white sm:p-9">
           <p className="eyebrow text-gold-light!">Contact us</p>
           <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">Let&apos;s talk about your breakthrough.</h2>
-          <p className="mt-3 text-[0.95rem] text-white/80">We more than find solutions. We ensure transformation.</p>
+          <p className="mt-3 text-[0.95rem] text-white/80">We do more than find solutions, we enable transformation.</p>
           <div className="mt-7 grid gap-3">
             <Link
               href="/contact"

@@ -175,3 +175,30 @@ Status: 🟡 noted. Changes steps 3–5 (see "Impact on the build" below).
 - **"Instead of this… use this instead"**: replace the panel photo in the navy conference band (Shop page, and the home "Why Move My Cheese?" band) with the photo of the young man speaking at the lectern to the room. ❓ Need the full-size file (WhatsApp copy is a cropped strip).
 - share.google link: appears to point to her current site (title "We more than find solutions…"), not the Drive originals.
 - Phone/Zoom questions (to Hilal): Zoom stays (GHL calendar integration); the GHL number is the main line (needs A2P 10DLC); a 1-800 number is optional.
+
+## #17 — Meeting notes, 2026-10-03 (Dr. Laide, Babajide, Hilal)
+Client is happy with the website overall. Order of work: 1 Website → 2 Store → 3 Stripe/GHL integration → 4 Automations → 5 Course/membership platform. Implementation/handoff ≈ 13–14 business days; monthly support starts after handoff (rate to revisit).
+
+**Website (our side)**
+- Main tagline → **"We do more than find solutions, we enable transformation."** (replaces "We more than find solutions. We ensure transformation." everywhere)
+- Simplify the wording around **Overcomer / Creator / Leader / Organization**.
+- Apply all wording changes from **Dr. Laide's latest email**. ❓ Need that email.
+- **Remove the two images discussed during the call.** ❓ Which two? (not named in the notes)
+- Improve headings/copy for clarity and positioning; keep more useful content on the home page (SEO + AI search).
+- **Forms: collect Name, Email, Phone** (contact/lead forms, books section, shop) so leads can get SMS follow-up.
+- **Client/partner logos** instead of company names in "worked with". ❓ Company website links from Dr. Laide/Babajide (we can research missing ones).
+- **Blog + CMS**: import her LinkedIn posts, CMS so she can publish herself, link back to LinkedIn. ❓ LinkedIn links.
+- **Google Search Console** connection; SEO / AI-search improvements.
+- **New logo concepts** (current logo is mainly the letter "A"): propose several directions to Dr. Laide + Babajide.
+
+**GHL / backend (Hilal)**
+- Import webinar attendees (300+ per session); reactivation campaign (email + SMS) referencing the session attended, with attendee offers (discounted coaching/courses, free intro content, packages). Q&A attendees get a more personal coaching offer. ❓ Q&A webinar recording.
+- GHL as central inbox (email, SMS, FB/IG, team); team installs the GHL mobile app.
+- GHL plan: activate the **$97/month** plan before the trial ends **Oct 5**.
+- Phones: keep the existing 1-800 number; new **Texas** GHL numbers for CRM/SMS/calls (ring through to app). ❓ LLC registration + EIN for A2P 10DLC → apply → buy numbers → configure → connect to workflows. Usage charged separately.
+- Automations: website inquiries, consultation requests, bookings, shop activity, webinar leads, reminders. Pipeline: New Lead → Contacted → Consultation Booked → Follow-Up → Converted/Customer.
+- Stripe + GHL: connect Stripe, test payments, push form submissions to GHL (contacts + opportunities), test the full journey before launch.
+- Courses/LMS: upload/sell courses, free courses, free lessons with the rest locked, offers, student login, possibly a community. Future webinars free live, replay/resources paid later.
+- Possible military/leadership client (not final) may change courses, flows and LMS structure.
+- Deposit: Hilal sends payment instructions (+ an alternative channel).
+- Status (2026-10-05) ✅ tagline changed everywhere (9 places incl. page titles, footer, social image); ✅ "overcomer and creator" reworded to leaders/organizations (home hero, Philosophy, Coaching, Services); ✅ phone field on all lead forms: Accexx Circle signup (every page), shop 10% popup, conference "notify me", Inside the Pages, Request a Cohort (contact + inquiry forms already had it). Signup forms show an unticked SMS opt-in once a number is entered (needed for A2P 10DLC); ✅ home FAQ (6 questions from existing copy) + FAQPage/Organization structured data for Google and AI search.
