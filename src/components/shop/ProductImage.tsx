@@ -43,6 +43,10 @@ export function ProductImage({
 
   const photo = image ?? product.photo;
   if (photo) {
+    // Photos shot at the frame's 4:5 fill it edge to edge (no inner gap). Square or wide ones
+    // (O Face Cap colours, gift card) are fitted inside so nothing gets cut off.
+    const ratio = photo.width / photo.height;
+    const fills = ratio > 0.74 && ratio < 0.86;
     return (
       <div className={`relative h-full w-full bg-white ${className}`}>
         <Image
@@ -52,7 +56,7 @@ export function ProductImage({
           preload={preload}
           placeholder="blur"
           sizes={sizes}
-          className="object-contain p-[6%]"
+          className={fills ? "object-cover" : "object-contain p-[6%]"}
         />
       </div>
     );
