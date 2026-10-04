@@ -19,6 +19,43 @@ export const metadata: Metadata = {
   twitter: { title: "Accexx Insight Shop | Books & Swag" },
 };
 
+const iconProps = { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+
+const swagPillars = [
+  {
+    title: "My Home",
+    line: "Lead with values.",
+    tone: "bg-teal",
+    icon: (
+      <svg {...iconProps} aria-hidden>
+        <path d="M3 11.5 12 4l9 7.5M5.5 9.5V20h13V9.5M10 20v-5h4v5" />
+      </svg>
+    ),
+  },
+  {
+    title: "My Work",
+    line: "Lead with strategy.",
+    tone: "bg-gold",
+    icon: (
+      <svg {...iconProps} aria-hidden>
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12h18" />
+      </svg>
+    ),
+  },
+  {
+    title: "My Universe",
+    line: "Lead with purpose.",
+    tone: "bg-navy",
+    icon: (
+      <svg {...iconProps} aria-hidden>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z" />
+      </svg>
+    ),
+  },
+];
+
 export default function ShopPage() {
   const firstSession = insideThePages.schedule[0];
 
@@ -75,6 +112,30 @@ export default function ShopPage() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Conference swag intro: copy from Dr. A's "Official Conference Swag" sheet (2026-10-02). */}
+      <section className="border-b border-line bg-white py-14 lg:py-16" aria-labelledby="swag-heading">
+        <div className="container-site grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-16">
+          <div data-reveal>
+            <p className="eyebrow">Official conference swag</p>
+            <h2 id="swag-heading" className="heading mt-3 text-4xl sm:text-5xl">
+              Wear the mindset. <em className="text-gold">Live the message.</em>
+            </h2>
+            <p className="mt-4 text-lg text-body">More than swag. It&apos;s a reminder of why you lead.</p>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-3" data-reveal data-reveal-delay="100">
+            {swagPillars.map((p) => (
+              <li key={p.title} className="flex items-center gap-4 rounded-2xl border border-line bg-cream p-4 sm:flex-col sm:items-start sm:p-6">
+                <span className={`grid size-12 shrink-0 place-items-center rounded-full text-white ${p.tone}`}>{p.icon}</span>
+                <span>
+                  <span className="block font-semibold text-navy">{p.title}</span>
+                  <span className="block text-sm text-body">{p.line}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

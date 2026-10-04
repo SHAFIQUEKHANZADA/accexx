@@ -207,3 +207,9 @@ Client is happy with the website overall. Order of work: 1 Website → 2 Store �
 - New mark: navy "A" shaped as an open doorway with a gold crossbar; wordmark "ACCEXX Insight" (full lockup also shows the tagline).
 - ✅ Applied site-wide (2026-10-05): header (navy) and footer (white) via `Logo` / `LogoMark` (inline SVG), browser-tab icon (`src/app/icon.svg`), link-preview image. Files kept in `public/brand/`; old circled-"A" logo files removed.
 - Note: the lockup's tagline reads "We do more than find solutions. We enable transformation." (full stop); the site uses the meeting wording "…solutions, we enable transformation." Confirm which punctuation she prefers.
+
+## #19 — "These are items for the store" (Official Conference Swag sheet, 2026-10-02)
+- ✅ (2026-10-05) New shop collection **Conference Swag** (22 items: the 9 earlier merch items + 13 new). New, all "Price coming soon": 4 hoodies (Disrupt. Adapt. Lead. Repeat.; Why Move My Cheese?; Built on Values. Driven by Purpose.; My Home/My Work/My Universe), 3 mugs (Lead Yourself…Leave a Legacy; My Home/Work/Universe; Purpose over Position), tumbler (Focus. Adapt. Execute. Repeat.), notebook (Ideas. Plans. Impact.), tote (Lead. Inspire. Impact.), pin set, lanyard, sticker pack.
+- ✅ Shop intro band with her copy: "Official conference swag · Wear the mindset. Live the message. · More than swag. It's a reminder of why you lead." + My Home (lead with values) / My Work (lead with strategy) / My Universe (lead with purpose).
+- Photos are cut from the sheet (low-res) until HD images are generated. Source: `reference/shop-images/conference-swag-sheet-2026-10-02.png`.
+- Not changed: the sheet's cap/tee colours differ from her first lineup (beige Adapt cap, teal Mindset tee); kept the first lineup. ❓ Prices, hoodie sizes, stock for all items.

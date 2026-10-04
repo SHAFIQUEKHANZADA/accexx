@@ -21,6 +21,19 @@ import teeDarkGrey from "../../public/images/products/tee-dark-grey.jpg";
 import teeForestGreen from "../../public/images/products/tee-forest-green.jpg";
 import ribMugWhite from "../../public/images/products/rib-mug-white.jpg";
 import ribMugNavy from "../../public/images/products/rib-mug-navy.jpg";
+import hoodieDisruptBlack from "../../public/images/products/hoodie-disrupt-black.jpg";
+import hoodieWmmcBeige from "../../public/images/products/hoodie-wmmc-beige.jpg";
+import hoodieValuesGreen from "../../public/images/products/hoodie-values-green.jpg";
+import hoodieIconsNavy from "../../public/images/products/hoodie-icons-navy.jpg";
+import mugLegacyBlack from "../../public/images/products/mug-legacy-black.jpg";
+import mugIconsWhite from "../../public/images/products/mug-icons-white.jpg";
+import mugPurposeBlack from "../../public/images/products/mug-purpose-black.jpg";
+import tumblerFocus from "../../public/images/products/tumbler-focus.jpg";
+import notebookIdeas from "../../public/images/products/notebook-ideas.jpg";
+import toteLeadInspire from "../../public/images/products/tote-lead-inspire.jpg";
+import pinsSet from "../../public/images/products/pins-set.jpg";
+import lanyardWmmc from "../../public/images/products/lanyard-wmmc.jpg";
+import stickersPack from "../../public/images/products/stickers-pack.jpg";
 
 export type ProductBadge = "NEW" | "BESTSELLER";
 
@@ -36,11 +49,13 @@ export const categories: { id: ProductCategory | "all"; label: string }[] = [
 ];
 
 /** Collections shown as tiles above the grid (the current shop has both, each holding all 4 items). */
-export type CollectionId = "leadership" | "summer-drop";
+export type CollectionId = "leadership" | "summer-drop" | "conference-swag";
 
 export const collections: { id: CollectionId; label: string }[] = [
   { id: "leadership", label: "Leadership" },
   { id: "summer-drop", label: "Summer Drop" },
+  // Dr. A's "Official Conference Swag" sheet (2026-10-02): Why Move My Cheese? Conference merch.
+  { id: "conference-swag", label: "Conference Swag" },
 ];
 
 /**
@@ -268,7 +283,7 @@ const merchCap = (slug: string, name: string, subtitle: string, photo: StaticIma
   badge: "NEW",
   type: "headwear",
   category: "apparel",
-  collections: ["summer-drop"],
+  collections: ["summer-drop", "conference-swag"],
   photo,
   photoAlt,
   variants: [{ id: `${slug}-one-size`, label: "One Size", options: { Size: "One Size" }, status: "coming-soon", note: PRICE_SOON }],
@@ -283,7 +298,7 @@ const merchTee = (slug: string, name: string, subtitle: string, photo: StaticIma
   badge: "NEW",
   type: "apparel",
   category: "apparel",
-  collections: ["summer-drop"],
+  collections: ["summer-drop", "conference-swag"],
   photo,
   photoAlt,
   variants: ["M", "L", "XL"].map((size) => ({
@@ -313,7 +328,7 @@ products.push(
     badge: "NEW",
     type: "drinkware",
     category: "other",
-    collections: ["summer-drop"],
+    collections: ["summer-drop", "conference-swag"],
     photo: ribMugWhite,
     photoAlt: "Concept design: white mug with Read. Imagine. Become. #R.I.B",
     // Concept mockups made at Dr. A's request ("use AI to make some merchandise with #R.I.B"). Replace with real photos.
@@ -331,6 +346,60 @@ products.push(
       image: image as StaticImageData,
     })),
   },
+);
+
+
+/* Conference swag, from Dr. A's "Official Conference Swag" sheet (2026-10-02,
+   reference/shop-images/conference-swag-sheet-2026-10-02.png). Photos are cut from the sheet until HD images arrive.
+   TODO_CLIENT: prices, sizes/stock. */
+const swag = (
+  slug: string,
+  name: string,
+  subtitle: string,
+  type: ProductType,
+  category: ProductCategory,
+  photo: StaticImageData,
+  photoAlt: string,
+  option: [string, string] = ["Option", "Standard"],
+): Product => ({
+  slug,
+  name,
+  subtitle,
+  price: 0,
+  pricePending: true,
+  badge: "NEW",
+  type,
+  category,
+  collections: ["conference-swag"],
+  photo,
+  photoAlt,
+  variants: [
+    {
+      id: `${slug}-${option[1].toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+      label: option[1],
+      options: { [option[0]]: option[1] },
+      status: "coming-soon",
+      note: PRICE_SOON,
+    },
+  ],
+});
+
+const hoodieSize: [string, string] = ["Size", "Sizes to be announced"];
+
+products.push(
+  swag("disrupt-adapt-lead-repeat-hoodie", "Disrupt. Adapt. Lead. Repeat. Hoodie", "Black hoodie · Back print", "apparel", "apparel", hoodieDisruptBlack, "Black hoodie: Disrupt. Adapt. Lead. Repeat.", hoodieSize),
+  swag("why-move-my-cheese-hoodie", "Why Move My Cheese? Hoodie", "Beige hoodie · Conference logo", "apparel", "apparel", hoodieWmmcBeige, "Beige hoodie with the Why Move My Cheese? logo", hoodieSize),
+  swag("built-on-values-hoodie", "Built on Values. Driven by Purpose. Hoodie", "Green hoodie · Back print", "apparel", "apparel", hoodieValuesGreen, "Green hoodie: Built on Values. Driven by Purpose.", hoodieSize),
+  swag("my-home-my-work-my-universe-hoodie", "My Home. My Work. My Universe. Hoodie", "Navy hoodie · Back print", "apparel", "apparel", hoodieIconsNavy, "Navy hoodie with the My Home, My Work, My Universe icons", hoodieSize),
+  swag("lead-yourself-mug", "Lead Yourself. Lead Others. Leave a Legacy. Mug", "Black ceramic mug", "drinkware", "other", mugLegacyBlack, "Black mug: Lead Yourself. Lead Others. Leave a Legacy."),
+  swag("my-home-my-work-my-universe-mug", "My Home. My Work. My Universe. Mug", "White ceramic mug", "drinkware", "other", mugIconsWhite, "White mug with the My Home, My Work, My Universe icons"),
+  swag("purpose-over-position-mug", "Purpose over Position Mug", "Black ceramic mug", "drinkware", "other", mugPurposeBlack, "Black mug: Purpose over Position."),
+  swag("focus-adapt-execute-tumbler", "Focus. Adapt. Execute. Repeat. Tumbler", "Insulated, hot & cold", "drinkware", "other", tumblerFocus, "Black tumbler: Focus. Adapt. Execute. Repeat."),
+  swag("ideas-plans-impact-notebook", "Ideas. Plans. Impact. Notebook", "Ruled pages, premium cover", "stationery", "other", notebookIdeas, "Black notebook: Ideas. Plans. Impact."),
+  swag("lead-inspire-impact-tote", "Lead. Inspire. Impact. Tote Bag", "Durable, reusable", "other", "other", toteLeadInspire, "Black tote bag: Lead. Inspire. Impact."),
+  swag("conference-pin-set", "Conference Pin Set", "Set of 3 pins", "other", "other", pinsSet, "Three pins: the open-circle logo, Lead Adapt Transform, and the icons", ["Option", "Set of 3"]),
+  swag("why-move-my-cheese-lanyard", "Why Move My Cheese? Lanyard", "Attendee lanyard", "other", "other", lanyardWmmc, "Why Move My Cheese? attendee lanyard"),
+  swag("conference-sticker-pack", "Conference Sticker Pack", "High-quality vinyl", "other", "other", stickersPack, "Sticker pack: Adapt. Lead. Transform., the logo, the icons, Purpose over Position", ["Option", "Pack"]),
 );
 
 export const books = products.filter((p) => p.type === "book");
