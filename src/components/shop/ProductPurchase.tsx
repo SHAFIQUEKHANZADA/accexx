@@ -191,6 +191,18 @@ export function ProductPurchase({ product }: { product: Product }) {
         </fieldset>
       )}
 
+      {variant?.checkoutUrl && purchasable ? (
+        // GHL checkout: payment, order and contact are handled in GHL (quantity is chosen there).
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <a
+            href={variant.checkoutUrl}
+            className="inline-flex h-12 flex-1 items-center justify-center rounded-full bg-gold px-8 text-[0.95rem] font-semibold text-white shadow-sm shadow-gold/30 transition-colors hover:bg-gold-deep sm:flex-none"
+          >
+            Buy now
+          </a>
+          <WishlistButton slug={product.slug} name={product.name} className="size-12!" />
+        </div>
+      ) : (
       <div className="mt-7 flex flex-wrap items-center gap-3">
         <div className="flex h-12 items-center rounded-full border border-line bg-white">
           <button
@@ -225,6 +237,7 @@ export function ProductPurchase({ product }: { product: Product }) {
         </button>
         <WishlistButton slug={product.slug} name={product.name} className="size-12!" />
       </div>
+      )}
       {error && (
         <p role="alert" className="mt-3 text-sm text-red-700">
           {error}

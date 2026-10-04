@@ -95,6 +95,8 @@ export type ProductVariant = {
   image?: StaticImageData;
   /** Gift card "Custom" amount: the price comes from the buyer's amount (validated against `giftCard`). */
   custom?: boolean;
+  /** GHL payment link for this option. When set, the product page shows "Buy now" (checkout + order in GHL). */
+  checkoutUrl?: string;
 };
 
 export type GiftCardConfig = {
@@ -137,6 +139,12 @@ export type Product = {
   pricePending?: boolean;
 };
 
+// GHL payment links per book format (Payments → Payment Links). Currently in GHL TEST mode.
+// TODO: Hardcover links + Why Move My Cheese? links; switch the links to Live before launch.
+const checkoutLinks: Record<string, string> = {
+  "the-unfinished-leader-paperback": "https://link.fastpaydirect.com/payment-link/6ac2d049075ea22a20cdc38a",
+};
+
 const bookVariants = (slug: string, formats: BookFormat[], compareAt?: number): ProductVariant[] =>
   formats
     // Kindle ($9.99) is sold only on Amazon and Dr. A does not want to send buyers there,
@@ -150,6 +158,7 @@ const bookVariants = (slug: string, formats: BookFormat[], compareAt?: number): 
       compareAt: f.format === "Hardcover" ? compareAt : undefined,
       status: f.status,
       note: f.note,
+      checkoutUrl: checkoutLinks[`${slug}-${f.format.toLowerCase()}`],
     }));
 
 const unfinishedLeaderFormats: BookFormat[] = [
@@ -410,7 +419,9 @@ export const getProduct = (slug: string) => products.find((p) => p.slug === slug
 export const variantPrice = (p: Product, v?: ProductVariant) => v?.price ?? p.price;
 
 /** First purchasable variant, used as the default selection. */
-export const defaultVariant = (p: Product) => p.variants?.find((v) => v.status === "available");
+/** Default selection: an option with a GHL checkout link if there is one, else the first purchasable one. */
+export const defaultVariant = (p: Product) =>
+  p.variants?.find((v) => v.status === "available" && v.checkoutUrl) ?? p.variants?.find((v) => v.status === "available");
 
 export const formatPrice = (usd: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(usd);

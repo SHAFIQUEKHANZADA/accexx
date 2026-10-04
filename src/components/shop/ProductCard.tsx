@@ -62,7 +62,14 @@ export function ProductCard({ product }: { product: Product }) {
             </>
           )}
         </p>
-        {product.giftCard || product.pricePending ? (
+        {variant?.checkoutUrl ? (
+          <a
+            href={variant.checkoutUrl}
+            className="mt-4 inline-flex h-11 w-full max-w-56 items-center justify-center rounded-full bg-gold text-sm font-semibold tracking-wide text-white transition-colors hover:bg-gold-deep"
+          >
+            Buy now · {variant.label}
+          </a>
+        ) : product.giftCard || product.pricePending ? (
           // Gift cards need an amount + recipient, so they're set up on the product page.
           <Link
             href={`/shop/${product.slug}`}
