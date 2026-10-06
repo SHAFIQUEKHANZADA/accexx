@@ -1,9 +1,10 @@
 // Source: reference/text/Accexx Insight - Who We Are.txt (copied verbatim).
 
+// Updated wording: Dr. A's email, 2026-10-06.
 export const whoWeAre = [
-  "Accexx Insight is a strategy, leadership, and transformation partner helping individuals and organizations move from uncertainty to clear, purposeful action.",
-  "We bring insight, structure, and practical guidance to complex challenges. Our approach is grounded in understanding what is really happening, identifying what needs to change, and creating a realistic path toward measurable progress.",
-  "We do not believe in one-size-fits-all solutions. We work alongside our clients to develop strategies and solutions that fit their goals, people, culture, and circumstances.",
+  "Accexx Insight is a strategy, leadership, and transformation partner helping individuals and organizations gain clarity, make informed decisions, and turn vision into meaningful progress.",
+  "Accexx Insight brings insight, structure, and practical guidance to complex challenges. We take the time to understand what is really happening, identify what needs to change, and create a realistic path forward.",
+  "We do not believe in one-size-fits-all solutions. We work alongside our clients to develop strategies that reflect their goals, people, culture, and circumstances, so change is not only well planned, but achievable and built to last.",
 ];
 
 export const whatWeDo = {
@@ -84,7 +85,7 @@ export const whoWeServe: AudienceGroup[] = [
 ];
 
 export const corePromise =
-  "Accexx Insight helps you see what is really happening, decide what to do next, and take action that produces measurable results.";
+  "Accexx Insight turns uncertainty into clarity, decisions into action, and action into measurable results.";
 
 // Source: reference/text/site_current-live_accexxinsight.com.txt ("About Me").
 export const bio = {
@@ -101,9 +102,8 @@ export const bio = {
     "True power in leadership is not found in perfection, but in purpose, presence, and the courage to keep evolving.",
 };
 
-// TODO_CLIENT: Dr. A is sending the official core values (email, 2026-10-01). Interim: the eight values
-// from her draft site (reference/text/site_draft_upload.x01works.com.ng.txt).
-export const coreValues = ["Empathy", "Integrity", "Transformation", "Empowerment", "Resilience", "Growth", "Connection", "Accountability"];
+// Dr. A's email, 2026-10-06. TODO_CLIENT: add each value's definition (in her email; not received here).
+export const coreValues = ["Empathy", "Integrity", "Clarity", "Empowerment", "Purposeful Action", "Accountability", "Resilience", "Connection"];
 
 // Dr. A's email, 2026-10-01: these are her present roles. Galen College of Nursing is history, not present.
 export const presentRoles = [

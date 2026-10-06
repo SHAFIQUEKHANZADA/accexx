@@ -213,3 +213,13 @@ Client is happy with the website overall. Order of work: 1 Website → 2 Store �
 - ✅ Shop intro band with her copy: "Official conference swag · Wear the mindset. Live the message. · More than swag. It's a reminder of why you lead." + My Home (lead with values) / My Work (lead with strategy) / My Universe (lead with purpose).
 - Photos are cut from the sheet (low-res) until HD images are generated. Source: `reference/shop-images/conference-swag-sheet-2026-10-02.png`.
 - Not changed: the sheet's cap/tee colours differ from her first lineup (beige Adapt cap, teal Mindset tee); kept the first lineup. ❓ Prices, hoodie sizes, stock for all items.
+
+## #20 — Dr. A's wording email (via Hilal), 2026-10-06
+- ✅ Home hero: "We help overcomers, creators, leaders, and organizations move from uncertainty to clarity, and from clarity to purposeful action and measurable transformation." (her em dash written as a comma, per the no-dashes rule)
+- ✅ Tagline everywhere now "We do more than find solutions. We enable transformation." (two sentences, as in her email and logo lockup)
+- ✅ About hero: "From uncertainty to confident action." + new intro
+- ✅ Who we are: "Clarity for complex challenges. Practical direction for meaningful progress." + new paragraphs
+- ✅ Core values: "What guides us." + description; values now Empathy, Integrity, Clarity, Empowerment, Purposeful Action, Accountability, Resilience, Connection (also the home hero pills). ❓ The definition for each value is in her email but not in the summary we got: send it.
+- ✅ Who we serve: added the intro sentence
+- ✅ Core promise: "Accexx Insight turns uncertainty into clarity, decisions into action, and action into measurable results."
+- ❓ Partner logos: she will send them.

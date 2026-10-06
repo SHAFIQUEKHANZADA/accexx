@@ -140,7 +140,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            We do more than find solutions, <em className="text-gold">we enable transformation.</em>
+            We do more than find solutions. <em className="text-gold">We enable transformation.</em>
           </>
         }
         intro="Accexx Insight helps leaders, entrepreneurs, professionals, and organizations turn uncertainty into clarity, strategy, action, and measurable progress."

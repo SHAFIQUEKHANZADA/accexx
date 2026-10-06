@@ -25,7 +25,7 @@ export default function AboutPage() {
         eyebrow="About Accexx Insight"
         title={
           <>
-            From uncertainty to <em className="text-gold">clear, purposeful action.</em>
+            From uncertainty to <em className="text-gold">confident action.</em>
           </>
         }
         intro={whoWeAre[0]}
@@ -45,7 +45,7 @@ export default function AboutPage() {
           <div data-reveal>
             <p className="eyebrow">Who we are</p>
             <h2 id="who-heading" className="heading mt-4 text-4xl leading-[1.08] sm:text-5xl">
-              Insight, structure, and <em className="text-gold">practical guidance.</em>
+              Clarity for complex challenges. <em className="text-gold">Practical direction for meaningful progress.</em>
             </h2>
           </div>
           <div className="space-y-5 text-[1.05rem] leading-relaxed text-body sm:text-lg" data-reveal data-reveal-delay="120">
@@ -82,14 +82,17 @@ export default function AboutPage() {
       </section>
 
       {/* Core values ---------------------------------------------------------- */}
-      {/* TODO_CLIENT: Dr. A is sending the official core values. Interim: the eight values from her draft site. */}
       <section className="border-t border-line bg-white py-20 lg:py-24" aria-labelledby="values-heading">
         <div className="container-site">
           <div className="max-w-3xl" data-reveal>
             <p className="eyebrow">Our core values</p>
             <h2 id="values-heading" className="heading mt-4 text-4xl sm:text-5xl">
-              What we <em className="text-gold">stand on.</em>
+              What <em className="text-gold">guides us.</em>
             </h2>
+            <p className="mt-5 text-lg leading-relaxed text-body">
+              Our values shape how we think, work, and show up for our clients. They guide our decisions, strengthen our
+              relationships, and keep our work focused on meaningful, lasting progress.
+            </p>
           </div>
           <ul className="mt-10 grid grid-cols-2 border-l border-t border-line sm:grid-cols-4">
             {coreValues.map((v, i) => (
@@ -110,6 +113,10 @@ export default function AboutPage() {
             <h2 id="serve-heading" className="heading mt-4 text-4xl sm:text-5xl">
               Built for people <em className="text-gold">ready to move.</em>
             </h2>
+            <p className="mt-5 text-lg leading-relaxed text-body">
+              We work with organizations, leaders, entrepreneurs, founders, and professionals who are ready to create clarity,
+              build momentum, and turn intention into meaningful progress.
+            </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {whoWeServe.map((g, i) => (

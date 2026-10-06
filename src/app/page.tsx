@@ -19,7 +19,7 @@ import insideThePagesSet from "../../public/images/inside-the-pages-set.jpg";
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | From Access to Accexx. Unlock Your Breakthrough.` },
   description:
-    "Consulting, coaching, speaking and education from Dr. Laide R. Alexander and her team of executive consultants. We do more than find solutions, we enable transformation.",
+    "Consulting, coaching, speaking and education from Dr. Laide R. Alexander and her team of executive consultants. We do more than find solutions. We enable transformation.",
   alternates: { canonical: "/" },
 };
 
@@ -716,7 +716,7 @@ function FinalCta() {
         <h2 className="mt-8 font-serif text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">
           Ready for Your <em className="text-gold-light">Breakthrough?</em>
         </h2>
-        <p className="mt-6 text-lg text-white/80">We do more than find solutions, we enable transformation.</p>
+        <p className="mt-6 text-lg text-white/80">We do more than find solutions. We enable transformation.</p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <ButtonLink href={links.booking}>Book a Discovery Call</ButtonLink>
           <ButtonLink href="#accexx-circle" variant="outline-light">

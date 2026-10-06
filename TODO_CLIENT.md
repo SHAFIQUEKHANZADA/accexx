@@ -89,3 +89,6 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] Approve the **SMS opt-in wording** on the signup forms ("Yes, text me updates from Accexx Insight. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."). Also used for the A2P 10DLC application. (CLIENT_UPDATES #17)
 - [ ] Forward **Dr. Laide's latest email** with wording changes, and confirm **which two images** to remove (meeting 2026-10-03).
 - [ ] Company website links for **client logos**; **LinkedIn post links** for the blog. (CLIENT_UPDATES #17)
+
+- [ ] **Core value definitions** (one line each for Empathy, Integrity, Clarity, Empowerment, Purposeful Action, Accountability, Resilience, Connection) from her email. (CLIENT_UPDATES #20)
+- [ ] **Partner logos** (she will send). (CLIENT_UPDATES #20)

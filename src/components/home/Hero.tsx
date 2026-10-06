@@ -1,7 +1,8 @@
 import { ButtonLink } from "@/components/ui/Button";
 import { GoldWaves } from "./GoldWaves";
+import { coreValues } from "@/data/about";
 
-const values = ["Empathy", "Integrity", "Transformation", "Empowerment", "Resilience", "Growth", "Connection", "Accountability"];
+const values = coreValues;
 
 const delay = (ms: number) => ({ animationDelay: `${ms}ms` });
 
@@ -39,10 +40,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-white/85 sm:text-xl" style={delay(320)}>
-            Helping leaders and organizations become their best and achieve lasting results.
+            We help overcomers, creators, leaders, and organizations move from uncertainty to clarity, and from clarity to purposeful action and measurable transformation.
           </p>
           <p className="mt-3 animate-fade-up font-serif text-xl italic text-gold-light sm:text-2xl" style={delay(400)}>
-            We do more than find solutions, we enable transformation.
+            We do more than find solutions. We enable transformation.
           </p>
 
           <ul aria-label="Our values" className="mt-7 flex max-w-2xl animate-fade-up flex-wrap gap-2" style={delay(480)}>

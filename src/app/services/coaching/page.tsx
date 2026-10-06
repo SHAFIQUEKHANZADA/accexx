@@ -223,7 +223,7 @@ export default function CoachingPage() {
             Ready for your <em className="text-gold-light">breakthrough?</em>
           </>
         }
-        body="We do more than find solutions, we enable transformation."
+        body="We do more than find solutions. We enable transformation."
       />
     </>
   );
