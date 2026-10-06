@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/ui/PageHero";
 import { ButtonLink } from "@/components/ui/Button";
-import { Instagram, LinkedIn, Mail, Phone } from "@/components/ui/icons";
+import { Clock, Instagram, LinkedIn, Mail, MapPin, Phone } from "@/components/ui/icons";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Facebook, TikTok, YouTube } from "@/components/contact/SocialIcons";
-import { callHref, links } from "@/lib/site";
+import { callHref, callHrefSecondary, links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 };
 
 const socials: { label: string; handle: string; href: string; icon: ReactNode }[] = [
-  { label: "LinkedIn", handle: "Laide Alexander", href: "https://www.linkedin.com/in/laidealexander/", icon: <LinkedIn width={20} height={20} /> },
-  { label: "Instagram", handle: "@iamdrlaidea", href: "https://www.instagram.com/iamdrlaidea/", icon: <Instagram width={20} height={20} /> },
-  { label: "YouTube", handle: "@Dr.LaideAlexander", href: "https://www.youtube.com/@Dr.LaideAlexander", icon: <YouTube /> },
-  { label: "TikTok", handle: "@drlaidealexander", href: "https://www.tiktok.com/@drlaidealexander/", icon: <TikTok /> },
-  { label: "Facebook", handle: "Dr. Laide Alexander", href: "https://www.facebook.com/profile.php?id=61584887520106", icon: <Facebook /> },
+  { label: "LinkedIn", handle: "Dr. Laide Alexander", href: links.linkedin, icon: <LinkedIn width={20} height={20} /> },
+  { label: "Instagram", handle: "@iamdrlaidea", href: links.instagram, icon: <Instagram width={20} height={20} /> },
+  { label: "YouTube", handle: "@Dr.LaideAlexander", href: links.youtube, icon: <YouTube /> },
+  { label: "TikTok", handle: "@drlaidealexander", href: links.tiktok, icon: <TikTok /> },
+  { label: "Facebook", handle: "Dr. Laide Alexander", href: links.facebook, icon: <Facebook /> },
 ];
 
 // The GHL "Consultation with Dr. Laide" calendar (NEXT_PUBLIC_GHL_BOOKING_URL), embedded below.
@@ -64,28 +64,92 @@ export default function ContactPage() {
 
           <aside className="space-y-6">
             <div className="rounded-3xl border border-line bg-cream p-7">
-              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">Where we are</h2>
-              <p className="mt-3 font-serif text-2xl font-semibold text-navy">Houston, Texas</p>
-              {(links.email || links.phone) && (
-                <ul className="mt-5 space-y-3 border-t border-line pt-5 text-[0.95rem]">
-                  {links.email && (
-                    <li>
-                      <a href={`mailto:${links.email}`} className="inline-flex items-center gap-3 font-medium text-ink hover:text-gold-deep">
-                        <Mail className="text-gold-deep" /> {links.email}
+              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">Office & Direct Contact</h2>
+
+              {/* Address */}
+              <div className="mt-4 flex items-start gap-3">
+                <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-full bg-gold/15 text-gold-deep">
+                  <MapPin width={16} height={16} />
+                </span>
+                <div>
+                  <p className="font-semibold text-navy">Houston Office</p>
+                  <address className="not-italic text-sm leading-relaxed text-body mt-0.5">
+                    1334 Brittmoore Road, Suite 1000B<br />
+                    Houston, TX 77043
+                  </address>
+                </div>
+              </div>
+
+              {/* Phone Numbers */}
+              <div className="mt-5 border-t border-line/70 pt-5 space-y-2.5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Phone Lines</p>
+                <div className="space-y-2 text-sm">
+                  <div>
+                    <span className="text-xs text-muted block">Primary / Toll-Free</span>
+                    <a href={callHref} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
+                      <Phone width={15} height={15} className="text-gold-deep" />
+                      {links.phone}
+                    </a>
+                  </div>
+                  {links.phoneSecondary && (
+                    <div>
+                      <span className="text-xs text-muted block">Direct / Secondary</span>
+                      <a href={callHrefSecondary} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
+                        <Phone width={15} height={15} className="text-gold-deep" />
+                        {links.phoneSecondary}
                       </a>
-                    </li>
+                    </div>
                   )}
-                  {links.phone && (
-                    <li>
-                      <a href={callHref} className="inline-flex items-center gap-3 font-medium text-ink hover:text-gold-deep">
-                        <Phone className="text-gold-deep" /> {links.phone}
-                      </a>
-                    </li>
-                  )}
-                </ul>
-              )}
+                </div>
+              </div>
+
+              {/* Dedicated Emails */}
+              <div className="mt-5 border-t border-line/70 pt-5 space-y-2.5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Dedicated Support & Inquiries</p>
+                <div className="space-y-2 text-sm">
+                  <div>
+                    <span className="text-xs text-muted block">General & Calendar</span>
+                    <a href={`mailto:${links.email}`} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
+                      <Mail width={15} height={15} className="text-gold-deep" />
+                      {links.email}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted block">Student Support</span>
+                    <a href={`mailto:${links.studentSupportEmail}`} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
+                      <Mail width={15} height={15} className="text-gold-deep" />
+                      {links.studentSupportEmail}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted block">Faculty Support</span>
+                    <a href={`mailto:${links.facultySupportEmail}`} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
+                      <Mail width={15} height={15} className="text-gold-deep" />
+                      {links.facultySupportEmail}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            {/* Consultation Hours */}
+            <div className="rounded-3xl border border-line bg-white p-7">
+              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">Consultation Availability</h2>
+              <div className="mt-4 flex items-start gap-3">
+                <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-full bg-gold/15 text-gold-deep">
+                  <Clock width={16} height={16} />
+                </span>
+                <div className="text-sm">
+                  <p className="font-semibold text-navy">{links.consultationHours}</p>
+                  <p className="text-muted mt-1">Conducted virtually via {links.meetingMethod}.</p>
+                  <p className="text-xs text-muted mt-2 border-t border-line/60 pt-2">
+                    Calendar invitations sent from <span className="font-medium text-navy">{links.email}</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Profiles */}
             <div className="rounded-3xl border border-line bg-white p-7">
               <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">Follow Dr. A</h2>
               <ul className="mt-4 space-y-1">
@@ -122,7 +186,7 @@ export default function ContactPage() {
               Consultation with <em className="text-gold">Dr. Laide</em>
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-body">
-              Choose a time that works for you.
+              Available {links.consultationHours}. Sessions are held virtually via {links.meetingMethod}, and calendar confirmations are sent directly from {links.email}.
             </p>
           </div>
 

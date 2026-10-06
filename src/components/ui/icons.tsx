@@ -93,8 +93,23 @@ export const Cap = (p: IconProps) => (
   </svg>
 );
 
+export const MapPin = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" />
+  </svg>
+);
+
+export const Clock = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
+  </svg>
+);
+
 export const Quote = (p: IconProps) => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden {...p}>
     <path d="M9.6 6C6.5 7.3 4.5 10 4.5 13.6V18h5.4v-5.4H7.2c0-2 1-3.6 3.1-4.5L9.6 6Zm9 0c-3.1 1.3-5.1 4-5.1 7.6V18h5.4v-5.4h-2.7c0-2 1-3.6 3.1-4.5L18.6 6Z" />
   </svg>
 );
+

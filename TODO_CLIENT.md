@@ -40,13 +40,17 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] **Self-paced prices** are still missing. The Pricing Master only covers live cohorts.
 
 ## Contact & integrations
-- [ ] **Phone number** for "Call Now" (currently links to /contact). Env: `NEXT_PUBLIC_CONTACT_PHONE`.
-- [ ] **Contact email** (footer "Email" links to /contact). Env: `NEXT_PUBLIC_CONTACT_EMAIL`.
-- [x] Social URLs: LinkedIn, Instagram, YouTube, TikTok, Facebook (in footer).
-- [ ] **GHL form webhook URL** (`GHL_FORM_WEBHOOK_URL`). Accexx Circle signup is not delivered anywhere until set.
+- [x] **Phone numbers:** Primary: `(800) 689-1185`, Secondary / Direct: `(281) 985-1765`. "Call Now" buttons link to `tel:8006891185`.
+- [x] **Contact & Support emails:** General & Calendar: `info@accexxinsight.com`, Student support: `axiacastudent@accexxinsight.com`, Faculty support: `axiacafaculty@accexxinsight.com`.
+- [x] **Physical office address:** `1334 Brittmoore Road, Suite 1000B, Houston, TX 77043`.
+- [x] **Consultation availability:** Tuesday–Thursday, 9:00 AM–4:00 PM (CT) via Zoom. Calendar invitations sent from `info@accexxinsight.com`.
+- [x] **GoHighLevel form integration:** Completed via GHL API v2 (`POST /api/forms`). All 7 forms sync contacts, custom fields, tags, and pipeline opportunities.
+- [x] **Social profiles:** LinkedIn, Instagram, YouTube, TikTok, Facebook (all active in footer, contact page, and site settings).
+- [x] **GoDaddy delegated access** provided.
 - [ ] **GHL booking calendar URL** (`NEXT_PUBLIC_GHL_BOOKING_URL`). "Book Dr. A" / "Book a Discovery Call" go to /contact until set.
 - [ ] **Course portal URL** (`NEXT_PUBLIC_COURSE_PORTAL_URL`).
 - [ ] **Payment provider (Stripe?), shipping and returns rules** for the shop. She wants taxes + shipping calculated at checkout and multiple currencies: which currencies/countries?
+
 
 ## Shop placeholders (2026-10-01)
 - [ ] **O Face Cap** and **Store Gift Card** photos (shown as navy typographic "Photo coming soon" tiles). Cap colours/sizes, if any.

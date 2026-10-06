@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { footerNav, links, site } from "@/lib/site";
+import { callHref, callHrefSecondary, footerNav, links, site } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
 
 const connect = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/laidealexander/" },
-  { label: "Instagram", href: "https://www.instagram.com/iamdrlaidea/" },
-  { label: "YouTube", href: "https://www.youtube.com/@Dr.LaideAlexander" },
-  { label: "TikTok", href: "https://www.tiktok.com/@drlaidealexander/" },
-  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584887520106" },
+  { label: "LinkedIn", href: links.linkedin },
+  { label: "Instagram", href: links.instagram },
+  { label: "YouTube", href: links.youtube },
+  { label: "TikTok", href: links.tiktok },
+  { label: "Facebook", href: links.facebook },
   { label: "Email", href: links.email ? `mailto:${links.email}` : "/contact" },
 ];
 
@@ -20,6 +20,25 @@ export function Footer() {
           <Logo tone="light" />
           <p className="mt-5 text-sm leading-relaxed text-white/75">{site.collective}</p>
           <p className="mt-3 font-serif text-lg italic text-gold-light">{site.tagline}</p>
+          
+          <div className="mt-6 border-t border-white/15 pt-5 text-xs leading-relaxed text-white/75 space-y-1.5">
+            <p className="font-medium text-white/90">{links.address}</p>
+            <p className="flex flex-wrap items-center gap-x-2 text-white/70">
+              <span>
+                Toll-free:{" "}
+                <a href={callHref} className="text-gold-light hover:text-white transition-colors">
+                  {links.phone}
+                </a>
+              </span>
+              <span>•</span>
+              <span>
+                Direct:{" "}
+                <a href={callHrefSecondary} className="text-gold-light hover:text-white transition-colors">
+                  {links.phoneSecondary}
+                </a>
+              </span>
+            </p>
+          </div>
         </div>
 
         {footerNav.map((col) => (

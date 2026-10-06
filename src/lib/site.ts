@@ -21,14 +21,30 @@ export const links = {
   booking: "/contact#book",
   bookingEmbed: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || null,
   coursePortal: process.env.NEXT_PUBLIC_COURSE_PORTAL_URL || "/contact",
-  // Phone number not supplied yet: "Call Now" routes to the contact page until it is.
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || null,
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || null,
-  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || null,
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
+
+  // Confirmed contact information
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "(800) 689-1185",
+  phoneSecondary: process.env.NEXT_PUBLIC_CONTACT_PHONE_SECONDARY || "(281) 985-1765",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@accexxinsight.com",
+  studentSupportEmail: process.env.NEXT_PUBLIC_STUDENT_SUPPORT_EMAIL || "axiacastudent@accexxinsight.com",
+  facultySupportEmail: process.env.NEXT_PUBLIC_FACULTY_SUPPORT_EMAIL || "axiacafaculty@accexxinsight.com",
+  address: "1334 Brittmoore Road, Suite 1000B, Houston, TX 77043",
+  addressCityState: "Houston, TX",
+
+  // Consultation availability
+  consultationHours: "Tuesday–Thursday, 9:00 AM–4:00 PM",
+  meetingMethod: "Zoom",
+
+  // Social profiles supplied
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/laidealexander/",
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/iamdrlaidea/",
+  youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://www.youtube.com/@Dr.LaideAlexander",
+  tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL || "https://www.tiktok.com/@drlaidealexander/",
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/profile.php?id=61584887520106",
 };
 
-export const callHref = links.phone ? `tel:${links.phone.replace(/[^+\d]/g, "")}` : "/contact";
+export const callHref = `tel:${links.phone.replace(/[^+\d]/g, "")}`;
+export const callHrefSecondary = `tel:${links.phoneSecondary.replace(/[^+\d]/g, "")}`;
 
 export function isExternal(href: string) {
   return /^(https?:|mailto:|tel:)/.test(href);
