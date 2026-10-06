@@ -73,9 +73,9 @@ export function InquiryForm({
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor={`${id}-name`} className={label}>
-            Name
+            Name <span className="text-gold-deep">*</span>
           </label>
-          <input id={`${id}-name`} name="name" autoComplete="name" className={`${field} h-12`} />
+          <input id={`${id}-name`} name="name" required autoComplete="name" className={`${field} h-12`} />
         </div>
         <div>
           <label htmlFor={`${id}-email`} className={label}>
@@ -85,15 +85,15 @@ export function InquiryForm({
         </div>
         <div>
           <label htmlFor={`${id}-phone`} className={label}>
-            Phone <span className="font-normal text-muted">(optional)</span>
+            Phone <span className="text-gold-deep">*</span>
           </label>
-          <input id={`${id}-phone`} name="phone" type="tel" autoComplete="tel" className={`${field} h-12`} />
+          <input id={`${id}-phone`} name="phone" type="tel" required autoComplete="tel" className={`${field} h-12`} />
         </div>
         <div>
           <label htmlFor={`${id}-org`} className={label}>
-            Organization
+            Organization <span className="text-gold-deep">*</span>
           </label>
-          <input id={`${id}-org`} name="organization" autoComplete="organization" className={`${field} h-12`} />
+          <input id={`${id}-org`} name="organization" required autoComplete="organization" className={`${field} h-12`} />
         </div>
       </div>
 
@@ -116,9 +116,9 @@ export function InquiryForm({
 
       <div>
         <label htmlFor={`${id}-message`} className={label}>
-          {messageLabel}
+          {messageLabel} <span className="text-gold-deep">*</span>
         </label>
-        <textarea id={`${id}-message`} name="message" rows={5} className={`${field} py-3`} />
+        <textarea id={`${id}-message`} name="message" required rows={5} className={`${field} py-3`} />
       </div>
 
       {/* Honeypot: real people never fill this in. */}

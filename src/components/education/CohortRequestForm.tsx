@@ -75,18 +75,21 @@ export function CohortRequestForm({
         </label>
         <label className="block">
           <span className={label}>
-            Phone <span className="font-normal text-muted">(optional)</span>
+            Phone
           </span>
-          <input name="phone" type="tel" autoComplete="tel" className={`h-12 ${field}`} />
+          <input name="phone" type="tel" required autoComplete="tel" className={`h-12 ${field}`} />
         </label>
         <label className="block">
           <span className={label}>Organization</span>
-          <input name="organization" autoComplete="organization" className={`h-12 ${field}`} />
+          <input name="organization" required autoComplete="organization" className={`h-12 ${field}`} />
         </label>
         <label className="block sm:col-span-2">
           <span className={label}>Preferred format</span>
-          <select name="preferredFormat" defaultValue="" className={`h-12 ${field}`}>
-            <option value="">No preference</option>
+          <select name="preferredFormat" required defaultValue="" className={`h-12 ${field}`}>
+            <option value="" disabled>
+              Choose a format
+            </option>
+            <option value="No preference">No preference</option>
             {formats.map((f) => (
               <option key={f} value={f}>
                 {f}
@@ -99,6 +102,7 @@ export function CohortRequestForm({
         <span className={label}>Message</span>
         <textarea
           name="message"
+          required
           rows={4}
           placeholder="Group size, preferred dates, anything we should know"
           className={`py-3 ${field}`}

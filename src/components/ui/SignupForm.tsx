@@ -7,7 +7,7 @@ import { getTrackingData } from "@/lib/tracking";
 type Status = "idle" | "sending" | "done" | "error";
 
 /**
- * Signup (name, email, optional phone + SMS opt-in) that posts to /api/forms with a `formType` and tracking data.
+ * Signup (name, email, phone all required; SMS opt-in stays optional by carrier rules) that posts to /api/forms with a `formType` and tracking data.
  * `tone="dark"` for navy panels, `tone="light"` for white/cream sections.
  */
 export function SignupForm({
@@ -77,6 +77,7 @@ export function SignupForm({
           <span className="sr-only">First name</span>
           <input
             name="firstName"
+            required
             autoComplete="given-name"
             placeholder="First name"
             className={`h-12 w-full rounded-full border px-5 text-sm focus:outline-none ${input}`}
@@ -96,12 +97,13 @@ export function SignupForm({
       </div>
       {/* Phone for SMS follow-up (meeting 2026-10-03). Optional; texting needs the opt-in below (A2P 10DLC). */}
       <label className="block">
-        <span className="sr-only">Mobile number (optional)</span>
+        <span className="sr-only">Mobile number</span>
         <input
           name="phone"
           type="tel"
           autoComplete="tel"
-          placeholder="Mobile number (optional)"
+          placeholder="Mobile number"
+          required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           className={`h-12 w-full rounded-full border px-5 text-sm focus:outline-none ${input}`}

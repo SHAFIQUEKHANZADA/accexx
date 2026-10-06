@@ -77,9 +77,9 @@ export function ContactForm() {
       </div>
       <label className="block">
         <span className="mb-1.5 block text-sm font-semibold text-navy">
-          Phone <span className="font-normal text-muted">(optional)</span>
+          Phone <span className="text-gold-deep">*</span>
         </span>
-        <input name="phone" type="tel" autoComplete="tel" className={`h-12 ${field}`} />
+        <input name="phone" type="tel" required autoComplete="tel" className={`h-12 ${field}`} />
       </label>
       <label className="block">
         <span className="mb-1.5 block text-sm font-semibold text-navy">
