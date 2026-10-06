@@ -129,20 +129,15 @@ function Philosophy() {
 
 /* Find your breakthrough (who we serve) ---------------------------------------- */
 
-// Where each audience usually starts (site navigation only). Dr. A (2026-10-01): photos on the
-// first two cards only, very large with the text below; none on cards 3 and 4.
+// Where each audience usually starts (site navigation only). No photos (Dr. A, 2026-10-07: "we don't need pictures there").
 const audienceCards: Record<string, { photo?: string; alt?: string; links: { label: string; href: string }[] }> = {
   Organizations: {
-    photo: "/images/consulting-meeting.jpg",
-    alt: "A leadership team in a working session",
     links: [
       { label: "Consulting", href: "/services/consulting" },
       { label: "Certifications", href: "/education/certifications" },
     ],
   },
   "Leaders and Executives": {
-    photo: "/images/events/wmmc-2026-02.jpg",
-    alt: "Leaders on a panel at the Why Move My Cheese? Leadership Conference 2026",
     links: [
       { label: "Coaching", href: "/services/coaching" },
       { label: "Leadership programs", href: "/education/leadership" },
