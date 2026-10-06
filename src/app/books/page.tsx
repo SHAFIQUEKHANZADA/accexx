@@ -168,7 +168,7 @@ export default function BooksPage() {
                 <SignupForm
                   formType="conference-interest"
                   cta="Notify me"
-                  success="Thank you. We'll let you know as soon as the dates are announced."
+                  success="Thank you. Your registration has been received. Event information will be sent to your email."
                 />
               </div>
             </div>

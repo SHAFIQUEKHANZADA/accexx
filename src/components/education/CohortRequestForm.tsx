@@ -2,11 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 
+import { getTrackingData } from "@/lib/tracking";
+
 type Status = "idle" | "sending" | "done" | "error";
 
 /**
- * "Request a Cohort" inquiry (not checkout). Posts to /api/forms (→ GHL webhook) with
- * formType "cohort-request" plus the program code and name.
+ * "Request a Cohort" inquiry. Posts to /api/forms with
+ * formType "cohort-request" plus the program code, name, and tracking parameters.
  */
 export function CohortRequestForm({
   programCode,
@@ -30,9 +32,15 @@ export function CohortRequestForm({
       const res = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, programCode, programName, formType: "cohort-request" }),
+        body: JSON.stringify({
+          ...data,
+          ...getTrackingData(),
+          programCode,
+          programName,
+          formType: "cohort-request",
+        }),
       });
-      const json = (await res.json().catch(() => ({}))) as { error?: string };
+      const json = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");
       setStatus("done");
       form.reset();
@@ -45,7 +53,7 @@ export function CohortRequestForm({
   if (status === "done") {
     return (
       <p role="status" className="rounded-2xl border border-gold/40 bg-gold-soft px-5 py-4 text-sm font-medium text-gold-deep">
-        Thank you. We&apos;ve received your request for {programName} and will be in touch to plan your cohort.
+        Thank you. Your cohort request has been received. Our team will contact you to discuss your group and next steps.
       </p>
     );
   }

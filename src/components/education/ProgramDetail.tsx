@@ -70,11 +70,6 @@ export function ProgramDetail({
         )}
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#request">Request a Cohort</ButtonLink>
-          {enrollHref && (
-            <ButtonLink href={enrollHref} variant="outline">
-              Enroll
-            </ButtonLink>
-          )}
         </div>
       </PageHero>
 
@@ -183,11 +178,6 @@ export function ProgramDetail({
               )}
               <div className="mt-6 flex flex-col gap-3">
                 <ButtonLink href="#request">Request a Cohort</ButtonLink>
-                {enrollHref && (
-                  <ButtonLink href={enrollHref} variant="outline">
-                    Enroll
-                  </ButtonLink>
-                )}
               </div>
             </div>
             {aside}

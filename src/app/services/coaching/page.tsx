@@ -210,7 +210,7 @@ export default function CoachingPage() {
               formType="coaching-inquiry"
               topicOptions={[...coachingStreams.map((s) => s.name), "Not sure yet"]}
               cta="Send inquiry"
-              success="Thank you. We've received your coaching inquiry and will be in touch soon."
+              success="Thank you. Your coaching inquiry has been received. Our team will contact you about the appropriate next step."
               messageLabel="What would you like to work on?"
             />
           </div>

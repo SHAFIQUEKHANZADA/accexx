@@ -35,8 +35,8 @@ export default function BeinspirePage() {
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#programs">See the workshops</ButtonLink>
-          <ButtonLink href={links.coursePortal} variant="outline">
-            Enroll
+          <ButtonLink href="#request" variant="outline">
+            Request a Cohort
           </ButtonLink>
         </div>
       </PageHero>

@@ -2,10 +2,12 @@
 
 import { useState, type FormEvent } from "react";
 
+import { getTrackingData } from "@/lib/tracking";
+
 type Status = "idle" | "sending" | "done" | "error";
 
 /**
- * Signup (name, email, optional phone + SMS opt-in) that posts to /api/forms (→ GHL webhook) with a `formType`.
+ * Signup (name, email, optional phone + SMS opt-in) that posts to /api/forms with a `formType` and tracking data.
  * `tone="dark"` for navy panels, `tone="light"` for white/cream sections.
  */
 export function SignupForm({
@@ -25,6 +27,7 @@ export function SignupForm({
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
+  const [displaySuccess, setDisplaySuccess] = useState(success);
   const dark = tone === "dark";
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -36,10 +39,11 @@ export function SignupForm({
       const res = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType }),
+        body: JSON.stringify({ ...data, ...getTrackingData(), formType }),
       });
-      const json = (await res.json().catch(() => ({}))) as { error?: string };
+      const json = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");
+      if (json.message) setDisplaySuccess(json.message);
       setStatus("done");
       form.reset();
       setPhone("");
@@ -57,7 +61,7 @@ export function SignupForm({
           dark ? "border-gold/40 bg-white/10 text-gold-light" : "border-gold/40 bg-gold-soft text-gold-deep"
         }`}
       >
-        {success}
+        {displaySuccess}
       </p>
     );
   }

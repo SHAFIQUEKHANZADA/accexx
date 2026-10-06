@@ -34,8 +34,8 @@ export default function LeadershipPage() {
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="#programs">See the programs</ButtonLink>
-          <ButtonLink href={links.coursePortal} variant="outline">
-            Enroll
+          <ButtonLink href="#programs" variant="outline">
+            Request a Cohort
           </ButtonLink>
         </div>
       </PageHero>

@@ -2,13 +2,15 @@
 
 import { useId, useState, type FormEvent } from "react";
 
+import { getTrackingData } from "@/lib/tracking";
+
 type Status = "idle" | "sending" | "done" | "error";
 
 export type InquiryFormType = "consulting-proposal" | "coaching-inquiry" | "speaking-inquiry";
 
 /**
  * Services inquiry form (consulting proposal, coaching, speaking).
- * Posts JSON to /api/forms (→ GHL webhook) with `formType` and `topic`.
+ * Posts JSON to /api/forms with `formType`, `topic`, and tracking data.
  */
 export function InquiryForm({
   formType,
@@ -29,6 +31,7 @@ export function InquiryForm({
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [displaySuccess, setDisplaySuccess] = useState(success);
   const id = useId();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -40,10 +43,11 @@ export function InquiryForm({
       const res = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType }),
+        body: JSON.stringify({ ...data, ...getTrackingData(), formType }),
       });
-      const json = (await res.json().catch(() => ({}))) as { error?: string };
+      const json = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");
+      if (json.message) setDisplaySuccess(json.message);
       setStatus("done");
       form.reset();
     } catch (err) {
@@ -55,7 +59,7 @@ export function InquiryForm({
   if (status === "done") {
     return (
       <p role="status" className="rounded-2xl border border-gold/40 bg-gold-soft px-5 py-4 text-sm font-medium text-gold-deep">
-        {success}
+        {displaySuccess}
       </p>
     );
   }

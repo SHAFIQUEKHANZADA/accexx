@@ -200,7 +200,7 @@ export default function SpeakingPage() {
               formType="speaking-inquiry"
               topicOptions={["Keynote", "Panel", "Talk", "Workshop", "Other"]}
               cta="Send speaking inquiry"
-              success="Thank you. We've received your speaking inquiry and will be in touch soon."
+              success="Thank you. Your speaking inquiry has been received. We’ll review your event details and follow up."
               messageLabel="About your event (date, audience, location)"
             />
           </div>

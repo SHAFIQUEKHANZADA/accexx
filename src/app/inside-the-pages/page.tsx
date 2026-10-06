@@ -221,7 +221,7 @@ export default function InsideThePagesPage() {
               <SignupForm
                 formType="inside-the-pages-interest"
                 cta="Join the conversation"
-                success="You're on the list. We'll send the details for the next Inside the Pages session."
+                success="Thank you. Your registration has been received. Event information will be sent to your email."
                 authorOption
               />
             </div>

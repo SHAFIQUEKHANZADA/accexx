@@ -161,7 +161,7 @@ export default function ConsultingPage() {
                 ...consultingEngagements.map((e) => `${e.code} ${e.name}`),
               ]}
               cta="Request a proposal"
-              success="Thank you. We've received your request and will be in touch to scope your engagement."
+              success="Thank you. Your consulting request has been received. We’ll review the information and follow up."
               messageLabel="What's happening in your organization?"
             />
           </div>

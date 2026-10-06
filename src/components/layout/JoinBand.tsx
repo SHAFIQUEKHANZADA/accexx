@@ -28,7 +28,7 @@ export function JoinBand() {
             <SignupForm
               formType="accexx-circle"
               cta="Join the Accexx Circle"
-              success="Welcome to the Accexx Circle. Your membership number will be sent to your email."
+              success="Welcome to the Accexx Circle. Please check your inbox for confirmation."
             />
           </div>
         </div>

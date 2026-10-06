@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 
+import { getTrackingData } from "@/lib/tracking";
+
 type Status = "idle" | "sending" | "done" | "error";
 
 const field =
   "w-full rounded-2xl border border-line bg-white px-5 text-[0.95rem] text-ink placeholder:text-muted focus:border-gold focus:outline-none";
 
-/** Contact form → /api/forms (formType "contact") → GHL webhook. */
+/** Contact form → /api/forms (formType "contact") → GHL integration. */
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -22,9 +24,14 @@ export function ContactForm() {
       const res = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, consent: data.consent === "yes", formType: "contact" }),
+        body: JSON.stringify({
+          ...data,
+          ...getTrackingData(),
+          consent: data.consent === "yes",
+          formType: "contact",
+        }),
       });
-      const json = (await res.json().catch(() => ({}))) as { error?: string };
+      const json = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");
       setStatus("done");
       form.reset();
@@ -38,7 +45,9 @@ export function ContactForm() {
     return (
       <div role="status" className="rounded-3xl border border-gold/40 bg-gold-soft p-8 text-center">
         <p className="heading text-3xl">Thank you.</p>
-        <p className="mt-3 text-body">Your message has been sent. We&apos;ll be in touch soon.</p>
+        <p className="mt-3 text-body">
+          Your message has been received, and the Accexx Insight team will follow up.
+        </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
