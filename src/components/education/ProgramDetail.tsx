@@ -29,7 +29,6 @@ export function ProgramDetail({
   modules,
   prices,
   priceNotes,
-  enrollHref,
   selfPacedNote,
   formats,
   aside,

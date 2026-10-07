@@ -4,8 +4,7 @@ import { beinspireWorkshops } from "@/data/beinspire";
 import { projectUnifyCertificates } from "@/data/projectUnify";
 import { hocShortCourses } from "@/data/shortCourses";
 import { trainingShopCourses } from "@/data/trainingShop";
-import { consultingEngagements, consultingGroups } from "@/data/consulting";
-import { coachingStreams } from "@/data/coaching";
+import { consultingGroups } from "@/data/consulting";
 
 export interface ResolvedProgram {
   programName: string;

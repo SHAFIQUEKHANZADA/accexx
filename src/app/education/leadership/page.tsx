@@ -5,7 +5,6 @@ import { ProgramCard } from "@/components/education/ProgramCard";
 import { CohortPricingNote } from "@/components/education/CohortPricingNote";
 import { hoursLabel, usd } from "@/components/education/format";
 import { leadershipPrograms } from "@/data/leadership";
-import { links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Leadership Development",

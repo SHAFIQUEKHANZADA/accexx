@@ -6,7 +6,6 @@ import { CohortPricingNote } from "@/components/education/CohortPricingNote";
 import { CohortRequestForm } from "@/components/education/CohortRequestForm";
 import { hoursLabel, usd } from "@/components/education/format";
 import { beinspirePricing, beinspireWorkshops } from "@/data/beinspire";
-import { links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "BEInspire© Career Series",

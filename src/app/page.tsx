@@ -129,8 +129,8 @@ function Philosophy() {
 
 /* Find your breakthrough (who we serve) ---------------------------------------- */
 
-// Where each audience usually starts (site navigation only). No photos (Dr. A, 2026-10-07: "we don't need pictures there").
-const audienceCards: Record<string, { photo?: string; alt?: string; links: { label: string; href: string }[] }> = {
+// Where each audience usually starts (site navigation only). No photos (Dr. A: "we don't need pictures there").
+const audienceCards: Record<string, { links: { label: string; href: string }[] }> = {
   Organizations: {
     links: [
       { label: "Consulting", href: "/services/consulting" },
@@ -174,11 +174,6 @@ function Paths() {
             const card = audienceCards[group.name];
             return (
               <article key={group.name} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-white" data-reveal>
-                {card?.photo && (
-                  <div className="relative aspect-[16/10]">
-                    <Image src={card.photo} alt={card.alt ?? ""} fill sizes="(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw" className="object-cover" />
-                  </div>
-                )}
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <h3 className="font-serif text-2xl font-semibold leading-tight text-navy sm:text-[1.75rem]">{group.name}</h3>
                   <p className="mt-3 text-[0.95rem] leading-relaxed text-body">{group.summary}</p>
