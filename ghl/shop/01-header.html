@@ -1,0 +1,46 @@
+<!-- ACCEXX SHOP | 01 HEADER (needs 00). Turn OFF the page's built-in GHL header. -->
+<style>
+.ax-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.ax-header .ax-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.ax-nav{display:none;gap:2rem;font-weight:600;font-size:.95rem}
+.ax-nav a:hover,.ax-nav a.is-active{color:var(--gold-deep)}
+.ax-head-cta{display:none;gap:.6rem}
+.ax-head-cta .ax-btn{height:2.6rem;padding:0 1.2rem;font-size:.9rem}
+.ax-menu{position:relative}
+.ax-menu summary{list-style:none;cursor:pointer;width:2.75rem;height:2.75rem;border:1px solid var(--line);border-radius:999px;display:grid;place-items:center;color:var(--navy)}
+.ax-menu summary::-webkit-details-marker{display:none}
+.ax-menu-panel{position:absolute;right:0;top:3.4rem;width:16rem;background:#fff;border:1px solid var(--line);border-radius:1rem;box-shadow:0 20px 40px -20px rgba(31,56,100,.35);padding:.5rem}
+.ax-menu-panel a{display:block;padding:.7rem 1rem;border-radius:.75rem;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--navy)}
+.ax-menu-panel a:hover{background:var(--cream)}
+.ax-menu-panel .ax-btn{width:100%;margin-top:.5rem;font-family:Inter,sans-serif;font-size:.95rem;color:#fff}
+@media(min-width:1024px){.ax-nav,.ax-head-cta{display:flex}.ax-menu{display:none}}
+</style>
+<header class="ax ax-header">
+  <div class="ax-wrap">
+    <a class="ax-logo" href="https://www.accexxinsight.com/" aria-label="Accexx Insight home"><svg class="ax-mark" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 16 L173 184 L27 184 Z M86 184 L86 132 A14 14 0 0 1 114 132 L114 184 Z" fill="currentColor" fill-rule="evenodd"/><rect x="64" y="92" width="72" height="9" rx="2" fill="#B08D57"/></svg><b>ACCEXX</b><i>Insight</i></a>
+    <nav class="ax-nav" aria-label="Main">
+      <a href="https://www.accexxinsight.com/">Home</a>
+      <a href="https://www.accexxinsight.com/about">About</a>
+      <a href="https://www.accexxinsight.com/services">Services</a>
+      <a href="https://www.accexxinsight.com/books">Books &amp; Events</a>
+      <a href="https://www.accexxinsight.com/contact">Contact</a>
+      <a href="#shop-grid" class="is-active">Shop</a>
+    </nav>
+    <div class="ax-head-cta">
+      <a class="ax-btn ax-btn--outline" href="tel:+18006891185">Call Now</a>
+      <a class="ax-btn ax-btn--gold" href="#accexx-circle">Join the Accexx Circle</a>
+    </div>
+    <details class="ax-menu">
+      <summary aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+      <div class="ax-menu-panel">
+        <a href="https://www.accexxinsight.com/">Home</a>
+        <a href="https://www.accexxinsight.com/about">About</a>
+        <a href="https://www.accexxinsight.com/services">Services</a>
+        <a href="https://www.accexxinsight.com/books">Books &amp; Events</a>
+        <a href="https://www.accexxinsight.com/contact">Contact</a>
+        <a href="#shop-grid">Shop</a>
+        <a class="ax-btn ax-btn--gold" href="#accexx-circle">Join the Accexx Circle</a>
+      </div>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,48 @@
+<!-- ACCEXX SHOP | 02 HERO (needs 00) -->
+<style>
+.ax-hero{background:var(--cream);border-bottom:1px solid var(--line);overflow:hidden}
+.ax-hero .ax-wrap{display:grid;gap:3rem;align-items:center;padding-top:3.5rem;padding-bottom:3.5rem}
+.ax-hero-media{position:relative;width:100%;max-width:34rem}
+.ax-hero-photo{position:relative;margin-right:30%;aspect-ratio:4/5;border-radius:2rem;overflow:hidden;box-shadow:0 25px 50px -20px rgba(31,56,100,.35)}
+.ax-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ax-hero-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:4rem 1.25rem 1.25rem;background:linear-gradient(to top,rgba(22,41,74,.92),rgba(22,41,74,.45),transparent);color:#fff}
+.ax-hero-photo figcaption i{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.6rem;color:var(--gold-light)}
+.ax-hero-photo figcaption span{font-size:.85rem;opacity:.9}
+.ax-hero-books{position:absolute;right:0;bottom:9%;width:50%;display:flex;align-items:flex-end}
+.ax-hero-books img{width:62%;aspect-ratio:2/3;object-fit:cover;border-radius:2px 6px 6px 2px;box-shadow:0 24px 50px -18px rgba(31,56,100,.6)}
+.ax-hero-books img:first-child{position:relative;z-index:2;margin-right:-24%}
+.ax-hero-books img:last-child{margin-bottom:10%}
+.ax-hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--navy);font-size:clamp(2.75rem,6vw,4.4rem);line-height:1.02;margin-top:1rem}
+.ax-hero h1 em{color:var(--gold)}
+.ax-rule{display:block;width:5rem;height:3px;border-radius:9px;background:linear-gradient(to right,var(--gold),transparent);margin-top:1.5rem}
+.ax-rib{margin-top:1.5rem;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(1.8rem,3vw,2.3rem);color:rgba(31,56,100,.85)}
+.ax-rib small{font-family:Inter,sans-serif;font-style:normal;font-weight:700;font-size:.85rem;letter-spacing:.06em;color:var(--gold-deep)}
+.ax-lede{margin-top:1.25rem;max-width:36rem;font-size:1.1rem;color:var(--body)}
+.ax-hero-ctas{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.75rem}
+@media(min-width:1024px){.ax-hero .ax-wrap{grid-template-columns:5fr 6fr;gap:3.5rem;padding-top:5rem;padding-bottom:5rem}}
+</style>
+<section class="ax ax-hero" aria-labelledby="ax-hero-title">
+  <div class="ax-wrap">
+    <div class="ax-hero-media">
+      <figure class="ax-hero-photo">
+        <img src="https://accexx-xi.vercel.app/images/dr-laide-headshot.jpg" alt="Dr. Laide R. Alexander" width="1200" height="1500" fetchpriority="high">
+        <figcaption><i>Dr. Laide R. Alexander</i><span>Author. Speaker. Transformation Leader.</span></figcaption>
+      </figure>
+      <div class="ax-hero-books">
+        <img src="https://accexx-xi.vercel.app/images/book-the-unfinished-leader.jpg" alt="The Unfinished Leader book cover" width="1000" height="1499">
+        <img src="https://accexx-xi.vercel.app/images/book-why-move-my-cheese.jpg" alt="Why Move My Cheese? book cover" width="1000" height="1499">
+      </div>
+    </div>
+    <div>
+      <p class="ax-eyebrow">Accexx Insight Shop</p>
+      <h1 id="ax-hero-title">Every Page. <em>A New Possibility.</em></h1>
+      <span class="ax-rule" aria-hidden="true"></span>
+      <p class="ax-rib">Read. Imagine. Become. <small>#R.I.B</small></p>
+      <p class="ax-lede">Practical wisdom and proven strategies to help you navigate change, own your &lsquo;why,&rsquo; and lead a life that lasts.</p>
+      <div class="ax-hero-ctas">
+        <a class="ax-btn ax-btn--navy" href="#shop-grid">Shop Books <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="ax-btn ax-btn--outline" href="https://www.accexxinsight.com/books">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>

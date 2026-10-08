@@ -1,0 +1,331 @@
+<!--
+  ACCEXX SHOP | 04 PRODUCT CATALOG (needs 00)
+  26 products. Images load from https://accexx-xi.vercel.app.
+  CHECKOUT: paste each product's GHL payment link into ACCEXX_LINKS (in the script at the bottom).
+  With a link, the button says "Buy now"; without one, "Coming soon".
+  To change a price, edit it in the product's card below.
+-->
+<style>
+.ax-shop{background:#fff;padding:3.5rem 0 5rem;scroll-margin-top:80px}
+.ax-cols{margin-top:2rem;display:flex;gap:.75rem;overflow-x:auto;padding-bottom:.5rem}
+.ax-cols button{flex-shrink:0;width:12rem;height:5rem;border-radius:1rem;border:1px solid var(--line);background:var(--cream);color:var(--navy);text-align:left;padding:1rem;display:flex;flex-direction:column;justify-content:flex-end;font:inherit;cursor:pointer}
+.ax-cols button b{font-size:.9rem}.ax-cols button span{font-size:.75rem;color:var(--muted)}
+.ax-cols button[aria-pressed=true]{background:var(--navy);color:#fff;box-shadow:0 0 0 2px var(--gold)}
+.ax-cols button[aria-pressed=true] span{color:rgba(255,255,255,.75)}
+.ax-bar{margin-top:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.ax-cats{display:flex;flex-wrap:wrap;gap:.5rem}
+.ax-cats button{height:2.25rem;padding:0 1rem;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font:inherit;font-size:.875rem;font-weight:600;cursor:pointer}
+.ax-cats button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.ax-sort{display:flex;align-items:center;gap:.6rem;font-size:.875rem;color:var(--muted)}
+.ax-sort select{height:2.5rem;border:1px solid var(--line);border-radius:999px;padding:0 1rem;font:inherit;font-weight:600;color:var(--navy);background:#fff}
+.ax-grid{margin-top:2.5rem;display:grid;gap:2.5rem 1.5rem;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr))}
+.ax-card{display:flex;flex-direction:column;align-items:center;text-align:center}
+.ax-card[hidden]{display:none}
+.ax-card-img{position:relative;width:100%;aspect-ratio:4/5;border-radius:1rem;overflow:hidden;border:1px solid var(--line);background:#fff}
+.ax-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ax-card:hover .ax-card-img img{transform:scale(1.03)}
+.ax-card--book .ax-card-img{background:var(--sand)}
+.ax-card--book .ax-card-img img{object-fit:contain;padding:9%}
+.ax-badge{position:absolute;left:.75rem;top:.75rem;z-index:2;border-radius:999px;padding:.25rem .75rem;font-size:.65rem;font-weight:700;letter-spacing:.16em;color:#fff}
+.ax-badge--new{background:var(--teal)}.ax-badge--best{background:var(--gold)}
+.ax-card h3{margin-top:1rem;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.45rem;font-weight:600;line-height:1.15;color:var(--navy)}
+.ax-card-sub{margin-top:.3rem;font-size:.8rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.ax-card-price{margin-top:.5rem}
+.ax-card-price s{margin-left:.4rem;font-size:.85rem;color:var(--muted)}
+.ax-soon{font-size:.85rem;font-weight:600;color:var(--gold-deep)}
+.ax-buy{margin-top:1rem;width:100%;max-width:14rem;height:2.75rem;font-size:.875rem}
+.ax-buy.is-on{background:var(--gold);border-color:var(--gold);color:#fff}.ax-buy.is-on:hover{background:var(--gold-deep)}
+.ax-buy.is-off{opacity:.55;pointer-events:none}
+</style>
+<section class="ax ax-shop" id="shop-grid" aria-labelledby="ax-shop-title">
+  <div class="ax-wrap">
+    <p class="ax-eyebrow">Shop</p>
+    <h2 class="ax-h2" id="ax-shop-title">Books &amp; <em>swag</em></h2>
+    <div class="ax-cols" role="group" aria-label="Collections">
+      <button type="button" data-col-btn="all" aria-pressed="true"><b>All products</b><span>26 items</span></button>
+      <button type="button" data-col-btn="leadership" aria-pressed="false"><b>Leadership</b><span>4 items</span></button>
+      <button type="button" data-col-btn="summer-drop" aria-pressed="false"><b>Summer Drop</b><span>13 items</span></button>
+      <button type="button" data-col-btn="conference-swag" aria-pressed="false"><b>Conference Swag</b><span>22 items</span></button>
+    </div>
+    <div class="ax-bar">
+      <div class="ax-cats" role="group" aria-label="Filter by category">
+        <button type="button" data-cat-btn="all" aria-pressed="true">All</button>
+        <button type="button" data-cat-btn="books" aria-pressed="false">Books</button>
+        <button type="button" data-cat-btn="apparel" aria-pressed="false">Apparel</button>
+        <button type="button" data-cat-btn="digital" aria-pressed="false">Digital</button>
+        <button type="button" data-cat-btn="other" aria-pressed="false">Other</button>
+      </div>
+      <label class="ax-sort">Sort
+        <select data-sort>
+          <option value="featured">Featured</option>
+          <option value="asc">Price: low to high</option>
+          <option value="desc">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+    <div class="ax-grid" data-grid>
+      <article class="ax-card ax-card--book" data-cat="books" data-col="leadership summer-drop" data-price="24">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/book-the-unfinished-leader.jpg" alt="The Unfinished Leader" loading="lazy" width="800" height="1000"></div>
+        <h3>The Unfinished Leader</h3>
+        <p class="ax-card-sub">Embracing Personal Transformation to Lead Change That Lasts</p>
+        <p class="ax-card-price"><b>$24.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="the-unfinished-leader" data-label=" · Paperback" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card ax-card--book" data-cat="books" data-col="leadership summer-drop" data-price="31">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--best">BESTSELLER</span><img src="https://accexx-xi.vercel.app/images/book-why-move-my-cheese.jpg" alt="Why Move My Cheese?" loading="lazy" width="800" height="1000"></div>
+        <h3>Why Move My Cheese?</h3>
+        <p class="ax-card-sub">How to Own Your Decisions, Tell the Truth About Your “Why” and Stop Disappearing in Seasons of Change</p>
+        <p class="ax-card-price"><b>$31.00</b> <s>$38.00</s></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="why-move-my-cheese" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="leadership summer-drop" data-price="25.95">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--best">BESTSELLER</span><img src="https://accexx-xi.vercel.app/images/products/o-face-cap-colours.jpg" alt="O Face Cap" loading="lazy" width="800" height="1000"></div>
+        <h3>O Face Cap</h3>
+        <p class="ax-card-sub">When the cheese moves, do you disappear or decide?</p>
+        <p class="ax-card-price"><b>$25.95</b> <s>$29.95</s></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="o-face-cap" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="digital" data-col="leadership summer-drop" data-price="0">
+        <div class="ax-card-img"><img src="https://accexx-xi.vercel.app/images/products/store-gift-card.jpg" alt="Store Gift Card" loading="lazy" width="800" height="1000"></div>
+        <h3>Store Gift Card</h3>
+        <p class="ax-card-sub">Temporarily unavailable</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="store-gift-card" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/cap-tan.jpg" alt="Logo Cap" loading="lazy" width="800" height="1000"></div>
+        <h3>Logo Cap</h3>
+        <p class="ax-card-sub">Tan · Open-circle logo</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="logo-cap-tan" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/cap-black.jpg" alt="Move Mindset Cap" loading="lazy" width="800" height="1000"></div>
+        <h3>Move Mindset Cap</h3>
+        <p class="ax-card-sub">Black · Move Mindset. Move Future.</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="move-mindset-cap" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/cap-grey.jpg" alt="Adapt. Lead. Transform. Cap" loading="lazy" width="800" height="1000"></div>
+        <h3>Adapt. Lead. Transform. Cap</h3>
+        <p class="ax-card-sub">Grey</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="adapt-lead-transform-cap" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/cap-olive.jpg" alt="Move Different. Cap" loading="lazy" width="800" height="1000"></div>
+        <h3>Move Different. Cap</h3>
+        <p class="ax-card-sub">Olive</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="move-different-cap" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tee-white.jpg" alt="Move Different. Lead Better. Tee" loading="lazy" width="800" height="1000"></div>
+        <h3>Move Different. Lead Better. Tee</h3>
+        <p class="ax-card-sub">White T-shirt</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="move-different-lead-better-tee" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tee-black.jpg" alt="Adapt. Lead. Transform. Tee" loading="lazy" width="800" height="1000"></div>
+        <h3>Adapt. Lead. Transform. Tee</h3>
+        <p class="ax-card-sub">Black T-shirt</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="adapt-lead-transform-tee" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tee-dark-grey.jpg" alt="Icon Tee" loading="lazy" width="800" height="1000"></div>
+        <h3>Icon Tee</h3>
+        <p class="ax-card-sub">Dark grey T-shirt · Home, work and world icons</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="home-work-world-tee" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tee-forest-green.jpg" alt="Mindset. Strategy. Impact. Tee" loading="lazy" width="800" height="1000"></div>
+        <h3>Mindset. Strategy. Impact. Tee</h3>
+        <p class="ax-card-sub">Forest green T-shirt</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="mindset-strategy-impact-tee" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="summer-drop conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/rib-mug-white.jpg" alt="Read. Imagine. Become. Mug" loading="lazy" width="800" height="1000"></div>
+        <h3>Read. Imagine. Become. Mug</h3>
+        <p class="ax-card-sub">#R.I.B</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="read-imagine-become-mug" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/hoodie-disrupt-black.jpg" alt="Disrupt. Adapt. Lead. Repeat. Hoodie" loading="lazy" width="800" height="1000"></div>
+        <h3>Disrupt. Adapt. Lead. Repeat. Hoodie</h3>
+        <p class="ax-card-sub">Black hoodie · Back print</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="disrupt-adapt-lead-repeat-hoodie" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/hoodie-wmmc-beige.jpg" alt="Why Move My Cheese? Hoodie" loading="lazy" width="800" height="1000"></div>
+        <h3>Why Move My Cheese? Hoodie</h3>
+        <p class="ax-card-sub">Beige hoodie · Conference logo</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="why-move-my-cheese-hoodie" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/hoodie-values-green.jpg" alt="Built on Values. Driven by Purpose. Hoodie" loading="lazy" width="800" height="1000"></div>
+        <h3>Built on Values. Driven by Purpose. Hoodie</h3>
+        <p class="ax-card-sub">Green hoodie · Back print</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="built-on-values-hoodie" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="apparel" data-col="conference-swag" data-price="0">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/hoodie-icons-navy.jpg" alt="My Home. My Work. My Universe. Hoodie" loading="lazy" width="800" height="1000"></div>
+        <h3>My Home. My Work. My Universe. Hoodie</h3>
+        <p class="ax-card-sub">Navy hoodie · Back print</p>
+        <p class="ax-card-price"><span class="ax-soon">Price coming soon</span></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="my-home-my-work-my-universe-hoodie" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="10">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/mug-legacy-black.jpg" alt="Lead Yourself. Lead Others. Leave a Legacy. Mug" loading="lazy" width="800" height="1000"></div>
+        <h3>Lead Yourself. Lead Others. Leave a Legacy. Mug</h3>
+        <p class="ax-card-sub">Black ceramic mug</p>
+        <p class="ax-card-price"><b>$10.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="lead-yourself-mug" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="10">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/mug-icons-white.jpg" alt="My Home. My Work. My Universe. Mug" loading="lazy" width="800" height="1000"></div>
+        <h3>My Home. My Work. My Universe. Mug</h3>
+        <p class="ax-card-sub">White ceramic mug</p>
+        <p class="ax-card-price"><b>$10.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="my-home-my-work-my-universe-mug" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="10">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/mug-purpose-black.jpg" alt="Purpose over Position Mug" loading="lazy" width="800" height="1000"></div>
+        <h3>Purpose over Position Mug</h3>
+        <p class="ax-card-sub">Black ceramic mug</p>
+        <p class="ax-card-price"><b>$10.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="purpose-over-position-mug" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="25.5">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tumbler-focus.jpg" alt="Focus. Adapt. Execute. Repeat. Tumbler" loading="lazy" width="800" height="1000"></div>
+        <h3>Focus. Adapt. Execute. Repeat. Tumbler</h3>
+        <p class="ax-card-sub">Insulated, hot &amp; cold</p>
+        <p class="ax-card-price"><b>$25.50</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="focus-adapt-execute-tumbler" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="10.79">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/notebook-ideas.jpg" alt="Ideas. Plans. Impact. Notebook" loading="lazy" width="800" height="1000"></div>
+        <h3>Ideas. Plans. Impact. Notebook</h3>
+        <p class="ax-card-sub">Ruled pages, premium cover</p>
+        <p class="ax-card-price"><b>$10.79</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="ideas-plans-impact-notebook" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="5.99">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/tote-lead-inspire.jpg" alt="Lead. Inspire. Impact. Tote Bag" loading="lazy" width="800" height="1000"></div>
+        <h3>Lead. Inspire. Impact. Tote Bag</h3>
+        <p class="ax-card-sub">Durable, reusable</p>
+        <p class="ax-card-price"><b>$5.99</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="lead-inspire-impact-tote" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="10.58">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/pins-set.jpg" alt="Conference Pin Set" loading="lazy" width="800" height="1000"></div>
+        <h3>Conference Pin Set</h3>
+        <p class="ax-card-sub">Set of 3 pins</p>
+        <p class="ax-card-price"><b>$10.58</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="conference-pin-set" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="20">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/lanyard-wmmc.jpg" alt="Why Move My Cheese? Lanyard" loading="lazy" width="800" height="1000"></div>
+        <h3>Why Move My Cheese? Lanyard</h3>
+        <p class="ax-card-sub">Attendee lanyard</p>
+        <p class="ax-card-price"><b>$20.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="why-move-my-cheese-lanyard" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+      <article class="ax-card" data-cat="other" data-col="conference-swag" data-price="15">
+        <div class="ax-card-img"><span class="ax-badge ax-badge--new">NEW</span><img src="https://accexx-xi.vercel.app/images/products/stickers-pack.jpg" alt="Conference Sticker Pack" loading="lazy" width="800" height="1000"></div>
+        <h3>Conference Sticker Pack</h3>
+        <p class="ax-card-sub">High-quality vinyl</p>
+        <p class="ax-card-price"><b>$15.00</b></p>
+        <a class="ax-btn ax-btn--outline ax-buy is-off" data-buy="conference-sticker-pack" data-label="" aria-disabled="true">Coming soon</a>
+      </article>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  /* GHL payment link per product. Empty "" = shows "Coming soon". */
+  var ACCEXX_LINKS = {
+    "the-unfinished-leader": "https://link.fastpaydirect.com/payment-link/6ac2d049075ea22a20cdc38a",
+    "why-move-my-cheese": "",
+    "o-face-cap": "",
+    "store-gift-card": "",
+    "logo-cap-tan": "",
+    "move-mindset-cap": "",
+    "adapt-lead-transform-cap": "",
+    "move-different-cap": "",
+    "move-different-lead-better-tee": "",
+    "adapt-lead-transform-tee": "",
+    "home-work-world-tee": "",
+    "mindset-strategy-impact-tee": "",
+    "read-imagine-become-mug": "",
+    "disrupt-adapt-lead-repeat-hoodie": "",
+    "why-move-my-cheese-hoodie": "",
+    "built-on-values-hoodie": "",
+    "my-home-my-work-my-universe-hoodie": "",
+    "lead-yourself-mug": "",
+    "my-home-my-work-my-universe-mug": "",
+    "purpose-over-position-mug": "",
+    "focus-adapt-execute-tumbler": "",
+    "ideas-plans-impact-notebook": "",
+    "lead-inspire-impact-tote": "",
+    "conference-pin-set": "",
+    "why-move-my-cheese-lanyard": "",
+    "conference-sticker-pack": ""
+  };
+
+  var root = document.getElementById("shop-grid");
+  if (!root) return;
+  var grid = root.querySelector("[data-grid]");
+  var cards = Array.prototype.slice.call(grid.children);
+  var state = { col: "all", cat: "all", sort: "featured" };
+
+  cards.forEach(function (card, i) {
+    card.setAttribute("data-order", i);
+    var btn = card.querySelector("[data-buy]");
+    var url = ACCEXX_LINKS[btn.getAttribute("data-buy")];
+    if (url) {
+      btn.href = url;
+      btn.textContent = "Buy now" + (btn.getAttribute("data-label") || "");
+      btn.classList.remove("is-off");
+      btn.classList.add("is-on");
+      btn.removeAttribute("aria-disabled");
+    }
+  });
+
+  function render() {
+    cards.forEach(function (c) {
+      var inCol = state.col === "all" || (" " + c.getAttribute("data-col") + " ").indexOf(" " + state.col + " ") > -1;
+      var inCat = state.cat === "all" || c.getAttribute("data-cat") === state.cat;
+      c.hidden = !(inCol && inCat);
+    });
+    cards.slice().sort(function (a, b) {
+      if (state.sort === "featured") return a.getAttribute("data-order") - b.getAttribute("data-order");
+      var pa = +a.getAttribute("data-price"), pb = +b.getAttribute("data-price");
+      if (!pa || !pb) return (pa ? 0 : 1) - (pb ? 0 : 1); /* "price coming soon" items last */
+      return state.sort === "asc" ? pa - pb : pb - pa;
+    }).forEach(function (c) { grid.appendChild(c); });
+  }
+
+  function bind(attr, key) {
+    var btns = root.querySelectorAll("[" + attr + "]");
+    Array.prototype.forEach.call(btns, function (b) {
+      b.addEventListener("click", function () {
+        state[key] = b.getAttribute(attr);
+        Array.prototype.forEach.call(btns, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        render();
+      });
+    });
+  }
+  bind("data-col-btn", "col");
+  bind("data-cat-btn", "cat");
+  root.querySelector("[data-sort]").addEventListener("change", function (ev) { state.sort = ev.target.value; render(); });
+})();
+</script>
