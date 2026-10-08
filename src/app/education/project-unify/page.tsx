@@ -8,7 +8,8 @@ import { projectUnifyCertificates, projectUnifyIntro } from "@/data/projectUnify
 export const metadata: Metadata = {
   title: "Project Unify© Certificates",
   description:
-    "15 Project Unify© Certificate Programs from Accexx Insight: credentialed workforce certificates built to the HOC Flagship graded standard, delivered to cohorts in person or virtually.",
+    "15 Project Unify© Certificate Programs from Accexx Insight: credentialed workforce certificates built to the HOC Flagship graded standard, delivered globally to cohorts in person or virtually.",
+
   alternates: { canonical: "/education/project-unify" },
 };
 

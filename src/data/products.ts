@@ -254,15 +254,14 @@ export const products: Product[] = [
   {
     slug: "store-gift-card",
     name: "Store Gift Card",
-    subtitle: cheeseTagline,
+    subtitle: "Temporarily unavailable",
     price: 25,
-    badge: "BESTSELLER",
+    pricePending: true,
     type: "gift-card",
     category: "digital",
     collections: ["leadership", "summer-drop"],
     photo: giftCardImage,
     photoAlt: "Why Move My Cheese? store gift card",
-    // Custom range is our default (her current shop doesn't show one): TODO_CLIENT.md.
     giftCard: { min: 10, max: 500, delivery: "email" },
     variants: [
       ...[25, 50, 100, 200].map((amount) => ({
@@ -270,12 +269,14 @@ export const products: Product[] = [
         label: `$${amount}`,
         options: { Amount: `$${amount}` },
         price: amount,
-        status: "available" as const,
+        status: "coming-soon" as const,
+        note: "Coming soon",
       })),
-      { id: "store-gift-card-custom", label: "Custom", options: { Amount: "Custom" }, status: "available", custom: true },
+      { id: "store-gift-card-custom", label: "Custom", options: { Amount: "Custom" }, status: "coming-soon" as const, custom: true, note: "Coming soon" },
     ],
   },
 ];
+
 
 
 /* Merch, from Dr. A's WhatsApp lineup (2026-10-02, reference/shop-images/merch-lineup-2026-10-02.png).
@@ -370,12 +371,13 @@ const swag = (
   photo: StaticImageData,
   photoAlt: string,
   option: [string, string] = ["Option", "Standard"],
+  price?: number,
 ): Product => ({
   slug,
   name,
   subtitle,
-  price: 0,
-  pricePending: true,
+  price: price ?? 0,
+  pricePending: price === undefined,
   badge: "NEW",
   type,
   category,
@@ -387,8 +389,9 @@ const swag = (
       id: `${slug}-${option[1].toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
       label: option[1],
       options: { [option[0]]: option[1] },
-      status: "coming-soon",
-      note: PRICE_SOON,
+      price: price ?? 0,
+      status: price !== undefined ? "available" : "coming-soon",
+      note: price !== undefined ? undefined : PRICE_SOON,
     },
   ],
 });
@@ -400,15 +403,15 @@ products.push(
   swag("why-move-my-cheese-hoodie", "Why Move My Cheese? Hoodie", "Beige hoodie · Conference logo", "apparel", "apparel", hoodieWmmcBeige, "Beige hoodie with the Why Move My Cheese? logo", hoodieSize),
   swag("built-on-values-hoodie", "Built on Values. Driven by Purpose. Hoodie", "Green hoodie · Back print", "apparel", "apparel", hoodieValuesGreen, "Green hoodie: Built on Values. Driven by Purpose.", hoodieSize),
   swag("my-home-my-work-my-universe-hoodie", "My Home. My Work. My Universe. Hoodie", "Navy hoodie · Back print", "apparel", "apparel", hoodieIconsNavy, "Navy hoodie with the My Home, My Work, My Universe icons", hoodieSize),
-  swag("lead-yourself-mug", "Lead Yourself. Lead Others. Leave a Legacy. Mug", "Black ceramic mug", "drinkware", "other", mugLegacyBlack, "Black mug: Lead Yourself. Lead Others. Leave a Legacy."),
-  swag("my-home-my-work-my-universe-mug", "My Home. My Work. My Universe. Mug", "White ceramic mug", "drinkware", "other", mugIconsWhite, "White mug with the My Home, My Work, My Universe icons"),
-  swag("purpose-over-position-mug", "Purpose over Position Mug", "Black ceramic mug", "drinkware", "other", mugPurposeBlack, "Black mug: Purpose over Position."),
-  swag("focus-adapt-execute-tumbler", "Focus. Adapt. Execute. Repeat. Tumbler", "Insulated, hot & cold", "drinkware", "other", tumblerFocus, "Black tumbler: Focus. Adapt. Execute. Repeat."),
-  swag("ideas-plans-impact-notebook", "Ideas. Plans. Impact. Notebook", "Ruled pages, premium cover", "stationery", "other", notebookIdeas, "Black notebook: Ideas. Plans. Impact."),
-  swag("lead-inspire-impact-tote", "Lead. Inspire. Impact. Tote Bag", "Durable, reusable", "other", "other", toteLeadInspire, "Black tote bag: Lead. Inspire. Impact."),
-  swag("conference-pin-set", "Conference Pin Set", "Set of 3 pins", "other", "other", pinsSet, "Three pins: the open-circle logo, Lead Adapt Transform, and the icons", ["Option", "Set of 3"]),
-  swag("why-move-my-cheese-lanyard", "Why Move My Cheese? Lanyard", "Attendee lanyard", "other", "other", lanyardWmmc, "Why Move My Cheese? attendee lanyard"),
-  swag("conference-sticker-pack", "Conference Sticker Pack", "High-quality vinyl", "other", "other", stickersPack, "Sticker pack: Adapt. Lead. Transform., the logo, the icons, Purpose over Position", ["Option", "Pack"]),
+  swag("lead-yourself-mug", "Lead Yourself. Lead Others. Leave a Legacy. Mug", "Black ceramic mug", "drinkware", "other", mugLegacyBlack, "Black mug: Lead Yourself. Lead Others. Leave a Legacy.", ["Option", "Standard"], 10),
+  swag("my-home-my-work-my-universe-mug", "My Home. My Work. My Universe. Mug", "White ceramic mug", "drinkware", "other", mugIconsWhite, "White mug with the My Home, My Work, My Universe icons", ["Option", "Standard"], 10),
+  swag("purpose-over-position-mug", "Purpose over Position Mug", "Black ceramic mug", "drinkware", "other", mugPurposeBlack, "Black mug: Purpose over Position.", ["Option", "Standard"], 10),
+  swag("focus-adapt-execute-tumbler", "Focus. Adapt. Execute. Repeat. Tumbler", "Insulated, hot & cold", "drinkware", "other", tumblerFocus, "Black tumbler: Focus. Adapt. Execute. Repeat.", ["Option", "Standard"], 25.5),
+  swag("ideas-plans-impact-notebook", "Ideas. Plans. Impact. Notebook", "Ruled pages, premium cover", "stationery", "other", notebookIdeas, "Black notebook: Ideas. Plans. Impact.", ["Option", "Standard"], 10.79),
+  swag("lead-inspire-impact-tote", "Lead. Inspire. Impact. Tote Bag", "Durable, reusable", "other", "other", toteLeadInspire, "Black tote bag: Lead. Inspire. Impact.", ["Option", "Standard"], 5.99),
+  swag("conference-pin-set", "Conference Pin Set", "Set of 3 pins", "other", "other", pinsSet, "Three pins: the open-circle logo, Lead Adapt Transform, and the icons", ["Option", "Set of 3"], 10.58),
+  swag("why-move-my-cheese-lanyard", "Why Move My Cheese? Lanyard", "Attendee lanyard", "other", "other", lanyardWmmc, "Why Move My Cheese? attendee lanyard", ["Option", "Standard"], 20),
+  swag("conference-sticker-pack", "Conference Sticker Pack", "High-quality vinyl", "other", "other", stickersPack, "Sticker pack: Adapt. Lead. Transform., the logo, the icons, Purpose over Position", ["Option", "Pack"], 15),
 );
 
 export const books = products.filter((p) => p.type === "book");

@@ -22,7 +22,7 @@ const credentials = [
   "Member, Forbes Coaches Council",
   "Author of The Unfinished Leader and Why Move My Cheese?",
   "Creator and host of the annual Why Move My Cheese? Conference",
-  "Designed and delivered over 72 workshops across 8 school types in the United States and Africa",
+  "Designed and delivered over 72 workshops across 8 school types globally, in person and virtually",
   "Has served as a college president, professor, and business founder",
   "Doctorate in Educational & Leadership Management; MBA in Human Resources Management",
 ];

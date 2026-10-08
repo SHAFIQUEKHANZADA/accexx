@@ -95,12 +95,13 @@ export const bio = {
   builder:
     "Dr. Laide Alexander is the Founder and Chair of The Transformation Platform, a community empowering leaders to drive personal and organizational transformation. She is also the creator and host of the annual Why Move My Cheese? Conference, bringing leaders across corporate, education, and nonprofit sectors together to navigate change and transformation.",
   coach:
-    "Through Accexx Insight, Dr. Alexander has partnered with organizations including McDonald’s, PSCC, HCC, Serasana, the Alexander Group, AOPE, Primrose, Corinthian Colleges and more. She has designed and delivered over 72 workshops across 8 school types in the United States and Africa, developed 10 certificate programs rooted in her applied HOS approach, and coached executives and leadership teams across diverse industries.",
+    "Through Accexx Insight, Dr. Alexander has partnered with organizations including McDonald’s, PSCC, HCC, Serasana, the Alexander Group, AOPE, Primrose, Corinthian Colleges and more. She has designed and delivered over 72 workshops across 8 school types globally, both in person and virtually, developed 10 certificate programs rooted in her applied HOS approach, and coached executives and leadership teams across diverse industries.",
   person:
-    "Beyond her professional achievements, Dr. Alexander is a wife and mother who understands the realities of leading in the boardroom, at home, and in the community often all in the same day. Based in Houston, Texas, she is deeply committed to strengthening connections between the United States and Africa, particularly West Africa, where she regularly delivers programs and mentors emerging leaders.",
+    "Beyond her professional achievements, Dr. Alexander is a wife and mother who understands the realities of leading in the boardroom, at home, and in the community often all in the same day. Based in Houston, Texas, she is deeply committed to empowering leaders worldwide, regularly delivering programs and mentoring emerging leaders globally, in person and virtually.",
   philosophy:
     "True power in leadership is not found in perfection, but in purpose, presence, and the courage to keep evolving.",
 };
+
 
 // Dr. A's email, 2026-10-06. TODO_CLIENT: add each value's definition (in her email; not received here).
 export const coreValues = ["Empathy", "Integrity", "Clarity", "Empowerment", "Purposeful Action", "Accountability", "Resilience", "Connection"];

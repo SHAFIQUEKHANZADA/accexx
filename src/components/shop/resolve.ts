@@ -8,7 +8,6 @@ export type ResolvedLine = {
   meta?: Record<string, string>;
 };
 
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Looks a bag line up in the catalog. Returns null for anything unknown or not purchasable
@@ -24,6 +23,13 @@ export function resolveLine(
 ): ResolvedLine | null {
   const product = getProduct(slug);
   if (!product) return null;
+
+  // Never allow $0, pricePending, or unlaunched products to enter the cart
+  if (product.pricePending || product.price <= 0) return null;
+
+  // Gift Card is currently unavailable
+  if (product.slug === "store-gift-card" || product.giftCard) return null;
+
   let variant: ProductVariant | undefined;
   if (product.variants?.length) {
     variant = product.variants.find((v) => v.id === variantId);
@@ -34,15 +40,9 @@ export function resolveLine(
   const q = Math.floor(qty);
   if (!Number.isFinite(q) || q < 1) return null;
 
-  let unitPrice = variantPrice(product, variant);
-  if (product.giftCard) {
-    // A gift card needs a recipient; a custom amount must be inside the allowed range.
-    if (!meta?.recipientEmail || !EMAIL.test(meta.recipientEmail)) return null;
-    if (variant?.custom) {
-      const amount = Math.round(Number(meta.amount) * 100) / 100;
-      if (!Number.isFinite(amount) || amount < product.giftCard.min || amount > product.giftCard.max) return null;
-      unitPrice = amount;
-    }
-  }
+  const unitPrice = variantPrice(product, variant);
+  if (!Number.isFinite(unitPrice) || unitPrice <= 0) return null;
+
   return { product, variant, unitPrice, qty: q, ...(meta ? { meta } : {}) };
 }
+

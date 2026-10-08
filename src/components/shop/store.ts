@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { MAX_QTY } from "./limits";
+import { resolveLine } from "./resolve";
 
 /**
  * Tiny localStorage-backed stores for the shop (bag + wishlist).
@@ -85,6 +86,9 @@ const cartStore = createPersistentStore<CartLine[]>("accexx-shop-bag", EMPTY_LIN
 
 export const cart = {
   add(slug: string, variantId: string | undefined, qty = 1, meta?: Record<string, string>) {
+    const valid = resolveLine(slug, variantId, qty, meta);
+    if (!valid) return;
+
     cartStore.set((lines) => {
       const key = lineKey({ slug, variantId, meta });
       const existing = lines.find((l) => lineKey(l) === key);
@@ -95,6 +99,7 @@ export const cart = {
     });
     drawer.open();
   },
+
   setQty(line: CartLine, qty: number) {
     if (qty < 1) return cart.remove(line);
     cartStore.set((lines) => lines.map((l) => (lineKey(l) === lineKey(line) ? { ...l, qty: Math.min(MAX_QTY, qty) } : l)));

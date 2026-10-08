@@ -10,7 +10,7 @@ import { beinspirePricing, beinspireWorkshops } from "@/data/beinspire";
 export const metadata: Metadata = {
   title: "BEInspire© Career Series",
   description:
-    "The BEInspire© Career Series: 10 single-session career-readiness workshops for students and early-career professionals, 3 contact hours each, in person or live-virtual.",
+    "The BEInspire© Career Series: 10 single-session career-readiness workshops for students and early-career professionals, 3 contact hours each, delivered globally in person or virtually.",
   alternates: { canonical: "/education/beinspire" },
 };
 
@@ -28,7 +28,7 @@ export default function BeinspirePage() {
         intro={
           <p>
             {beinspireWorkshops.length} single-session career-readiness workshops for students and early-career
-            professionals. Each runs {beinspirePricing.contactHours} contact hours, in-person or live-virtual.
+            professionals. Each runs {beinspirePricing.contactHours} contact hours, delivered globally in person or virtually.
           </p>
         }
       >

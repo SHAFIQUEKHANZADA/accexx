@@ -191,7 +191,14 @@ export function ProductPurchase({ product }: { product: Product }) {
         </fieldset>
       )}
 
-      {variant?.checkoutUrl && purchasable ? (
+      {product.pricePending || product.price <= 0 || product.giftCard ? (
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="rounded-full border border-line bg-cream px-6 py-3 text-sm font-semibold text-muted">
+            {product.giftCard ? "Gift cards are temporarily unavailable" : "Coming soon · Not available for purchase"}
+          </div>
+          <WishlistButton slug={product.slug} name={product.name} className="size-12!" />
+        </div>
+      ) : variant?.checkoutUrl && purchasable ? (
         // GHL checkout: payment, order and contact are handled in GHL (quantity is chosen there).
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <a
@@ -238,6 +245,7 @@ export function ProductPurchase({ product }: { product: Product }) {
         <WishlistButton slug={product.slug} name={product.name} className="size-12!" />
       </div>
       )}
+
       {error && (
         <p role="alert" className="mt-3 text-sm text-red-700">
           {error}

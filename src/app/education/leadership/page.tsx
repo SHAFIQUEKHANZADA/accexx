@@ -9,7 +9,7 @@ import { leadershipPrograms } from "@/data/leadership";
 export const metadata: Metadata = {
   title: "Leadership Development",
   description:
-    "12 Leadership Development programs from Accexx Insight: flexible, high-impact workshops targeting specific leadership skills, delivered in person or online. Certificate of Participation.",
+    "12 Leadership Development programs from Accexx Insight: flexible, high-impact workshops targeting specific leadership skills, delivered globally in person or virtually. Certificate of Participation.",
   alternates: { canonical: "/education/leadership" },
 };
 
@@ -26,7 +26,7 @@ export default function LeadershipPage() {
         intro={
           <p>
             {leadershipPrograms.length} flexible, high-impact workshops targeting specific leadership skills. Stand-alone or
-            combinable with each other. Built for in-person and online delivery. Attendees receive a Certificate of
+            combinable with each other. Delivered globally, in person or virtually. Attendees receive a Certificate of
             Participation.
           </p>
         }

@@ -389,8 +389,8 @@ function MeetDrA() {
 
 /* Stats ----------------------------------------------------------------------------- */
 
-// From Dr. A's bio on the live site: "over 72 workshops across 8 school types in the
-// United States and Africa, developed 10 certificate programs".
+// Dr. A has delivered 72+ workshops across 8 school types globally, in person and virtually,
+// and developed 10 certificate programs.
 const stats = [
   { value: 72, suffix: "+", label: "Workshops designed and delivered" },
   { value: 10, suffix: "", label: "Certificate programs developed" },
@@ -410,11 +410,12 @@ function Stats() {
           </div>
         ))}
         <div className="flex flex-col px-2 py-5 text-center lg:px-6" data-reveal data-reveal-delay="270">
-          <dt className="order-2 mt-2 text-sm font-medium text-white/70">Programs delivered in both regions</dt>
+          <dt className="order-2 mt-2 text-sm font-medium text-white/70">Delivered in person &amp; virtually</dt>
           <dd className="whitespace-nowrap font-serif text-[2.6rem] font-semibold italic leading-[1.4] text-gold sm:text-5xl lg:text-[3.3rem] lg:leading-[1.32]">
-            US &amp; Africa
+            Global
           </dd>
         </div>
+
       </dl>
     </section>
   );
@@ -627,8 +628,9 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What services and programs do you offer?",
-    a: "Consulting, coaching, speaking, and education. The education catalogue includes 10 HOC certifications, 12 leadership development programs, 10 BEInspire© career workshops, 15 Project Unify© certificates, 8 HOC short courses, and 10 Project Unify© Training Shop courses, delivered to cohorts in person or virtually.",
+    a: "Consulting, coaching, speaking, and education. The education catalogue includes 10 HOC certifications, 12 leadership development programs, 10 BEInspire© career workshops, 15 Project Unify© certificates, 8 HOC short courses, and 10 Project Unify© Training Shop courses, delivered to cohorts globally, in person or virtually.",
   },
+
   {
     q: "Who is Dr. Laide R. Alexander?",
     a: `${presentRoles.map((r) => `${r.title}, ${r.org}`).join("; ")}. She is the author of The Unfinished Leader and Why Move My Cheese?, and host of the annual Why Move My Cheese? Conference.`,
