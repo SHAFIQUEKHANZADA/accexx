@@ -40,7 +40,7 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [ ] **Self-paced prices** are still missing. The Pricing Master only covers live cohorts.
 
 ## Contact & integrations
-- [x] **Phone numbers:** Primary: `(800) 689-1185`, Secondary / Direct: `(281) 985-1765`. "Call Now" buttons link to `tel:8006891185`.
+- [x] **Contact number:** `(800) 689-1185` (labeled "Contact number"; zoom / secondary direct number not advertised). Call links to `tel:8006891185`.
 - [x] **Contact & Support emails:** General & Calendar: `info@accexxinsight.com`, Student support: `axiacastudent@accexxinsight.com`, Faculty support: `axiacafaculty@accexxinsight.com`.
 - [x] **Physical office address:** `1334 Brittmoore Road, Suite 1000B, Houston, TX 77043`.
 - [x] **Consultation availability:** Tuesday–Thursday, 9:00 AM–4:00 PM (CT) via Zoom. Calendar invitations sent from `info@accexxinsight.com`.

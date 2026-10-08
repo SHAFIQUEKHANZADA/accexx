@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Clock, Instagram, LinkedIn, Mail, MapPin, Phone } from "@/components/ui/icons";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Facebook, TikTok, YouTube } from "@/components/contact/SocialIcons";
-import { callHref, callHrefSecondary, links } from "@/lib/site";
+import { callHref, links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -80,26 +80,17 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Phone Numbers */}
+              {/* Phone Number */}
               <div className="mt-5 border-t border-line/70 pt-5 space-y-2.5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Phone Lines</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Phone Line</p>
                 <div className="space-y-2 text-sm">
                   <div>
-                    <span className="text-xs text-muted block">Primary / Toll-Free</span>
+                    <span className="text-xs text-muted block">Contact number</span>
                     <a href={callHref} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
                       <Phone width={15} height={15} className="text-gold-deep" />
                       {links.phone}
                     </a>
                   </div>
-                  {links.phoneSecondary && (
-                    <div>
-                      <span className="text-xs text-muted block">Direct / Secondary</span>
-                      <a href={callHrefSecondary} className="inline-flex items-center gap-2 font-medium text-navy hover:text-gold-deep transition-colors">
-                        <Phone width={15} height={15} className="text-gold-deep" />
-                        {links.phoneSecondary}
-                      </a>
-                    </div>
-                  )}
                 </div>
               </div>
 

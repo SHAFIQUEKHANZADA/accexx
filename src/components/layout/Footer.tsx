@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { callHref, callHrefSecondary, footerNav, links, site } from "@/lib/site";
+import { callHref, footerNav, links, site } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
 
 const connect = [
@@ -25,16 +25,9 @@ export function Footer() {
             <p className="font-medium text-white/90">{links.address}</p>
             <p className="flex flex-wrap items-center gap-x-2 text-white/70">
               <span>
-                Toll-free:{" "}
+                Contact number:{" "}
                 <a href={callHref} className="text-gold-light hover:text-white transition-colors">
                   {links.phone}
-                </a>
-              </span>
-              <span>•</span>
-              <span>
-                Direct:{" "}
-                <a href={callHrefSecondary} className="text-gold-light hover:text-white transition-colors">
-                  {links.phoneSecondary}
                 </a>
               </span>
             </p>

@@ -26,7 +26,7 @@ export const links = {
 
   // Confirmed contact information
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "(800) 689-1185",
-  phoneSecondary: process.env.NEXT_PUBLIC_CONTACT_PHONE_SECONDARY || "(281) 985-1765",
+  phoneSecondary: process.env.NEXT_PUBLIC_CONTACT_PHONE_SECONDARY || "",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@accexxinsight.com",
   studentSupportEmail: process.env.NEXT_PUBLIC_STUDENT_SUPPORT_EMAIL || "axiacastudent@accexxinsight.com",
   facultySupportEmail: process.env.NEXT_PUBLIC_FACULTY_SUPPORT_EMAIL || "axiacafaculty@accexxinsight.com",
@@ -46,7 +46,7 @@ export const links = {
 };
 
 export const callHref = `tel:${links.phone.replace(/[^+\d]/g, "")}`;
-export const callHrefSecondary = `tel:${links.phoneSecondary.replace(/[^+\d]/g, "")}`;
+export const callHrefSecondary = links.phoneSecondary ? `tel:${links.phoneSecondary.replace(/[^+\d]/g, "")}` : "";
 
 export function isExternal(href: string) {
   return /^(https?:|mailto:|tel:)/.test(href);
