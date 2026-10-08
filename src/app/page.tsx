@@ -487,7 +487,7 @@ function Books() {
           </p>
           <p className="mt-5 text-sm font-medium text-muted">Hardcover · Paperback · Audiobook coming October 2026</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/shop" variant="navy">
+            <ButtonLink href={links.shop} variant="navy">
               Shop Books
             </ButtonLink>
             <ButtonLink href="/books" variant="outline">
@@ -501,7 +501,7 @@ function Books() {
           <ul className="relative grid grid-cols-2 gap-5 sm:gap-8">
             {books.map((b, i) => (
               <li key={b.slug} data-reveal data-reveal-delay={String(120 + i * 120)} className={i === 1 ? "mt-12" : ""}>
-                <Link href={`/shop/${b.slug}`} className="group block">
+                <Link href={links.shop} className="group block">
                   <div className="relative aspect-[2/3] overflow-hidden rounded-l-sm rounded-r-md shadow-[0_30px_60px_-20px_rgba(31,56,100,0.45)] transition-transform duration-500 group-hover:-translate-y-2">
                     {b.cover ? (
                       <Image

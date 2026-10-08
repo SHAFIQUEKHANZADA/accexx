@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Gallery } from "@/components/ui/Gallery";
 import { ButtonLink } from "@/components/ui/Button";
+import { links } from "@/lib/site";
 import { SignupForm } from "@/components/ui/SignupForm";
 import { VideoFeature } from "@/components/ui/VideoFeature";
 import { books, formatPrice } from "@/data/products";
@@ -50,7 +51,7 @@ export default function BooksPage() {
               <span className="whitespace-nowrap font-sans text-sm font-bold not-italic tracking-wider text-gold-deep">#R.I.B</span>
             </p>
             <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row" style={{ animationDelay: "240ms" }}>
-              <ButtonLink href="/shop" variant="navy">
+              <ButtonLink href={links.shop} variant="navy">
                 Shop Books
               </ButtonLink>
               <ButtonLink href="#conference" variant="outline">
@@ -135,7 +136,7 @@ export default function BooksPage() {
                       ))}
                   </ul>
                   <div className="mt-8">
-                    <ButtonLink href={`/shop/${b.slug}`} variant="navy">
+                    <ButtonLink href={links.shop} variant="navy">
                       Buy {b.name}
                     </ButtonLink>
                   </div>

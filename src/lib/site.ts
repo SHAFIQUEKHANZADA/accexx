@@ -21,6 +21,8 @@ export const links = {
   booking: "/contact#book",
   bookingEmbed: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || null,
   coursePortal: process.env.NEXT_PUBLIC_COURSE_PORTAL_URL || "/contact",
+  // The store now runs as a separate site (2026-10-09). /shop on this site redirects there.
+  shop: process.env.NEXT_PUBLIC_SHOP_URL || "https://shop.accexxinsight.com",
 
   // Confirmed contact information
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "(800) 689-1185",
@@ -81,7 +83,7 @@ export const mainNav: NavItem[] = [
       { label: "Books", href: "/books", description: "The Unfinished Leader · Why Move My Cheese?" },
       { label: "Why Move My Cheese? Conference", href: "/books#conference", description: "Leadership Conference 2026 highlights" },
       { label: "Inside the Pages with Dr. A", href: "/inside-the-pages", description: "Where books become conversations" },
-      { label: "Shop", href: "/shop", description: "Books & swag" },
+      { label: "Shop", href: "https://shop.accexxinsight.com", description: "Books & swag" },
     ],
   },
   { label: "Contact", href: "/contact" },
@@ -96,7 +98,7 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "Services", href: "/services" },
       { label: "Education", href: "/education" },
       { label: "Books & Events", href: "/books" },
-      { label: "Shop", href: "/shop" },
+      { label: "Shop", href: "https://shop.accexxinsight.com" },
       { label: "Contact", href: "/contact" },
     ],
   },

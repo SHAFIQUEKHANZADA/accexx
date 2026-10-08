@@ -7,7 +7,6 @@ import { projectUnifyCertificates } from "@/data/projectUnify";
 import { hocShortCourses } from "@/data/shortCourses";
 import { trainingShopCourses } from "@/data/trainingShop";
 import { consultingEngagements } from "@/data/consulting";
-import { products } from "@/data/products";
 
 const staticRoutes = [
   "/",
@@ -26,7 +25,6 @@ const staticRoutes = [
   "/education/training-shop",
   "/books",
   "/inside-the-pages",
-  "/shop",
   "/contact",
   "/privacy",
 ];
@@ -40,7 +38,6 @@ const dataRoutes = [
   ...hocShortCourses.map((c) => `/education/short-courses/${c.slug}`),
   ...trainingShopCourses.map((c) => `/education/training-shop/${c.slug}`),
   ...consultingEngagements.map((e) => `/services/consulting/${e.slug}`),
-  ...products.map((p) => `/shop/${p.slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
+import { links } from "@/lib/site";
 import { SignupForm } from "@/components/ui/SignupForm";
 import { books } from "@/data/products";
 import { insideThePages, insideThePagesPage } from "@/data/events";
@@ -209,7 +210,7 @@ export default function InsideThePagesPage() {
               ))}
             </p>
             <div className="mt-6">
-              <ButtonLink href="/shop" variant="link">
+              <ButtonLink href={links.shop} variant="link">
                 Get the books
               </ButtonLink>
             </div>
