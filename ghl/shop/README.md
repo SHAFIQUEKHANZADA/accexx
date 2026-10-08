@@ -6,9 +6,8 @@ Clean replacement for the old one-file shop code. Each file is one **Custom Code
 
 1. **Back up** the current page (or duplicate it) before changing anything.
 2. In the page settings, turn **off** GHL's own header and footer (these blocks include their own).
-3. Paste `00-global-styles.html` into **Page Settings → Tracking Code → Header Code**.
-   (Or paste it as the first Custom Code element on the page.) Every other block needs it.
-4. Add one **full-width section** per block, with **zero padding**, and paste one file into a Custom Code element in each, in this order:
+3. Add one **full-width section** per block, with **zero padding**, and paste one file into a Custom Code element in each, in this order.
+   **Every file is self-contained** (its own fonts and styles), so each section works on its own and can be moved or removed independently.
 
 | Order | File | What it is |
 |---|---|---|
@@ -21,7 +20,7 @@ Clean replacement for the old one-file shop code. Each file is one **Custom Code
 | 7 | `07-accexx-circle.html` | Join the Accexx Circle (GHL form `P5jS8GT6YsAX51P27C9T`) + Contact card |
 | 8 | `08-footer.html` | Footer |
 
-5. **Save**, then check the **published/preview page** (the builder canvas doesn't always run scripts).
+4. **Save**, then check the **published/preview page** (the builder canvas doesn't always run scripts).
 
 ## Turning on "Buy now" for a product
 
