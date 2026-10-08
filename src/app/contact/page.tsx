@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { PageHero } from "@/components/ui/PageHero";
 import { ButtonLink } from "@/components/ui/Button";
 import { Clock, Instagram, LinkedIn, Mail, MapPin, Phone } from "@/components/ui/icons";
@@ -182,13 +183,18 @@ export default function ContactPage() {
           </div>
 
           {bookingEmbed ? (
-            <div className="mt-10 overflow-hidden rounded-3xl border border-line bg-white shadow-sm">
+            <div className="mt-10 overflow-hidden rounded-3xl border border-line bg-white shadow-sm p-1 sm:p-3">
               <iframe
+                id="oGs0SikqVymjpRw8ibHe_1791494634518"
                 src={bookingEmbed}
                 title="Book a consultation with Dr. Laide"
+                allow="payment"
+                scrolling="no"
                 loading="lazy"
-                className="block h-[760px] w-full border-0"
+                className="block min-h-[720px] w-full border-0"
+                style={{ width: "100%", border: "none", overflow: "hidden" }}
               />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
             </div>
           ) : (
             // TODO_CLIENT: set NEXT_PUBLIC_GHL_BOOKING_URL to the GHL "Consultation with Dr. Laide" calendar.

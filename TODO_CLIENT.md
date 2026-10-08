@@ -47,7 +47,7 @@ Update this file whenever an item arrives or a new placeholder is added.
 - [x] **GoHighLevel form integration:** Completed via GHL API v2 (`POST /api/forms`). All 7 forms sync contacts, custom fields, tags, and pipeline opportunities.
 - [x] **Social profiles:** LinkedIn, Instagram, YouTube, TikTok, Facebook (all active in footer, contact page, and site settings).
 - [x] **GoDaddy delegated access** provided.
-- [ ] **GHL booking calendar URL** (`NEXT_PUBLIC_GHL_BOOKING_URL`). "Book Dr. A" / "Book a Discovery Call" go to /contact until set.
+- [x] **GHL booking calendar URL** (`NEXT_PUBLIC_GHL_BOOKING_URL`): `https://api.leadconnectorhq.com/widget/booking/oGs0SikqVymjpRw8ibHe`. Embedded directly on `/contact#book`, connected to all "Book Dr. A" and "Book a Discovery Call" buttons.
 - [ ] **Course portal URL** (`NEXT_PUBLIC_COURSE_PORTAL_URL`).
 - [ ] **Payment provider (Stripe?), shipping and returns rules** for the shop. She wants taxes + shipping calculated at checkout and multiple currencies: which currencies/countries?
 

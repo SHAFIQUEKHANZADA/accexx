@@ -19,7 +19,7 @@ export const links = {
   // Every "Book Dr. A" / "Book a Discovery Call" button goes to the calendar embedded on /contact,
   // so visitors stay on the site. The GHL widget URL itself is only used for that embed.
   booking: "/contact#book",
-  bookingEmbed: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || null,
+  bookingEmbed: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || "https://api.leadconnectorhq.com/widget/booking/oGs0SikqVymjpRw8ibHe",
   coursePortal: process.env.NEXT_PUBLIC_COURSE_PORTAL_URL || "/contact",
   // The store now runs as a separate site (2026-10-09). /shop on this site redirects there.
   shop: process.env.NEXT_PUBLIC_SHOP_URL || "https://shop.accexxinsight.com",
