@@ -10,28 +10,36 @@ import { UnfinishedCircle } from "@/components/ui/UnfinishedCircle";
  * first. There will be a membership number assigned to them."
  * The membership number is assigned in GoHighLevel when the "accexx-circle" form arrives.
  */
-export function JoinBand() {
+export function JoinBand({ showSignup = true }: { showSignup?: boolean }) {
   return (
-    <section id="accexx-circle" aria-labelledby="accexx-circle-heading" className="relative scroll-mt-20 overflow-hidden border-t border-line bg-gold-soft">
+    <section
+      id="accexx-circle"
+      aria-labelledby="accexx-circle-heading"
+      className="relative scroll-mt-20 overflow-hidden border-t border-line bg-gold-soft"
+    >
       <UnfinishedCircle className="pointer-events-none absolute -bottom-56 -left-40 size-[32rem] text-gold/50" />
-      <div className="container-site relative grid gap-8 py-14 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-12 lg:py-16">
-        <div className="rounded-3xl border border-line bg-white p-7 shadow-sm sm:p-9">
-          <p className="eyebrow">Join the Accexx Circle</p>
-          <h2 id="accexx-circle-heading" className="heading mt-3 text-3xl sm:text-4xl">
-            Hear it <em className="text-gold">first.</em>
-          </h2>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-body">
-            The Accexx Circle is the community that follows us. Members receive our newsletter and other information first,
-            and each member is assigned an Accexx Circle membership number.
-          </p>
-          <div className="mt-6">
-            <SignupForm
-              formType="accexx-circle"
-              cta="Join the Accexx Circle"
-              success="Welcome to the Accexx Circle. Please check your inbox for confirmation."
-            />
+      <div
+        className={`container-site relative grid gap-8 py-14 lg:gap-12 lg:py-16 ${showSignup ? "lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]" : "max-w-3xl"}`}
+      >
+        {showSignup && (
+          <div className="rounded-3xl border border-line bg-white p-7 shadow-sm sm:p-9">
+            <p className="eyebrow">Join the Accexx Circle</p>
+            <h2 id="accexx-circle-heading" className="heading mt-3 text-3xl sm:text-4xl">
+              Hear it <em className="text-gold">first.</em>
+            </h2>
+            <p className="mt-3 text-[0.95rem] leading-relaxed text-body">
+              The Accexx Circle is the community that follows us. Members receive our newsletter and other information first, and each
+              member is assigned an Accexx Circle membership number.
+            </p>
+            <div className="mt-6">
+              <SignupForm
+                formType="accexx-circle"
+                cta="Join the Accexx Circle"
+                success="Welcome to the Accexx Circle. Please check your inbox for confirmation."
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex flex-col justify-center rounded-3xl bg-navy p-7 text-white sm:p-9">
           <p className="eyebrow text-gold-light!">Contact us</p>
@@ -52,7 +60,10 @@ export function JoinBand() {
               Book a Discovery Call
             </a>
             {links.phone && (
-              <a href={callHref} className="inline-flex items-center justify-center gap-2 pt-1 text-sm font-semibold text-gold-light hover:text-white">
+              <a
+                href={callHref}
+                className="inline-flex items-center justify-center gap-2 pt-1 text-sm font-semibold text-gold-light hover:text-white"
+              >
                 <Phone width={15} height={15} /> {links.phone}
               </a>
             )}

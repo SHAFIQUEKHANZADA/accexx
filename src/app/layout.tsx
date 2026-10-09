@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { JoinBand } from "@/components/layout/JoinBand";
+import { JoinBandGate } from "@/components/layout/JoinBandGate";
 import { RevealProvider } from "@/components/ui/RevealProvider";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -61,7 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main" className="flex-1">
           {children}
         </main>
-        <JoinBand />
+        <JoinBandGate />
         <Footer />
         <RevealProvider />
       </body>

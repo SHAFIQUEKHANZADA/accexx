@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { Counter } from "@/components/home/Counter";
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* GHL chat widget for A2P 10DLC opt-in (home page only, 2026-10-10). */}
+      <Script
+        src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="6ac973845ca136cc0b91c536"
+        data-source="WEB_USER"
+        strategy="afterInteractive"
+      />
       <Hero />
       <Credibility />
       <Philosophy />
