@@ -158,12 +158,21 @@ class CustomFieldsBuilder {
       if (!isNaN(num)) processedValue = num;
     } else if (def.dataType === "DATE") {
       if (typeof value === "string") {
-        const parsed = new Date(value);
-        if (!isNaN(parsed.getTime())) {
-          processedValue = parsed.toISOString().split("T")[0];
+        const vTrim = value.trim().toLowerCase();
+        if (vTrim === "immediately" || vTrim === "asap" || vTrim === "now") {
+          processedValue = formatDate();
+        } else {
+          const parsed = new Date(value);
+          if (!isNaN(parsed.getTime())) {
+            processedValue = parsed.toISOString().split("T")[0];
+          } else {
+            return this;
+          }
         }
       } else if (value instanceof Date) {
         processedValue = value.toISOString().split("T")[0];
+      } else {
+        return this;
       }
     }
 
